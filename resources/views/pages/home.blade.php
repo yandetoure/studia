@@ -149,9 +149,29 @@
                             <div>
                                 <h4
                                     class="font-black text-slate-900 italic tracking-tight text-lg mb-2 underline decoration-gold-500/10 underline-offset-4">
-                                    La Rigueur d'Abidjan</h4>
-                                <p class="text-sm leading-relaxed capitalize">Notre cabinet allie
-                                    proximité locale et standards d'excellence internationaux.</p>
+                                    Un Accompagnement Structuré</h4>
+                                <p class="text-sm leading-relaxed mb-6">Nous accompagnons chaque étudiant de manière
+                                    structurée, depuis la réflexion sur son projet jusqu’à son installation dans son pays
+                                    d’études.</p>
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                                    @php
+                                        $steps = [
+                                            'Orientation stratégique',
+                                            'Choix de la formation et de l’établissement',
+                                            'Constitution du dossier',
+                                            'Admission',
+                                            'Procédure visa',
+                                            'Préparation du départ',
+                                            'Logement et intégration'
+                                        ];
+                                    @endphp
+                                    @foreach($steps as $index => $step)
+                                        <li class="flex items-center gap-3 text-sm font-bold text-slate-700 italic group/step">
+                                            <span class="text-gold-600 font-black text-xs">{{ $index + 1 }}.</span>
+                                            <span class="group-hover/step:text-gold-600 transition-colors">{{ $step }}</span>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             </div>
                         </div>
                     </div>
