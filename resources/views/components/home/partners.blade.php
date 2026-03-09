@@ -27,27 +27,40 @@
         <div class="flex overflow-hidden group">
             <div class="flex animate-marquee-slow gap-8 py-4 px-4 whitespace-nowrap group-hover:pause">
                 @php
-                    $partners = [
-                        'OMNES EDUCATION',
-                        'CAMPUS DE PARIS',
-                        'EXCELIA GROUP',
-                        'ISTEC PARIS',
-                        'SKEMA BUSINESS SCHOOL',
-                        'EKLORE ED SCHOOL',
-                        'ASCENCIA BUSINESS SCHOOL',
-                        'MEDIA SCHOOL INT.',
-                        'COLLEGE LA SALLE',
-                        'COLLEGE BOREAL',
-                        'BRITTS IMPERIAL',
-                        'HERTFORDSHIRE UNIV.',
-                        'GALILEO GLOBAL EDUCATION'
+                    $logos = [
+                        'LPU.png',
+                        'Media school.png',
+                        'UH.png',
+                        'abs.png',
+                        'boreal.png',
+                        'britts.png',
+                        'cdp.png',
+                        'cesi.png',
+                        'eaa.jpeg',
+                        'eklore.png',
+                        'em lyon.png',
+                        'excelia.png',
+                        'galileo 2.jpeg',
+                        'galileo.png',
+                        'gsc.png',
+                        'i2l.png',
+                        'ifh.png',
+                        'igensia groupe.png',
+                        'istec.png',
+                        'lasalle.jpeg',
+                        'neoma.png',
+                        'omnes.png',
+                        'skema.png',
+                        'studely.png'
                     ];
+                    $row1 = array_slice($logos, 0, 12);
+                    $row2 = array_slice($logos, 12);
                 @endphp
-                @foreach(array_merge($partners, $partners) as $partner)
+                @foreach(array_merge($row1, $row1) as $logo)
                     <div
-                        class="flex items-center justify-center px-12 py-6 rounded-3xl bg-white border border-slate-200 shadow-sm transition-all hover:border-gold-500/40 hover:shadow-xl hover:shadow-gold-500/5 group/logo min-w-[280px]">
-                        <span
-                            class="text-xl font-black text-slate-400 group-hover/logo:text-gold-600 transition-colors tracking-tighter italic">{{ $partner }}</span>
+                        class="flex items-center justify-center px-12 py-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm transition-all hover:border-gold-500/30 hover:shadow-2xl hover:shadow-gold-500/10 group/logo min-w-[280px] h-32">
+                        <img src="{{ asset('images/Logos écoles partenaires/' . $logo) }}" alt="Partner Logo"
+                            class="h-16 w-auto object-contain grayscale group-hover/logo:grayscale-0 transition-all duration-500">
                     </div>
                 @endforeach
             </div>
@@ -56,14 +69,11 @@
         {{-- Row 2: Moving Right --}}
         <div class="flex overflow-hidden group">
             <div class="flex animate-marquee-reverse-slow gap-8 py-4 px-4 whitespace-nowrap group-hover:pause">
-                @php
-                    $reversedPartners = array_reverse($partners);
-                @endphp
-                @foreach(array_merge($reversedPartners, $reversedPartners) as $partner)
+                @foreach(array_merge($row2, $row2) as $logo)
                     <div
-                        class="flex items-center justify-center px-12 py-6 rounded-3xl bg-white border border-slate-200 shadow-sm transition-all hover:border-gold-500/40 hover:shadow-xl hover:shadow-gold-500/5 group/logo min-w-[280px]">
-                        <span
-                            class="text-xl font-black text-slate-400 group-hover/logo:text-gold-600 transition-colors tracking-tighter italic">{{ $partner }}</span>
+                        class="flex items-center justify-center px-12 py-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm transition-all hover:border-gold-500/30 hover:shadow-2xl hover:shadow-gold-500/10 group/logo min-w-[280px] h-32">
+                        <img src="{{ asset('images/Logos écoles partenaires/' . $logo) }}" alt="Partner Logo"
+                            class="h-16 w-auto object-contain grayscale group-hover/logo:grayscale-0 transition-all duration-500">
                     </div>
                 @endforeach
             </div>

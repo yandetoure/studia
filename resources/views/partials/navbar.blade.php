@@ -48,6 +48,11 @@
                         <p class="font-bold text-slate-900">Billets d'avion</p>
                         <p class="text-xs text-slate-500">Voyagez en toute sérénité</p>
                     </a>
+                    <a href="{{ route('housing') }}"
+                        class="block px-4 py-3 rounded-xl hover:bg-slate-50 transition-colors">
+                        <p class="font-bold text-slate-900">Logement & Intégration</p>
+                        <p class="text-xs text-slate-500">Installation & Sérénité</p>
+                    </a>
                 </div>
             </div>
 

@@ -51,6 +51,7 @@
                 <a href="{{ route('about') }}" class="hover:text-gold-600">À propos</a>
                 <a href="{{ route('services') }}" class="hover:text-gold-600">Nos services</a>
                 <a href="{{ route('destinations') }}" class="hover:text-gold-600">Destinations</a>
+                <a href="{{ route('housing') }}" class="hover:text-gold-600">Logement & Intégration</a>
                 <a href="{{ route('contact') }}" class="hover:text-gold-600">Contact</a>
                 <a href="{{ route('home') }}#faq" class="hover:text-gold-600">FAQ</a>
                 <div class="mt-4 pt-6 border-t border-slate-100">

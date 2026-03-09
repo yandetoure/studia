@@ -36,6 +36,16 @@ class PageController extends Controller
         return view('pages.services.visa');
     }
 
+    public function departure()
+    {
+        return view('pages.services.departure');
+    }
+
+    public function housing()
+    {
+        return view('pages.housing');
+    }
+
     public function flight()
     {
         return view('pages.services.flight');

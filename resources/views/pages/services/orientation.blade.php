@@ -8,11 +8,11 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
                     <h1 class="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase italic">Service d'excellence</h1>
-                    <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">Orientation & Soutien <br> <span
-                            class="text-gold-500">Scolaire</span>.</h2>
+                    <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">Orientation <br> <span
+                            class="text-gold-500">Académique</span>.</h2>
                     <p class="text-xl text-slate-400 leading-relaxed font-medium">
                         L’orientation est une étape clé dans la réussite d’un parcours académique. Chez STUDIA, nous aidons
-                        les élèves, étudiants et professionnels à construire un parcours clair.
+                        les étudiants et professionnels à construire un parcours clair et stratégique.
                     </p>
                     <div class="flex gap-4">
                         <a href="{{ route('contact') }}#appointment"
@@ -44,11 +44,10 @@
                     <div class="space-y-6">
                         @php
                             $items = [
-                                'Bilans d’orientation' => 'Analyse approfondie des compétences et des aspirations.',
-                                'Coaching scolaire' => 'Développement de méthodes de travail efficaces.',
-                                'Soutien scolaire' => 'Accompagnement dans les matières clés.',
-                                'Suivi académique personnalisé' => 'Un mentorat régulier pour assurer la progression.',
-                                'Préparation aux examens' => 'Stratégies de réussite pour les concours et examens.'
+                                'Analyse du profil' => 'Évaluation approfondie de votre parcours et de vos ambitions.',
+                                'Choix de la destination' => 'Identification du pays le plus adapté à votre projet.',
+                                'Choix de la formation' => 'Sélection des établissements et filières d\'excellence.',
+                                'Stratégie académique' => 'Planification rigoureuse pour maximiser vos chances de succès.'
                             ];
                         @endphp
 
