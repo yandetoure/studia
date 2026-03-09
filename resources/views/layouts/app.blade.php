@@ -50,10 +50,11 @@
                 <a href="{{ route('home') }}" class="hover:text-gold-600">Accueil</a>
                 <a href="{{ route('about') }}" class="hover:text-gold-600">À propos</a>
                 <a href="{{ route('services') }}" class="hover:text-gold-600">Nos services</a>
-                <a href="{{ route('destinations') }}" class="hover:text-gold-600">Destinations</a>
-                <a href="{{ route('housing') }}" class="hover:text-gold-600">Logement & Intégration</a>
-                <a href="{{ route('contact') }}" class="hover:text-gold-600">Contact</a>
-                <a href="{{ route('home') }}#faq" class="hover:text-gold-600">FAQ</a>
+                <a href="{{ route('destinations') }}" class="hover:text-gold-600">Destinations d’études</a>
+                <a href="{{ route('housing') }}" class="hover:text-gold-600">Logement & intégration</a>
+                <a href="{{ route('home') }}#testimonials" class="hover:text-gold-600">Témoignages</a>
+                <a href="#" class="hover:text-gold-600">Blog / Conseils</a>
+                <a href="{{ route('contact') }}" class="hover:text-gold-600">Contact / Prendre rendez-vous</a>
                 <div class="mt-4 pt-6 border-t border-slate-100">
                     <a href="{{ route('contact') }}#appointment"
                         class="w-full py-4 text-center rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-200">Prendre

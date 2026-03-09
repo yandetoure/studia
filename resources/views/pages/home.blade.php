@@ -17,12 +17,6 @@
             {{-- Text Content --}}
             <div class="lg:col-span-7 space-y-10 py-20">
                 <div class="space-y-6">
-                    <div
-                        class="inline-flex items-center gap-4 px-4 py-2 rounded-full bg-gold-500/10 backdrop-blur-md border border-gold-500/20">
-                        <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
-                        <span class="text-xs font-bold tracking-[0.25em] uppercase text-gold-400 italic">Excellence
-                            Académique Premium</span>
-                    </div>
 
                     <h1 class="text-7xl lg:text-[7.5rem] font-black text-white leading-[0.9] tracking-[-0.04em]">
                         Ouvrir le <br>
@@ -30,9 +24,9 @@
                     </h1>
 
                     <p class="text-xl lg:text-2xl text-slate-300 max-w-xl leading-relaxed font-light">
-                        Depuis 10 ans, <span
-                            class="text-gold-500 font-medium italic underline decoration-gold-500/30 underline-offset-8">STUDIA</span>
-                        guide l'avenir des leaders de demain avec un accompagnement d'élite.
+                        Cabinet d’orientation scolaire, de soutien académique et de mobilité internationale. Nous
+                        accompagnons les élèves, étudiants et professionnels africains dans leurs projets d’études et de
+                        formation à l’étranger.
                     </p>
                 </div>
 
@@ -58,7 +52,7 @@
                         class="p-6 rounded-3xl bg-white shadow-2xl shadow-black/10 transition-transform hover:-translate-y-2">
                         <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">Localisation
                         </p>
-                        <p class="text-sm font-bold text-slate-900 leading-tight">Cocody, Abidjan<br>Côte d’Ivoire</p>
+                        <p class="text-sm font-bold text-slate-900 leading-tight">Côte d’Ivoire</p>
                     </div>
                     <div
                         class="p-6 rounded-3xl bg-white shadow-2xl shadow-black/10 transition-transform hover:-translate-y-2">
@@ -71,35 +65,13 @@
                         class="p-6 rounded-3xl bg-white shadow-2xl shadow-black/10 transition-transform hover:-translate-y-2">
                         <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">Email Officiel
                         </p>
-                        <p class="text-sm font-bold text-slate-900 leading-tight">infos@studia.com</p>
+                        <p class="text-sm font-bold text-slate-900 leading-tight">contact@studia-edu.com</p>
                     </div>
                 </div>
             </div>
 
             {{-- Floating Feature Cards --}}
             <div class="lg:col-span-5 relative hidden lg:block">
-                <div
-                    class="absolute -top-20 right-0 p-8 rounded-[2.5rem] bg-white shadow-2xl shadow-gold-900/10 border border-slate-100 max-w-[240px] animate-float">
-                    <div class="space-y-4">
-                        <div
-                            class="w-10 h-10 rounded-2xl bg-gold-600 flex items-center justify-center text-slate-950 font-black italic">
-                            10</div>
-                        <p class="text-sm font-black text-slate-900 italic tracking-tight">Années d'Excellence</p>
-                    </div>
-                </div>
-
-                <div class="absolute top-40 -right-10 p-8 rounded-[2.5rem] bg-white shadow-2xl shadow-gold-900/10 border border-slate-100 max-w-[240px] scale-90 animate-float"
-                    style="animation-delay: 1.5s">
-                    <div class="space-y-4">
-                        <div class="w-10 h-10 rounded-2xl bg-slate-900 flex items-center justify-center text-white">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-sm font-black text-slate-900 italic tracking-tight">Accompagnement d'Élite</p>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -144,11 +116,6 @@
                     </div>
 
                     {{-- Heritage Badge --}}
-                    <div
-                        class="absolute bottom-12 -right-6 lg:-right-12 z-20 bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl border border-white/10">
-                        <p class="text-6xl font-black italic leading-none">10</p>
-                        <p class="text-xs font-bold uppercase tracking-[0.2em] mt-2 opacity-60">Années de <br> Confiance</p>
-                    </div>
                 </div>
 
                 {{-- Content --}}
@@ -183,7 +150,7 @@
                                 <h4
                                     class="font-black text-slate-900 italic tracking-tight text-lg mb-2 underline decoration-gold-500/10 underline-offset-4">
                                     La Rigueur d'Abidjan</h4>
-                                <p class="text-sm leading-relaxed capitalize">Basé au cœur de Cocody, notre cabinet allie
+                                <p class="text-sm leading-relaxed capitalize">Notre cabinet allie
                                     proximité locale et standards d'excellence internationaux.</p>
                             </div>
                         </div>

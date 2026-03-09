@@ -11,8 +11,9 @@
                     <span class="text-2xl font-bold tracking-tight text-white">STUDIA</span>
                 </a>
                 <p class="text-sm leading-relaxed">
-                    Ouvrir le Monde, Guider l’Avenir. Cabinet d’orientation scolaire, de soutien académique et de
-                    mobilité internationale.
+                    Cabinet d’orientation scolaire, de soutien académique et de mobilité internationale. Nous
+                    accompagnons les élèves, étudiants et professionnels africains dans leurs projets d’études et de
+                    formation à l’étranger.
                 </p>
                 <div class="flex gap-4">
                     <a href="#"
@@ -40,9 +41,15 @@
                     <li><a href="{{ route('about') }}" class="hover:text-white transition-colors">À propos</a></li>
                     <li><a href="{{ route('services') }}" class="hover:text-white transition-colors">Nos services</a>
                     </li>
-                    <li><a href="{{ route('destinations') }}"
-                            class="hover:text-white transition-colors">Destinations</a></li>
-                    <li><a href="{{ route('contact') }}" class="hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="{{ route('destinations') }}" class="hover:text-white transition-colors">Destinations
+                            d’études</a></li>
+                    <li><a href="{{ route('housing') }}" class="hover:text-white transition-colors">Logement &
+                            intégration</a></li>
+                    <li><a href="{{ route('home') }}#testimonials"
+                            class="hover:text-white transition-colors">Témoignages</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Blog / Conseils</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-white transition-colors">Contact / Prendre
+                            rendez-vous</a></li>
                 </ul>
             </div>
 
@@ -73,7 +80,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
-                        Cocody, Abidjan – Côte d’Ivoire
+                        Côte d’Ivoire
                     </li>
                     <li class="flex items-center gap-3">
                         <svg class="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +96,7 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                             </path>
                         </svg>
-                        infos@studia.com
+                        contact@studia-edu.com
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contactez STUDIA - Cocody, Abidjan')
+@section('title', 'Contactez STUDIA - Côte d’Ivoire')
 
 @section('content')
     <section class="pt-40 pb-24 bg-slate-900 text-white relative overflow-hidden">
@@ -39,7 +39,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1 italic">Localisation</h4>
-                                    <p class="text-slate-500 font-medium capitalize prose prose-sm">Cocody, Abidjan – Côte
+                                    <p class="text-slate-500 font-medium capitalize prose prose-sm">Côte
                                         d’Ivoire<br>STUDIA reçoit sur rendez-vous.</p>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1 italic">Email</h4>
-                                    <p class="text-slate-500 font-medium">infos@studia.com</p>
+                                    <p class="text-slate-500 font-medium">contact@studia-edu.com</p>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +106,8 @@
                         </div>
                         <div class="space-y-2">
                             <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Email</label>
-                             <input type="email" placeholder="votre@email.com"
-                                 class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
+                            <input type="email" placeholder="votre@email.com"
+                                class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">

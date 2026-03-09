@@ -24,7 +24,7 @@
                         ['q' => 'À qui s’adressent les services de STUDIA ?', 'a' => 'Les services de STUDIA s’adressent : aux élèves du secondaire (collège et lycée), aux étudiants universitaires (Bac à Bac+5), aux professionnels souhaitant se former ou se reconvertir à l’international, aux parents recherchant un accompagnement sérieux et sécurisé pour leurs enfants.'],
                         ['q' => 'Dans quels pays puis-je étudier avec STUDIA ?', 'a' => 'STUDIA accompagne les projets d’études vers plus de 13 destinations, notamment : France, Canada, États-Unis, Royaume-Uni, Belgique, Espagne, Turquie, Inde, Maroc, Tunisie, Égypte, Sénégal, Dubaï.'],
                         ['q' => 'STUDIA garantit-elle l’obtention du visa ou de l’admission ?', 'a' => 'Non. Aucune structure sérieuse ne peut garantir un visa ou une admission. En revanche, STUDIA garantit : un dossier conforme et complet, une préparation rigoureuse, une orientation réaliste, un accompagnement professionnel, une réduction significative des risques de refus.'],
-                        ['q' => 'Qu’est-ce qui différencie STUDIA des autres agences ?', 'a' => 'STUDIA se distingue par : près de 10 ans d’expérience terrain, un positionnement premium, une approche humaine et personnalisée, une transparence totale, un accompagnement de A à Z, une expertise multi-pays.'],
+                        ['q' => 'Qu’est-ce qui différencie STUDIA des autres agences ?', 'a' => 'STUDIA se distingue par : son expérience terrain, un positionnement premium, une approche humaine et personnalisée, une transparence totale, un accompagnement de A à Z, une expertise multi-pays.'],
                         ['q' => 'Puis-je bénéficier uniquement d’une orientation sans partir à l’étranger ?', 'a' => 'Oui. STUDIA propose des services d’orientation scolaire et universitaire, ainsi que du soutien scolaire, même sans projet de mobilité internationale.'],
                         ['q' => 'Comment se déroule l’accompagnement chez STUDIA ?', 'a' => 'L’accompagnement se déroule en plusieurs étapes : Premier échange et analyse du profil, Orientation et choix du parcours, Constitution du dossier académique, Admission et suivi, Assistance visa (si nécessaire), Installation et suivi post-départ (selon le pack).'],
                         ['q' => 'Les parents peuvent-ils être impliqués dans le suivi ?', 'a' => 'Oui. STUDIA accorde une grande importance à l’implication des parents, notamment : lors de la définition du projet académique, pendant les étapes clés (admission, visa), à travers des sessions d’information dédiées.'],
@@ -36,10 +36,10 @@
                         ['q' => 'Y a-t-il un paiement échelonné possible ?', 'a' => 'Selon le service et le pack choisi, un paiement échelonné peut être proposé. Les modalités sont définies au cas par cas.'],
                         ['q' => 'STUDIA travaille-t-elle avec des universités partenaires ?', 'a' => 'STUDIA collabore avec : des universités, des écoles, des instituts de formation, des partenaires éducatifs internationaux, dans le respect des règles et des exigences académiques.'],
                         ['q' => 'STUDIA est-elle une agence de voyage ?', 'a' => 'Non. STUDIA n’est pas une agence de voyage. La vente et l’assistance billets d’avion sont proposées en partenariat avec des agences agréées, conformément à la réglementation.'],
-                        ['q' => 'Puis-je suivre mon dossier à distance ?', 'a' => 'Oui. L’accompagnement peut se faire : en présentiel à Cocody, à distance (WhatsApp, visioconférence, e-mail), selon votre situation géographique.'],
+                        ['q' => 'Puis-je suivre mon dossier à distance ?', 'a' => 'Oui. L’accompagnement peut se faire : en présentiel, à distance (WhatsApp, visioconférence, e-mail), selon votre situation géographique.'],
                         ['q' => 'Que se passe-t-il en cas de refus de visa ou d’admission ?', 'a' => 'STUDIA analyse chaque situation au cas par cas et peut : proposer une alternative réaliste, ajuster la stratégie, accompagner dans un nouveau projet, selon les conditions prévues dans le contrat.'],
-                        ['q' => 'Comment prendre rendez-vous avec STUDIA ?', 'a' => 'Vous pouvez : remplir le formulaire de contact sur le site, appeler ou écrire via WhatsApp au +225 07 67 93 93 93, envoyer un email à infos@studia.com.'],
-                        ['q' => 'Où est situé STUDIA ?', 'a' => '📍 Cocody, Abidjan – Côte d’Ivoire. STUDIA reçoit sur rendez-vous.'],
+                        ['q' => 'Comment prendre rendez-vous avec STUDIA ?', 'a' => 'Vous pouvez : remplir le formulaire de contact sur le site, appeler ou écrire via WhatsApp au +225 07 67 93 93 93, envoyer un email à contact@studia-edu.com.'],
+                        ['q' => 'Où est situé STUDIA ?', 'a' => '📍 Côte d’Ivoire. STUDIA reçoit sur rendez-vous.'],
                         ['q' => 'Comment être sûr que STUDIA est une structure sérieuse ?', 'a' => 'STUDIA est : une entreprise légalement constituée, dirigée par un professionnel expérimenté, transparente sur ses services et ses limites, engagée dans une démarche éthique et responsable.'],
                     ];
                 @endphp
@@ -77,7 +77,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                             </path>
-                        </svg> infos@studia.com</p>
+                        </svg> contact@studia-edu.com</p>
                 </div>
                 <div class="pt-4">
                     <a href="{{ route('contact') }}"
