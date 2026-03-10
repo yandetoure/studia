@@ -43,4 +43,6 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'au
 
     // Finances
     Route::get('/finances', [DashboardController::class, 'finances'])->name('finances.index');
+    Route::post('/invoices', [DashboardController::class, 'storeInvoice'])->name('finances.invoices.store');
+    Route::post('/payments', [DashboardController::class, 'storePayment'])->name('finances.payments.store');
 });

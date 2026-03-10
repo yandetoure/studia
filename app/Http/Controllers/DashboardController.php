@@ -78,7 +78,7 @@ class DashboardController extends Controller
     public function finances()
     {
         $accounts = Account::all();
-        $invoices = Invoice::with('client')->latest()->paginate(10);
+        $invoices = Invoice::with(['client', 'payments'])->latest()->paginate(10);
         return view('pages.dashboard.finances.index', compact('accounts', 'invoices'));
     }
 
@@ -120,6 +120,26 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', ucfirst($validated['type']) . ' créée avec succès.');
     }
 
+    public function updateInvoice(Request $request, Invoice $invoice)
+    {
+        $validated = $request->validate([
+            'type' => 'required|in:devis,facture',
+            'total_amount' => 'required|numeric|min:0',
+            'status' => 'required|in:draft,pending,paid,partial,cancelled',
+            'due_date' => 'required|date',
+        ]);
+
+        $invoice->update($validated);
+
+        return redirect()->back()->with('success', 'Facture mise à jour avec succès.');
+    }
+
+    public function destroyInvoice(Invoice $invoice)
+    {
+        $invoice->delete();
+        return redirect()->back()->with('success', 'Facture supprimée avec succès.');
+    }
+
     public function storePayment(Request $request)
     {
         $validated = $request->validate([
@@ -139,16 +159,47 @@ class DashboardController extends Controller
         $account->save();
 
         // Update Invoice Status
-        $invoice = Invoice::find($validated['invoice_id']);
-        $totalPaid = $invoice->payments()->sum('amount');
+        $this->updateInvoiceStatus($payment->invoice_id);
+
+        return redirect()->back()->with('success', 'Paiement enregistré avec succès.');
+    }
+
+    public function destroyPayment(Payment $payment)
+    {
+        $invoiceId = $payment->invoice_id;
+        $accountId = $payment->account_id;
+        $amount = $payment->amount;
+
+        $payment->delete();
+
+        // Revert Account Balance
+        $account = Account::find($accountId);
+        if ($account) {
+            $account->balance -= $amount;
+            $account->save();
+        }
+
+        // Update Invoice Status
+        $this->updateInvoiceStatus($invoiceId);
+
+        return redirect()->back()->with('success', 'Paiement supprimé avec succès.');
+    }
+
+    private function updateInvoiceStatus($invoiceId)
+    {
+        $invoice = Invoice::with('payments')->find($invoiceId);
+        if (!$invoice)
+            return;
+
+        $totalPaid = $invoice->payments->sum('amount');
 
         if ($totalPaid >= $invoice->total_amount) {
             $invoice->status = 'paid';
         } elseif ($totalPaid > 0) {
             $invoice->status = 'partial';
+        } else {
+            $invoice->status = 'pending';
         }
         $invoice->save();
-
-        return redirect()->back()->with('success', 'Paiement enregistré avec succès.');
     }
 }

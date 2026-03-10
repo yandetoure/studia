@@ -36,9 +36,11 @@
                     <tr>
                         <th>N° Facture</th>
                         <th>Client</th>
-                        <th>Montant</th>
+                        <th>Total</th>
+                        <th>Payé</th>
+                        <th>Reste</th>
                         <th>Statut</th>
-                        <th>Date d'échéance</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,21 +57,46 @@
                                 </a>
                             </td>
                             <td style="font-weight: 600; color: var(--text-main);">
-                                {{ number_format($invoice->total_amount, 0, ',', ' ') }} <small>FCFA</small>
+                                {{ number_format($invoice->total_amount, 0, ',', ' ') }}
+                            </td>
+                            <td style="color: #2ecc71; font-weight: 500;">
+                                {{ number_format($invoice->paid_amount, 0, ',', ' ') }}
+                            </td>
+                            <td
+                                style="color: {{ $invoice->remaining_amount > 0 ? '#e74c3c' : 'var(--text-dim)' }}; font-weight: 500;">
+                                {{ number_format($invoice->remaining_amount, 0, ',', ' ') }}
                             </td>
                             <td>
                                 <span class="badge status-{{ $invoice->status }}">
                                     @if($invoice->status == 'paid') ✓ @elseif($invoice->status == 'pending') ⌛ @else ◒ @endif
-                                    {{ str_replace('paid', 'Payée', str_replace('pending', 'En attente', $invoice->status)) }}
+                                    {{ str_replace('paid', 'Payée', str_replace('pending', 'En attente', str_replace('partial', 'Partiel', $invoice->status))) }}
                                 </span>
                             </td>
-                            <td style="color: var(--text-dim);">
-                                {{ \Carbon\Carbon::parse($invoice->due_date)->format('d M, Y') }}
+                            <td>
+                                <div style="display: flex; gap: 8px;">
+                                    <button onclick="openEditInvoiceModal({
+                                                id: {{ $invoice->id }},
+                                                invoice_number: '{{ $invoice->invoice_number }}',
+                                                type: '{{ $invoice->type }}',
+                                                total_amount: {{ $invoice->total_amount }},
+                                                status: '{{ $invoice->status }}',
+                                                due_date: '{{ $invoice->due_date }}'
+                                            })" class="btn-small"
+                                        style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); color: var(--text-main);">✏️</button>
+
+                                    <form action="{{ route('dashboard.finances.invoices.destroy', $invoice->id) }}"
+                                        method="POST" onsubmit="return confirm('Supprimer cette facture ?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn-small"
+                                            style="background: rgba(231, 76, 60, 0.1); padding: 8px; border-radius: 8px; border: 1px solid rgba(231, 76, 60, 0.2); color: #e74c3c;">🗑️</button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5" style="text-align: center; color: var(--text-dim); padding: 50px;">Aucune facture
+                            <td colspan="7" style="text-align: center; color: var(--text-dim); padding: 50px;">Aucune facture
                                 trouvée</td>
                         </tr>
                     @endforelse
@@ -85,6 +112,7 @@
     @endif
 
     @include('pages.dashboard.finances._modal_invoice', ['clients' => \App\Models\Client::all()])
+    @include('pages.dashboard.finances._modal_edit_invoice')
     @include('pages.dashboard.finances._modal_payment', ['invoices' => $invoices, 'accounts' => $accounts])
 
     <style>
