@@ -3,6 +3,13 @@
 @section('content')
     <header>
         <h1>Finances</h1>
+        <div style="display: flex; gap: 15px;">
+            <button class="nav-link"
+                style="margin-bottom: 0; background: var(--glass); border: 1px solid var(--glass-border);"
+                onclick="document.getElementById('addInvoiceModal').style.display='flex'">+ Nouveau Devis/Facture</button>
+            <button class="btn-gold" onclick="document.getElementById('addPaymentModal').style.display='flex'">💰
+                Enregistrer un Paiement</button>
+        </div>
     </header>
 
     <div class="stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px;">
@@ -18,8 +25,10 @@
     </div>
 
     <div class="premium-card" style="padding: 0; overflow: hidden;">
-        <div style="padding: 30px; border-bottom: 1px solid var(--glass-border);">
+        <div
+            style="padding: 30px; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center;">
             <h2 style="font-size: 20px; font-weight: 600;">Factures Récentes</h2>
+            <div style="font-size: 13px; color: var(--text-dim);">Dernières transactions</div>
         </div>
         <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
             <table>
@@ -35,23 +44,28 @@
                 <tbody>
                     @forelse($invoices as $invoice)
                         <tr>
-                            <td style="font-family: monospace; font-size: 13px;">{{ $invoice->invoice_number }}</td>
+                            <td style="font-family: monospace; font-size: 13px; color: var(--gold);">
+                                {{ $invoice->invoice_number }}</td>
                             <td style="font-weight: 500;">
                                 <a href="{{ route('dashboard.clients.show', $invoice->client_id) }}"
-                                    style="color: var(--text-main); text-decoration: none;">
+                                    style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s;"
+                                    onmouseover="this.style.borderColor='var(--gold)';"
+                                    onmouseout="this.style.borderColor='transparent';">
                                     {{ $invoice->client->first_name }} {{ $invoice->client->last_name }}
                                 </a>
                             </td>
-                            <td style="font-weight: 600; color: var(--gold);">
-                                {{ number_format($invoice->total_amount, 0, ',', ' ') }} FCFA</td>
+                            <td style="font-weight: 600; color: var(--text-main);">
+                                {{ number_format($invoice->total_amount, 0, ',', ' ') }} <small>FCFA</small>
+                            </td>
                             <td>
                                 <span class="badge status-{{ $invoice->status }}">
                                     @if($invoice->status == 'paid') ✓ @elseif($invoice->status == 'pending') ⌛ @else ◒ @endif
-                                    {{ $invoice->status }}
+                                    {{ str_replace('paid', 'Payée', str_replace('pending', 'En attente', $invoice->status)) }}
                                 </span>
                             </td>
                             <td style="color: var(--text-dim);">
-                                {{ \Carbon\Carbon::parse($invoice->due_date)->format('d M, Y') }}</td>
+                                {{ \Carbon\Carbon::parse($invoice->due_date)->format('d M, Y') }}
+                            </td>
                         </tr>
                     @empty
                         <tr>
@@ -69,6 +83,9 @@
             {{ $invoices->links() }}
         </div>
     @endif
+
+    @include('pages.dashboard.finances._modal_invoice', ['clients' => \App\Models\Client::all()])
+    @include('pages.dashboard.finances._modal_payment', ['invoices' => $invoices, 'accounts' => $accounts])
 
     <style>
         .status-paid {

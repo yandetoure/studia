@@ -101,4 +101,54 @@ class DashboardController extends Controller
 
         return redirect()->back()->with('success', 'Dossier mis à jour avec succès.');
     }
+
+    public function storeInvoice(Request $request)
+    {
+        $validated = $request->validate([
+            'client_id' => 'required|exists:clients,id',
+            'dossier_id' => 'nullable|exists:dossiers,id',
+            'type' => 'required|in:devis,facture',
+            'total_amount' => 'required|numeric|min:0',
+            'due_date' => 'required|date',
+        ]);
+
+        $validated['invoice_number'] = ($validated['type'] == 'facture' ? 'FAC-' : 'DEV-') . strtoupper(uniqid());
+        $validated['status'] = 'pending';
+
+        Invoice::create($validated);
+
+        return redirect()->back()->with('success', ucfirst($validated['type']) . ' créée avec succès.');
+    }
+
+    public function storePayment(Request $request)
+    {
+        $validated = $request->validate([
+            'invoice_id' => 'required|exists:invoices,id',
+            'account_id' => 'required|exists:accounts,id',
+            'amount' => 'required|numeric|min:0',
+            'method' => 'required|string',
+            'payment_date' => 'required|date',
+            'reference' => 'nullable|string',
+        ]);
+
+        $payment = Payment::create($validated);
+
+        // Update Account Balance
+        $account = Account::find($validated['account_id']);
+        $account->balance += $validated['amount'];
+        $account->save();
+
+        // Update Invoice Status
+        $invoice = Invoice::find($validated['invoice_id']);
+        $totalPaid = $invoice->payments()->sum('amount');
+
+        if ($totalPaid >= $invoice->total_amount) {
+            $invoice->status = 'paid';
+        } elseif ($totalPaid > 0) {
+            $invoice->status = 'partial';
+        }
+        $invoice->save();
+
+        return redirect()->back()->with('success', 'Paiement enregistré avec succès.');
+    }
 }
