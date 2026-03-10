@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
+// Public Routes
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/a-propos', [PageController::class, 'about'])->name('about');
 Route::get('/nos-services', [PageController::class, 'services'])->name('services');
@@ -18,3 +21,25 @@ Route::get('/destinations', [PageController::class, 'destinations'])->name('dest
 Route::get('/pourquoi-choisir-studia', [PageController::class, 'whyStudia'])->name('why-studia');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');
+
+// Auth Routes
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Dashboard Routes (Secured)
+Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'auth'], function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
+
+    // Clients
+    Route::get('/clients', [DashboardController::class, 'clients'])->name('clients.index');
+    Route::get('/clients/{client}', [DashboardController::class, 'showClient'])->name('clients.show');
+    Route::post('/clients', [DashboardController::class, 'storeClient'])->name('clients.store');
+
+    // Dossiers
+    Route::get('/dossiers', [DashboardController::class, 'dossiers'])->name('dossiers.index');
+    Route::post('/dossiers', [DashboardController::class, 'storeDossier'])->name('dossiers.store');
+
+    // Finances
+    Route::get('/finances', [DashboardController::class, 'finances'])->name('finances.index');
+});
