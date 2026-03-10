@@ -369,6 +369,19 @@
     </div>
 
     @stack('scripts')
+    <script>
+        // Close modals when clicking outside or pressing Escape
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+            }
+        });
+    </script>
 </body>
 
 </html>

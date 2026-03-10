@@ -10,7 +10,8 @@
             <div class="premium-card">
                 <div style="color: var(--text-dim); font-size: 14px; margin-bottom: 8px;">{{ $account->name }}</div>
                 <div style="font-size: 24px; color: var(--gold); font-weight: 700;">
-                    {{ number_format($account->balance, 0, ',', ' ') }} <small style="font-size: 12px; opacity: 0.7;">FCFA</small>
+                    {{ number_format($account->balance, 0, ',', ' ') }} <small
+                        style="font-size: 12px; opacity: 0.7;">FCFA</small>
                 </div>
             </div>
         @endforeach
@@ -35,19 +36,27 @@
                     @forelse($invoices as $invoice)
                         <tr>
                             <td style="font-family: monospace; font-size: 13px;">{{ $invoice->invoice_number }}</td>
-                            <td style="font-weight: 500;">{{ $invoice->client->first_name }} {{ $invoice->client->last_name }}</td>
-                            <td style="font-weight: 600; color: var(--gold);">{{ number_format($invoice->total_amount, 0, ',', ' ') }} FCFA</td>
+                            <td style="font-weight: 500;">
+                                <a href="{{ route('dashboard.clients.show', $invoice->client_id) }}"
+                                    style="color: var(--text-main); text-decoration: none;">
+                                    {{ $invoice->client->first_name }} {{ $invoice->client->last_name }}
+                                </a>
+                            </td>
+                            <td style="font-weight: 600; color: var(--gold);">
+                                {{ number_format($invoice->total_amount, 0, ',', ' ') }} FCFA</td>
                             <td>
                                 <span class="badge status-{{ $invoice->status }}">
                                     @if($invoice->status == 'paid') ✓ @elseif($invoice->status == 'pending') ⌛ @else ◒ @endif
                                     {{ $invoice->status }}
                                 </span>
                             </td>
-                            <td style="color: var(--text-dim);">{{ \Carbon\Carbon::parse($invoice->due_date)->format('d M, Y') }}</td>
+                            <td style="color: var(--text-dim);">
+                                {{ \Carbon\Carbon::parse($invoice->due_date)->format('d M, Y') }}</td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5" style="text-align: center; color: var(--text-dim); padding: 50px;">Aucune facture trouvée</td>
+                            <td colspan="5" style="text-align: center; color: var(--text-dim); padding: 50px;">Aucune facture
+                                trouvée</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -62,9 +71,28 @@
     @endif
 
     <style>
-        .status-paid { background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.2); }
-        .status-pending { background: rgba(241, 196, 15, 0.1); color: #f1c40f; border: 1px solid rgba(241, 196, 15, 0.2); }
-        .status-partial { background: rgba(230, 126, 34, 0.1); color: #e67e22; border: 1px solid rgba(230, 126, 34, 0.2); }
-        .status-cancelled { background: rgba(231, 76, 60, 0.1); color: #e74c3c; border: 1px solid rgba(231, 76, 60, 0.2); }
+        .status-paid {
+            background: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+            border: 1px solid rgba(46, 204, 113, 0.2);
+        }
+
+        .status-pending {
+            background: rgba(241, 196, 15, 0.1);
+            color: #f1c40f;
+            border: 1px solid rgba(241, 196, 15, 0.2);
+        }
+
+        .status-partial {
+            background: rgba(230, 126, 34, 0.1);
+            color: #e67e22;
+            border: 1px solid rgba(230, 126, 34, 0.2);
+        }
+
+        .status-cancelled {
+            background: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+            border: 1px solid rgba(231, 76, 60, 0.2);
+        }
     </style>
 @endsection

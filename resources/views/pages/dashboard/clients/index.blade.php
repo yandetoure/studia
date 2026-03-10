@@ -46,6 +46,7 @@
                                     <a href="{{ route('dashboard.clients.show', $client->id) }}" class="btn-small"
                                         style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); transition: 0.3s; color: var(--text-main); text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">👁️</a>
                                     <button class="btn-small"
+                                        onclick="alert('Modification du client en cours de développement')"
                                         style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); transition: 0.3s; color: var(--text-main);">✏️</button>
                                 </div>
                             </td>

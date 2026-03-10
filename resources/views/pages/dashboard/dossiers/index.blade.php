@@ -39,8 +39,17 @@
                             <td style="color: var(--text-dim);">{{ \Carbon\Carbon::parse($dossier->created_at)->format('d M, Y') }}</td>
                             <td>
                                 <div style="display: flex; gap: 8px;">
-                                    <button class="btn-small" style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); transition: 0.3s; color: var(--text-main);">👁️</button>
-                                    <button class="btn-small" style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); transition: 0.3s; color: var(--text-main);">✏️</button>
+                                    <a href="{{ route('dashboard.clients.show', $dossier->client_id) }}" class="btn-small" 
+                                        style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); transition: 0.3s; color: var(--text-main); text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">👁️</a>
+                                    <button onclick="openEditDossierModal({
+                                        id: {{ $dossier->id }},
+                                        client_name: '{{ $dossier->client->first_name }} {{ $dossier->client->last_name }}',
+                                        service_type: '{{ $dossier->service_type }}',
+                                        target_country: '{{ $dossier->target_country }}',
+                                        status: '{{ $dossier->status }}',
+                                        institution: '{{ $dossier->institution }}'
+                                    })" class="btn-small" 
+                                        style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); transition: 0.3s; color: var(--text-main);">✏️</button>
                                 </div>
                             </td>
                         </tr>
@@ -61,4 +70,12 @@
     @endif
 
     @include('pages.dashboard.dossiers._modal_create', ['clients' => $clients])
+    @include('pages.dashboard.dossiers._modal_edit')
+
+    <style>
+        .status-en_cours { background: rgba(52, 152, 219, 0.1); color: #3498db; border: 1px solid rgba(52, 152, 219, 0.2); }
+        .status-valide { background: rgba(46, 204, 113, 0.1); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.2); }
+        .status-refuse { background: rgba(231, 76, 60, 0.1); color: #e74c3c; border: 1px solid rgba(231, 76, 60, 0.2); }
+        .status-cloture { background: rgba(149, 165, 166, 0.1); color: #95a5a6; border: 1px solid rgba(149, 165, 166, 0.2); }
+    </style>
 @endsection

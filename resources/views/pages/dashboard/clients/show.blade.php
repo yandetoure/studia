@@ -61,13 +61,13 @@
             <div class="premium-card">
                 <h3 style="font-size: 16px; margin-bottom: 20px; color: var(--gold);">Actions Rapides</h3>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <button class="nav-link"
+                    <button class="nav-link" onclick="alert('Fonctionnalité de modification en cours de développement')"
                         style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">Modifier les
                         infos</button>
-                    <button class="nav-link"
+                    <button class="nav-link" onclick="alert('Système de gestion documentaire en cours de développement')"
                         style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">Ajouter un
                         document</button>
-                    <button class="nav-link"
+                    <button class="nav-link" onclick="alert('Génération de devis en cours de développement')"
                         style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">Générer un
                         devis</button>
                 </div>
@@ -77,65 +77,85 @@
         <!-- Right Column: Tabs -->
         <div style="display: flex; flex-direction: column; gap: 30px;">
             <!-- Simple Tab Bar -->
-            <div style="display: flex; gap: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 0;">
-                <div
+            <div class="tab-bar" style="display: flex; gap: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 0;">
+                <div class="tab-item active" onclick="switchTab(event, 'dossiers-tab')"
                     style="color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 15px; font-weight: 600; cursor: pointer;">
                     Dossiers ({{ $client->dossiers->count() }})</div>
-                <div style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Paiements &
+                <div class="tab-item" onclick="switchTab(event, 'finances-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Paiements &
                     Factures</div>
-                <div style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Documents
+                <div class="tab-item" onclick="switchTab(event, 'docs-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Documents
                 </div>
-                <div style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Notes</div>
+                <div class="tab-item" onclick="switchTab(event, 'notes-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Notes</div>
             </div>
 
-            <div class="premium-card" style="padding: 0; overflow: hidden;">
-                <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Dossier</th>
-                                <th>Destination</th>
-                                <th>Statut</th>
-                                <th>Progression</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse($client->dossiers as $dossier)
+            <div id="dossiers-tab" class="tab-content">
+                <div class="premium-card" style="padding: 0; overflow: hidden;">
+                    <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
+                        <table>
+                            <thead>
                                 <tr>
-                                    <td>
-                                        <div style="font-weight: 600; text-transform: capitalize;">
-                                            {{ str_replace('_', ' ', $dossier->service_type) }}</div>
-                                        <div style="font-size: 12px; color: var(--text-dim);">Créé le
-                                            {{ $dossier->created_at->format('d/m/Y') }}</div>
-                                    </td>
-                                    <td style="color: var(--gold); font-weight: 500;">📍 {{ $dossier->target_country }}</td>
-                                    <td>
-                                        <span class="badge status-{{ $dossier->status }}">
-                                            {{ str_replace('_', ' ', $dossier->status) }}
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <div
-                                            style="width: 100%; background: var(--glass-strong); height: 6px; border-radius: 3px;">
+                                    <th>Dossier</th>
+                                    <th>Destination</th>
+                                    <th>Statut</th>
+                                    <th>Progression</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse($client->dossiers as $dossier)
+                                    <tr>
+                                        <td>
+                                            <div style="font-weight: 600; text-transform: capitalize;">
+                                                {{ str_replace('_', ' ', $dossier->service_type) }}</div>
+                                            <div style="font-size: 12px; color: var(--text-dim);">Créé le
+                                                {{ $dossier->created_at->format('d/m/Y') }}</div>
+                                        </td>
+                                        <td style="color: var(--gold); font-weight: 500;">📍 {{ $dossier->target_country }}</td>
+                                        <td>
+                                            <span class="badge status-{{ $dossier->status }}">
+                                                {{ str_replace('_', ' ', $dossier->status) }}
+                                            </span>
+                                        </td>
+                                        <td>
                                             <div
-                                                style="width: 40%; background: var(--gold-gradient); height: 100%; border-radius: 3px; box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);">
+                                                style="width: 100%; background: var(--glass-strong); height: 6px; border-radius: 3px;">
+                                                <div
+                                                    style="width: 40%; background: var(--gold-gradient); height: 100%; border-radius: 3px; box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <button class="btn-small"
-                                            style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); color: var(--text-main);">👁️</button>
-                                    </td>
-                                </tr>
-                            @empty
-                                <tr>
-                                    <td colspan="5" style="text-align: center; color: var(--text-dim); padding: 50px;">Aucun
-                                        dossier ouvert</td>
-                                </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('dashboard.dossiers.index') }}" class="btn-small"
+                                                style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); color: var(--text-main); text-decoration: none;">👁️</a>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="5" style="text-align: center; color: var(--text-dim); padding: 50px;">Aucun
+                                            dossier ouvert</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="finances-tab" class="tab-content" style="display: none;">
+                <div class="premium-card">
+                    <p style="color: var(--text-dim); text-align: center; padding: 40px;">Historique des paiements détaillé en cours de chargement...</p>
+                </div>
+            </div>
+
+            <div id="docs-tab" class="tab-content" style="display: none;">
+                <div class="premium-card">
+                    <p style="color: var(--text-dim); text-align: center; padding: 40px;">Système de fichiers sécurisé en attente.</p>
+                </div>
+            </div>
+
+            <div id="notes-tab" class="tab-content" style="display: none;">
+                <div class="premium-card">
+                    <p style="color: var(--text-dim); text-align: center; padding: 40px;">Journal des notes internes vide.</p>
                 </div>
             </div>
 

@@ -87,4 +87,18 @@ class DashboardController extends Controller
         $client->load(['dossiers', 'invoices.payments']);
         return view('pages.dashboard.clients.show', compact('client'));
     }
+
+    public function updateDossier(Request $request, Dossier $dossier)
+    {
+        $validated = $request->validate([
+            'service_type' => 'required|string',
+            'target_country' => 'required|string',
+            'status' => 'required|in:en_cours,valide,refuse,cloture',
+            'institution' => 'nullable|string',
+        ]);
+
+        $dossier->update($validated);
+
+        return redirect()->back()->with('success', 'Dossier mis à jour avec succès.');
+    }
 }
