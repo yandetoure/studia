@@ -359,13 +359,17 @@
                     class="nav-link {{ request()->routeIs('dashboard.dossiers.index') ? 'active' : '' }}">
                     <span>📁</span> Dossiers
                 </a>
-                <a href="{{ route('dashboard.finances.index') }}"
-                    class="nav-link {{ request()->routeIs('dashboard.finances.index') ? 'active' : '' }}">
-                    <span>💰</span> Finances
+                <a href="{{ route('dashboard.finances.invoices') }}"
+                    class="nav-link {{ request()->routeIs('dashboard.finances.invoices') ? 'active' : '' }}">
+                    <span>�</span> Factures
                 </a>
                 <a href="{{ route('dashboard.finances.devis') }}"
                     class="nav-link {{ request()->routeIs('dashboard.finances.devis') ? 'active' : '' }}">
                     <span>📜</span> Devis
+                </a>
+                <a href="{{ route('dashboard.finances.index') }}"
+                    class="nav-link {{ request()->routeIs('dashboard.finances.index') ? 'active' : '' }}">
+                    <span>💰</span> Finances
                 </a>
 
                 <div class="nav-label" style="margin-top: 30px;">Outils</div>

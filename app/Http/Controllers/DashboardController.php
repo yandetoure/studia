@@ -79,7 +79,21 @@ class DashboardController extends Controller
     public function finances()
     {
         $accounts = Account::all();
-        $invoices = Invoice::with(['client', 'payments'])->latest()->paginate(10);
+        $payments = Payment::with(['invoice.client'])->latest()->paginate(10);
+        return view('pages.dashboard.finances.index', compact('accounts', 'payments'));
+    }
+
+    public function invoices()
+    {
+        $accounts = Account::all();
+        $invoices = Invoice::with(['client', 'payments'])->where('type', 'facture')->latest()->paginate(10);
+        return view('pages.dashboard.finances.index', compact('accounts', 'invoices'));
+    }
+
+    public function devis()
+    {
+        $accounts = Account::all();
+        $invoices = Invoice::with(['client', 'payments'])->where('type', 'devis')->latest()->paginate(10);
         return view('pages.dashboard.finances.index', compact('accounts', 'invoices'));
     }
 
