@@ -4,10 +4,8 @@
             {{-- Brand Column --}}
             <div class="space-y-6">
                 <a href="{{ route('home') }}" class="flex items-center gap-2 group">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-gold-600 flex items-center justify-center text-slate-950 font-bold text-xl">
-                        S
-                    </div>
+                    <img src="{{ asset('images/logo.png') }}" alt="STUDIA Logo"
+                        class="w-10 h-10 object-contain group-hover:scale-110 transition-transform">
                     <span class="text-2xl font-bold tracking-tight text-white">STUDIA</span>
                 </a>
                 <p class="text-sm leading-relaxed">
