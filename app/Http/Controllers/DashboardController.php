@@ -18,6 +18,7 @@ class DashboardController extends Controller
             'active_dossiers' => Dossier::where('status', 'en_cours')->count(),
             'total_invoices' => Invoice::where('type', 'facture')->sum('total_amount'),
             'recent_payments' => Payment::with('invoice.client')->latest()->limit(5)->get(),
+            'recent_invoices' => Invoice::with('client')->latest()->limit(5)->get(),
         ];
 
         return view('pages.dashboard.index', compact('stats'));

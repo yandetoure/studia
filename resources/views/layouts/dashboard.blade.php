@@ -341,9 +341,12 @@
     <div class="dashboard-container">
         <aside class="sidebar">
             <a href="{{ route('home') }}" class="logo">
-                STUDIA<span>.</span>
+                <img src="{{ asset('images/logo.png') }}" alt="Logo"
+                    style="width: 32px; height: 32px; object-fit: contain;">
+                <span>STUDIA.</span>
             </a>
-            <nav>
+            <nav style="flex: 1;">
+                <div class="nav-label">Menu Principal</div>
                 <a href="{{ route('dashboard.index') }}"
                     class="nav-link {{ request()->routeIs('dashboard.index') ? 'active' : '' }}">
                     <span>📊</span> Vue d'ensemble
@@ -360,7 +363,29 @@
                     class="nav-link {{ request()->routeIs('dashboard.finances.index') ? 'active' : '' }}">
                     <span>💰</span> Finances
                 </a>
+                <a href="{{ route('dashboard.finances.devis') }}"
+                    class="nav-link {{ request()->routeIs('dashboard.finances.devis') ? 'active' : '' }}">
+                    <span>📜</span> Devis
+                </a>
+
+                <div class="nav-label" style="margin-top: 30px;">Outils</div>
+                <a href="#" class="nav-link">
+                    <span>📄</span> Documents
+                </a>
+                <a href="#" class="nav-link">
+                    <span>⚙️</span> Paramètres
+                </a>
             </nav>
+
+            <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--glass-border);">
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="nav-link"
+                        style="width: 100%; background: none; border: none; cursor: pointer; text-align: left;">
+                        <span>🚪</span> Déconnexion
+                    </button>
+                </form>
+            </div>
         </aside>
 
         <main class="main-content">
