@@ -3,10 +3,8 @@
         class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg shadow-black/5">
         {{-- Logo --}}
         <a href="{{ route('home') }}" class="flex items-center gap-2 group">
-            <div
-                class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-600 to-gold-700 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-gold-500/20 group-hover:scale-110 transition-transform">
-                S
-            </div>
+            <img src="{{ asset('images/logo.png') }}" alt="STUDIA Logo"
+                class="w-10 h-10 object-contain group-hover:scale-110 transition-transform">
             <span
                 class="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-gold-600 transition-colors">STUDIA</span>
         </a>
