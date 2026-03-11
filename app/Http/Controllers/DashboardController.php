@@ -342,4 +342,34 @@ class DashboardController extends Controller
         }
         $invoice->save();
     }
+    public function documents(Request $request)
+    {
+        $query = Document::with('dossier.client');
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where('display_name', 'like', "%{$search}%")
+                ->orWhereHas('dossier.client', function ($q) use ($search) {
+                    $q->where('first_name', 'like', "%{$search}%")
+                        ->orWhere('last_name', 'like', "%{$search}%");
+                });
+        }
+
+        if ($request->filled('category')) {
+            $query->where('category', $request->category);
+        }
+
+        $documents = $query->latest()->paginate(20)->withQueryString();
+        return view('pages.dashboard.documents', compact('documents'));
+    }
+
+    public function settings()
+    {
+        $accounts = Account::all();
+        $stats = [
+            'total_documents' => Document::count(),
+            'total_notes' => Note::count(),
+        ];
+        return view('pages.dashboard.settings', compact('accounts', 'stats'));
+    }
 }

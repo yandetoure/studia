@@ -53,4 +53,8 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'au
     Route::delete('/invoices/{invoice}', [DashboardController::class, 'destroyInvoice'])->name('finances.invoices.destroy');
     Route::post('/payments', [DashboardController::class, 'storePayment'])->name('finances.payments.store');
     Route::delete('/payments/{payment}', [DashboardController::class, 'destroyPayment'])->name('finances.payments.destroy');
+
+    // Tools
+    Route::get('/documents', [DashboardController::class, 'documents'])->name('documents');
+    Route::get('/parametres', [DashboardController::class, 'settings'])->name('settings');
 });

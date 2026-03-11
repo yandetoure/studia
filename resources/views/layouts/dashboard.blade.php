@@ -373,10 +373,10 @@
                 </a>
 
                 <div class="nav-label" style="margin-top: 30px;">Outils</div>
-                <a href="#" class="nav-link">
+                <a href="{{ route('dashboard.documents') }}" class="nav-link {{ request()->routeIs('dashboard.documents') ? 'active' : '' }}">
                     <span>📄</span> Documents
                 </a>
-                <a href="#" class="nav-link">
+                <a href="{{ route('dashboard.settings') }}" class="nav-link {{ request()->routeIs('dashboard.settings') ? 'active' : '' }}">
                     <span>⚙️</span> Paramètres
                 </a>
             </nav>
@@ -393,6 +393,28 @@
         </aside>
 
         <main class="main-content">
+            @if(session('success'))
+                <div style="background: rgba(46, 204, 113, 0.1); color: #2ecc71; padding: 15px 20px; border-radius: 12px; border: 1px solid rgba(46, 204, 113, 0.2); margin-bottom: 30px; display: flex; align-items: center; gap: 10px;">
+                    <span>✅</span> {{ session('success') }}
+                </div>
+            @endif
+
+            @if(session('error'))
+                <div style="background: rgba(231, 76, 60, 0.1); color: #e74c3c; padding: 15px 20px; border-radius: 12px; border: 1px solid rgba(231, 76, 60, 0.2); margin-bottom: 30px; display: flex; align-items: center; gap: 10px;">
+                    <span>⚠️</span> {{ session('error') }}
+                </div>
+            @endif
+
+            @if($errors->any())
+                <div style="background: rgba(231, 76, 60, 0.1); color: #e74c3c; padding: 15px 20px; border-radius: 12px; border: 1px solid rgba(231, 76, 60, 0.2); margin-bottom: 30px;">
+                    <ul style="list-style: none;">
+                        @foreach($errors->all() as $error)
+                            <li style="display: flex; align-items: center; gap: 10px;"><span>❌</span> {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             @yield('content')
         </main>
     </div>
