@@ -151,5 +151,10 @@
         </div>
     </div>
 
+    @include('pages.dashboard.finances._modal_invoice', ['clients' => \App\Models\Client::all()])
     @include('pages.dashboard.finances._modal_edit_invoice')
+    @include('pages.dashboard.finances._modal_payment', [
+        'invoices' => \App\Models\Invoice::with('client')->where('status', '!=', 'paid')->get(),
+        'accounts' => \App\Models\Account::all()
+    ])
 @endsection

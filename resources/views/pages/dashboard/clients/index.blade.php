@@ -7,6 +7,33 @@
             Client</button>
     </header>
 
+    <form action="{{ url()->current() }}" method="GET"
+        style="margin-bottom: 30px; display: flex; gap: 15px; align-items: flex-end;">
+        <div style="flex: 1;">
+            <label style="display: block; color: var(--text-dim); font-size: 13px; margin-bottom: 8px;">Recherche</label>
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="Nom, Email, N° client..."
+                style="width: 100%; background: var(--glass); border: 1px solid var(--glass-border); padding: 12px 15px; border-radius: 12px; color: var(--text-main); font-family: inherit;">
+        </div>
+
+        <div style="width: 200px;">
+            <label style="display: block; color: var(--text-dim); font-size: 13px; margin-bottom: 8px;">Statut</label>
+            <select name="status" onchange="this.form.submit()"
+                style="width: 100%; background: var(--glass); border: 1px solid var(--glass-border); padding: 12px 15px; border-radius: 12px; color: var(--text-main); font-family: inherit;">
+                <option value="">Tous les statuts</option>
+                <option value="eleve" {{ request('status') == 'eleve' ? 'selected' : '' }}>Élève</option>
+                <option value="etudiant" {{ request('status') == 'etudiant' ? 'selected' : '' }}>Étudiant</option>
+                <option value="professionnel" {{ request('status') == 'professionnel' ? 'selected' : '' }}>Professionnel
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-gold" style="padding: 12px 25px; border-radius: 12px;">🔍 Filtrer</button>
+        @if(request()->anyFilled(['search', 'status']))
+            <a href="{{ url()->current() }}" class="nav-link"
+                style="margin-bottom: 0; padding: 12px 20px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 12px; text-decoration: none; color: var(--text-dim); font-size: 13px;">Réinitialiser</a>
+        @endif
+    </form>
+
     <div class="premium-card" style="padding: 0; overflow: hidden;">
         <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
             <table>

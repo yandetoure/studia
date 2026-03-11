@@ -61,15 +61,14 @@
             <div class="premium-card">
                 <h3 style="font-size: 16px; margin-bottom: 20px; color: var(--gold);">Actions Rapides</h3>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <button class="nav-link" onclick="alert('Fonctionnalité de modification en cours de développement')"
-                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">Modifier les
-                        infos</button>
-                    <button class="nav-link" onclick="alert('Système de gestion documentaire en cours de développement')"
-                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">Ajouter un
-                        document</button>
-                    <button class="nav-link" onclick="alert('Génération de devis en cours de développement')"
-                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">Générer un
-                        devis</button>
+                    <button class="nav-link" onclick="document.getElementById('addDossierModal').style.display='flex'"
+                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">📂 Nouveau Dossier</button>
+                    <button class="nav-link" onclick="openAddInvoiceWithClient('devis', {{ $client->id }})"
+                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">📜 Générer un Devis</button>
+                    <button class="nav-link" onclick="openAddInvoiceWithClient('facture', {{ $client->id }})"
+                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">📑 Créer une Facture</button>
+                    <button class="nav-link" onclick="document.getElementById('addPaymentModal').style.display='flex'"
+                        style="width: 100%; border: 1px solid var(--glass-border); justify-content: center;">💰 Encaisser Paiement</button>
                 </div>
             </div>
         </div>
@@ -77,15 +76,15 @@
         <!-- Right Column: Tabs -->
         <div style="display: flex; flex-direction: column; gap: 30px;">
             <!-- Simple Tab Bar -->
-            <div class="tab-bar" style="display: flex; gap: 30px; border-bottom: 1px solid var(--glass-border); padding-bottom: 0;">
+            <div class="tab-bar" style="display: flex; gap: 25px; border-bottom: 1px solid var(--glass-border); padding-bottom: 0; overflow-x: auto;">
                 <div class="tab-item active" onclick="switchTab(event, 'dossiers-tab')"
-                    style="color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 15px; font-weight: 600; cursor: pointer;">
+                    style="color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 15px; font-weight: 600; cursor: pointer; white-space: nowrap;">
                     Dossiers ({{ $client->dossiers->count() }})</div>
-                <div class="tab-item" onclick="switchTab(event, 'finances-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Paiements &
-                    Factures</div>
-                <div class="tab-item" onclick="switchTab(event, 'docs-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Documents
-                </div>
-                <div class="tab-item" onclick="switchTab(event, 'notes-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer;">Notes</div>
+                <div class="tab-item" onclick="switchTab(event, 'factures-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer; white-space: nowrap;">Factures ({{ $client->invoices->where('type', 'facture')->count() }})</div>
+                <div class="tab-item" onclick="switchTab(event, 'devis-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer; white-space: nowrap;">Devis ({{ $client->invoices->where('type', 'devis')->count() }})</div>
+                <div class="tab-item" onclick="switchTab(event, 'payments-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer; white-space: nowrap;">Paiements</div>
+                <div class="tab-item" onclick="switchTab(event, 'docs-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer; white-space: nowrap;">Documents</div>
+                <div class="tab-item" onclick="switchTab(event, 'notes-tab')" style="color: var(--text-dim); padding-bottom: 15px; font-weight: 500; cursor: pointer; white-space: nowrap;">Notes</div>
             </div>
 
             <div id="dossiers-tab" class="tab-content">
@@ -141,9 +140,97 @@
                 </div>
             </div>
 
-            <div id="finances-tab" class="tab-content" style="display: none;">
-                <div class="premium-card">
-                    <p style="color: var(--text-dim); text-align: center; padding: 40px;">Historique des paiements détaillé en cours de chargement...</p>
+            <div id="factures-tab" class="tab-content" style="display: none;">
+                <div class="premium-card" style="padding: 0; overflow: hidden;">
+                    <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>N° Facture</th>
+                                    <th>Total</th>
+                                    <th>Payé</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse($client->invoices->where('type', 'facture') as $invoice)
+                                    <tr>
+                                        <td style="font-family: monospace; color: var(--gold);">{{ $invoice->invoice_number }}</td>
+                                        <td>{{ number_format($invoice->total_amount, 0, ',', ' ') }}</td>
+                                        <td style="color: #2ecc71;">{{ number_format($invoice->paid_amount, 0, ',', ' ') }}</td>
+                                        <td><span class="badge status-{{ $invoice->status }}">{{ $invoice->status }}</span></td>
+                                        <td><button onclick="openEditInvoiceModal({{ $invoice }})" class="btn-small">✏️</button></td>
+                                    </tr>
+                                @empty
+                                    <tr><td colspan="5" style="text-align: center; padding: 40px; color: var(--text-dim);">Aucune facture</td></tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="devis-tab" class="tab-content" style="display: none;">
+                <div class="premium-card" style="padding: 0; overflow: hidden;">
+                    <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>N° Devis</th>
+                                    <th>Total</th>
+                                    <th>Date Échéance</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse($client->invoices->where('type', 'devis') as $invoice)
+                                    <tr>
+                                        <td style="font-family: monospace; color: var(--gold);">{{ $invoice->invoice_number }}</td>
+                                        <td>{{ number_format($invoice->total_amount, 0, ',', ' ') }}</td>
+                                        <td>{{ $invoice->due_date }}</td>
+                                        <td><button onclick="openEditInvoiceModal({{ $invoice }})" class="btn-small">✏️</button></td>
+                                    </tr>
+                                @empty
+                                    <tr><td colspan="4" style="text-align: center; padding: 40px; color: var(--text-dim);">Aucun devis</td></tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="payments-tab" class="tab-content" style="display: none;">
+                <div class="premium-card" style="padding: 0; overflow: hidden;">
+                    <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Document</th>
+                                    <th>Montant</th>
+                                    <th>Méthode</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php $hasPayments = false; @endphp
+                                @foreach($client->invoices as $invoice)
+                                    @foreach($invoice->payments as $payment)
+                                        @php $hasPayments = true; @endphp
+                                        <tr>
+                                            <td>{{ $payment->payment_date }}</td>
+                                            <td style="color: var(--gold);">{{ $invoice->invoice_number }}</td>
+                                            <td style="font-weight: 600;">{{ number_format($payment->amount, 0, ',', ' ') }}</td>
+                                            <td>{{ $payment->method }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endforeach
+                                @if(!$hasPayments)
+                                    <tr><td colspan="4" style="text-align: center; padding: 40px; color: var(--text-dim);">Aucun paiement</td></tr>
+                                @endif
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -190,8 +277,43 @@
         </div>
     </div>
 
-    @include('pages.dashboard.dossiers._modal_create')
+    @include('pages.dashboard.dossiers._modal_create', ['clients' => \App\Models\Client::all()])
+    @include('pages.dashboard.dossiers._modal_edit')
+    @include('pages.dashboard.finances._modal_invoice', ['clients' => \App\Models\Client::all()])
+    @include('pages.dashboard.finances._modal_edit_invoice')
+    @include('pages.dashboard.finances._modal_payment', [
+        'invoices' => $client->invoices->where('status', '!=', 'paid'),
+        'accounts' => \App\Models\Account::all()
+    ])
 
+    <script>
+        function switchTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-item");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+                tablinks[i].style.color = "var(--text-dim)";
+                tablinks[i].style.borderBottom = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+            evt.currentTarget.style.color = "var(--gold)";
+            evt.currentTarget.style.borderBottom = "2px solid var(--gold)";
+        }
+
+        function openAddInvoiceWithClient(type, clientId) {
+            const modal = document.getElementById('addInvoiceModal');
+            modal.style.display = 'flex';
+            const typeSelect = modal.querySelector('select[name="type"]');
+            const clientSelect = modal.querySelector('select[name="client_id"]');
+            if (typeSelect) typeSelect.value = type;
+            if (clientSelect) clientSelect.value = clientId;
+        }
+    </script>
     <style>
         .status-en_cours {
             background: rgba(52, 152, 219, 0.1);

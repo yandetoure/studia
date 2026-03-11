@@ -24,9 +24,25 @@ class DashboardController extends Controller
         return view('pages.dashboard.index', compact('stats'));
     }
 
-    public function clients()
+    public function clients(Request $request)
     {
-        $clients = Client::latest()->paginate(10);
+        $query = Client::query();
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                    ->orWhere('last_name', 'like', "%{$search}%")
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('client_number', 'like', "%{$search}%");
+            });
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        $clients = $query->latest()->paginate(10)->withQueryString();
         return view('pages.dashboard.clients.index', compact('clients'));
     }
 
@@ -53,9 +69,27 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Client créé avec succès.');
     }
 
-    public function dossiers()
+    public function dossiers(Request $request)
     {
-        $dossiers = Dossier::with('client')->latest()->paginate(10);
+        $query = Dossier::with('client');
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->whereHas('client', function ($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                    ->orWhere('last_name', 'like', "%{$search}%");
+            });
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        if ($request->filled('service_type')) {
+            $query->where('service_type', $request->service_type);
+        }
+
+        $dossiers = $query->latest()->paginate(10)->withQueryString();
         $clients = Client::all();
         return view('pages.dashboard.dossiers.index', compact('dossiers', 'clients'));
     }
@@ -76,24 +110,74 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Dossier créé avec succès.');
     }
 
-    public function finances()
+    public function finances(Request $request)
     {
         $accounts = Account::all();
-        $payments = Payment::with(['invoice.client'])->latest()->paginate(10);
+        $query = Payment::with(['invoice.client']);
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->whereHas('invoice.client', function ($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                    ->orWhere('last_name', 'like', "%{$search}%");
+            })->orWhereHas('invoice', function ($q) use ($search) {
+                $q->where('invoice_number', 'like', "%{$search}%");
+            });
+        }
+
+        if ($request->filled('method')) {
+            $query->where('method', $request->method);
+        }
+
+        $payments = $query->latest()->paginate(10)->withQueryString();
         return view('pages.dashboard.finances.index', compact('accounts', 'payments'));
     }
 
-    public function invoices()
+    public function invoices(Request $request)
     {
         $accounts = Account::all();
-        $invoices = Invoice::with(['client', 'payments'])->where('type', 'facture')->latest()->paginate(10);
+        $query = Invoice::with(['client', 'payments'])->where('type', 'facture');
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('invoice_number', 'like', "%{$search}%")
+                    ->orWhereHas('client', function ($subQ) use ($search) {
+                        $subQ->where('first_name', 'like', "%{$search}%")
+                            ->orWhere('last_name', 'like', "%{$search}%");
+                    });
+            });
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        $invoices = $query->latest()->paginate(10)->withQueryString();
         return view('pages.dashboard.finances.index', compact('accounts', 'invoices'));
     }
 
-    public function devis()
+    public function devis(Request $request)
     {
         $accounts = Account::all();
-        $invoices = Invoice::with(['client', 'payments'])->where('type', 'devis')->latest()->paginate(10);
+        $query = Invoice::with(['client', 'payments'])->where('type', 'devis');
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('invoice_number', 'like', "%{$search}%")
+                    ->orWhereHas('client', function ($subQ) use ($search) {
+                        $subQ->where('first_name', 'like', "%{$search}%")
+                            ->orWhere('last_name', 'like', "%{$search}%");
+                    });
+            });
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        $invoices = $query->latest()->paginate(10)->withQueryString();
         return view('pages.dashboard.finances.index', compact('accounts', 'invoices'));
     }
 

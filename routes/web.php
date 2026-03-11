@@ -38,6 +38,7 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'au
 
     // Dossiers
     Route::get('/dossiers', [DashboardController::class, 'dossiers'])->name('dossiers.index');
+    Route::get('/dossiers/{dossier}', [DashboardController::class, 'showDossier'])->name('dossiers.show');
     Route::post('/dossiers', [DashboardController::class, 'storeDossier'])->name('dossiers.store');
     Route::put('/dossiers/{dossier}', [DashboardController::class, 'updateDossier'])->name('dossiers.update');
 

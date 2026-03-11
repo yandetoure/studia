@@ -31,6 +31,45 @@
     </div>
     @endif
 
+    <form action="{{ url()->current() }}" method="GET" style="margin-bottom: 30px; display: flex; gap: 15px; align-items: flex-end;">
+        <div style="flex: 1;">
+            <label style="display: block; color: var(--text-dim); font-size: 13px; margin-bottom: 8px;">Recherche</label>
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="Nom, N° document..." 
+                style="width: 100%; background: var(--glass); border: 1px solid var(--glass-border); padding: 12px 15px; border-radius: 12px; color: var(--text-main); font-family: inherit;">
+        </div>
+
+        @if(isset($invoices))
+        <div style="width: 200px;">
+            <label style="display: block; color: var(--text-dim); font-size: 13px; margin-bottom: 8px;">Statut</label>
+            <select name="status" onchange="this.form.submit()" 
+                style="width: 100%; background: var(--glass); border: 1px solid var(--glass-border); padding: 12px 15px; border-radius: 12px; color: var(--text-main); font-family: inherit;">
+                <option value="">Tous les statuts</option>
+                <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>En attente</option>
+                <option value="partial" {{ request('status') == 'partial' ? 'selected' : '' }}>Partiel</option>
+                <option value="paid" {{ request('status') == 'paid' ? 'selected' : '' }}>Payée</option>
+                <option value="cancelled" {{ request('status') == 'cancelled' ? 'selected' : '' }}>Annulée</option>
+            </select>
+        </div>
+        @else
+        <div style="width: 200px;">
+            <label style="display: block; color: var(--text-dim); font-size: 13px; margin-bottom: 8px;">Méthode</label>
+            <select name="method" onchange="this.form.submit()" 
+                style="width: 100%; background: var(--glass); border: 1px solid var(--glass-border); padding: 12px 15px; border-radius: 12px; color: var(--text-main); font-family: inherit;">
+                <option value="">Toutes les méthodes</option>
+                <option value="Espèces" {{ request('method') == 'Espèces' ? 'selected' : '' }}>Espèces</option>
+                <option value="Virement" {{ request('method') == 'Virement' ? 'selected' : '' }}>Virement</option>
+                <option value="Chèque" {{ request('method') == 'Chèque' ? 'selected' : '' }}>Chèque</option>
+                <option value="Mobile Money" {{ request('method') == 'Mobile Money' ? 'selected' : '' }}>Mobile Money</option>
+            </select>
+        </div>
+        @endif
+
+        <button type="submit" class="btn-gold" style="padding: 12px 25px; border-radius: 12px;">🔍 Filtrer</button>
+        @if(request()->anyFilled(['search', 'status', 'method']))
+            <a href="{{ url()->current() }}" class="nav-link" style="margin-bottom: 0; padding: 12px 20px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 12px; text-decoration: none; color: var(--text-dim); font-size: 13px;">Réinitialiser</a>
+        @endif
+    </form>
+
     <div class="premium-card" style="padding: 0; overflow: hidden;">
         <div
             style="padding: 30px; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center;">
