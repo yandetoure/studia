@@ -119,7 +119,8 @@
                             <div>
                                 <h4 class="font-black text-white italic tracking-tight">{{ $item['name'] }}</h4>
                                 <p class="text-[10px] uppercase font-black tracking-widest text-gold-500 italic">
-                                    {{ $item['program'] }}</p>
+                                    {{ $item['program'] }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -134,5 +135,67 @@
                     Succès</span>
             </div>
         </div>
+
+        {{-- Video Testimonials Slider (Commented out temporarily)
+        <div class="mt-32">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+                <div class="space-y-4">
+                    <h3 class="text-3xl lg:text-4xl font-black text-white italic tracking-tighter">
+                        Témoignages <span class="text-gold-500 font-serif font-light lowercase">Vidéos.</span>
+                    </h3>
+                    <p class="text-slate-400 font-medium italic text-sm">L'expérience vécue par nos étudiants en images.
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="document.getElementById('videoSlider').scrollBy({left: -400, behavior: 'smooth'})"
+                        class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-gold-600 hover:text-slate-950 transition-all">
+                        ←
+                    </button>
+                    <button onclick="document.getElementById('videoSlider').scrollBy({left: 400, behavior: 'smooth'})"
+                        class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-gold-600 hover:text-slate-950 transition-all">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <div id="videoSlider" class="flex gap-8 overflow-x-auto pb-12 snap-x no-scrollbar"
+                style="scroll-snap-type: x mandatory; -ms-overflow-style: none; scrollbar-width: none;">
+                @foreach(['v1', 'v2', 'v3', 'v4'] as $vid)
+                <div class="flex-none w-80 md:w-[400px] snap-center">
+                    <div
+                        class="relative group aspect-[9/16] rounded-[2.5rem] overflow-hidden bg-slate-800 shadow-2xl transition-transform hover:scale-[1.02]">
+                        <video class="w-full h-full object-cover" loop muted playsinline preload="metadata"
+                            onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="{{ asset('images/' . $vid . '.MOV') }}" type="video/quicktime">
+                            <source src="{{ asset('images/' . $vid . '.mp4') }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60">
+                        </div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-gold-600 flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-slate-950" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.333-5.89a1.5 1.5 0 000-2.538L6.3 2.841z" />
+                                    </svg>
+                                </div>
+                                <span class="text-white font-black italic tracking-tight uppercase text-sm">Success
+                                    Story {{ $loop->iteration }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+
+        <style>
+            #videoSlider::-webkit-scrollbar {
+                display: none;
+            }
+        </style>
+        --}}
     </div>
 </section>

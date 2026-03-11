@@ -44,5 +44,8 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'au
     // Finances
     Route::get('/finances', [DashboardController::class, 'finances'])->name('finances.index');
     Route::post('/invoices', [DashboardController::class, 'storeInvoice'])->name('finances.invoices.store');
+    Route::put('/invoices/{invoice}', [DashboardController::class, 'updateInvoice'])->name('finances.invoices.update');
+    Route::delete('/invoices/{invoice}', [DashboardController::class, 'destroyInvoice'])->name('finances.invoices.destroy');
     Route::post('/payments', [DashboardController::class, 'storePayment'])->name('finances.payments.store');
+    Route::delete('/payments/{payment}', [DashboardController::class, 'destroyPayment'])->name('finances.payments.destroy');
 });

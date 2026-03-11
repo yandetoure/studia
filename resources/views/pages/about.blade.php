@@ -48,7 +48,7 @@
                         class="absolute -inset-4 border-2 border-slate-100 rounded-[3rem] -rotate-3 group-hover:rotate-0 transition-transform">
                     </div>
                     <div class="relative bg-slate-900 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
-                        <img src="{{ asset('images/advisor.png') }}" alt="Mamadou Diaw" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/pdg3.jpg') }}" alt="Mamadou Diaw" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -182,6 +182,9 @@
             </div>
         </div>
     </section>
+
+    {{-- Testimonials --}}
+    <x-home.testimonials />
 
     {{-- Call to Action / Engagement --}}
     <section class="py-24 bg-slate-900 text-white">
