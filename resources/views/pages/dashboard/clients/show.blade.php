@@ -124,7 +124,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="{{ route('dashboard.dossiers.index') }}" class="btn-small"
+                                            <a href="{{ route('dashboard.dossiers.show', $dossier->id) }}" class="btn-small"
                                                 style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); color: var(--text-main); text-decoration: none;">👁️</a>
                                         </td>
                                     </tr>

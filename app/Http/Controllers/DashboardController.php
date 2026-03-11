@@ -7,6 +7,8 @@ use App\Models\Dossier;
 use App\Models\Invoice;
 use App\Models\Payment;
 use App\Models\Account;
+use App\Models\Document;
+use App\Models\Note;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -185,6 +187,45 @@ class DashboardController extends Controller
     {
         $client->load(['dossiers', 'invoices.payments']);
         return view('pages.dashboard.clients.show', compact('client'));
+    }
+
+    public function showDossier(Dossier $dossier)
+    {
+        $dossier->load(['client', 'invoices.payments', 'documents', 'notes.user']);
+        return view('pages.dashboard.dossiers.show', compact('dossier'));
+    }
+
+    public function storeDocument(Request $request, Dossier $dossier)
+    {
+        $request->validate([
+            'display_name' => 'required|string|max:255',
+            'category' => 'required|string',
+            'file' => 'required|file|max:10240', // 10MB limit
+        ]);
+
+        $path = $request->file('file')->store('dossiers/' . $dossier->id, 'public');
+
+        $dossier->documents()->create([
+            'display_name' => $request->display_name,
+            'category' => $request->category,
+            'file_path' => $path,
+        ]);
+
+        return redirect()->back()->with('success', 'Document ajouté avec succès.');
+    }
+
+    public function storeNote(Request $request, Dossier $dossier)
+    {
+        $request->validate([
+            'content' => 'required|string',
+        ]);
+
+        $dossier->notes()->create([
+            'content' => $request->content,
+            'user_id' => auth()->id() ?? 1,
+        ]);
+
+        return redirect()->back()->with('success', 'Note ajoutée avec succès.');
     }
 
     public function updateDossier(Request $request, Dossier $dossier)

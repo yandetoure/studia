@@ -41,4 +41,9 @@ class Dossier extends Model
     {
         return $this->hasMany(Note::class);
     }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
 }
