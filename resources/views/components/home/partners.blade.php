@@ -28,21 +28,15 @@
             <div class="flex animate-marquee-slow gap-8 py-4 px-4 whitespace-nowrap group-hover:pause">
                 @php
                     $logos = [
-                        'LPU.png',
                         'Media school.png',
-                        'UH.png',
                         'abs.png',
-                        'boreal.png',
                         'britts.png',
                         'cdp.png',
-                        'cesi.png',
                         'eaa.jpeg',
-                        'eklore.png',
                         'em lyon.png',
                         'excelia.png',
                         'galileo 2.jpeg',
                         'galileo.png',
-                        'gsc.png',
                         'i2l.png',
                         'ifh.png',
                         'igensia groupe.png',
