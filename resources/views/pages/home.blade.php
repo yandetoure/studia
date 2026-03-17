@@ -106,7 +106,7 @@
                 {{-- Visual Composition --}}
                 <div class="relative order-2 lg:order-1">
                     <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl scale-105 transform translate-y-6">
-                        <img src="{{ asset('images/advisor.png') }}" alt="Expertise STUDIA"
+                        <img src="{{ asset('images/pdg.jpg') }}" alt="Expertise STUDIA"
                             class="w-full h-full object-cover">
                     </div>
                     <div

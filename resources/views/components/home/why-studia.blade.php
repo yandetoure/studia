@@ -86,7 +86,7 @@
                     <div class="pt-8">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full border-2 border-gold-600 overflow-hidden">
-                                <img src="{{ asset('images/advisor.png') }}" class="w-full h-full object-cover">
+                                <img src="{{ asset('images/pdg3.jpg') }}" class="w-full h-full object-cover">
                             </div>
                             <div>
                                 <p class="font-black italic text-lg">Mamadou Diaw</p>
