@@ -34,7 +34,7 @@
                         'name' => 'Oumou DIALLO',
                         'program' => 'Sciences Politiques – HEIP',
                         'text' => 'Grâce à STUDIA, j’ai bénéficié d’une orientation stratégique. L’équipe m’a accompagnée à chaque étape. Aujourd’hui, à HEIP, je suis convaincue que sans cet accompagnement, je n’aurais pas fait les bons choix.',
-                        'img' => 'https://i.pravatar.cc/150?u=oumou',
+                        'img' => asset('images/temoignages/Oumou Diallo.jpg'),
                         'rating' => 5,
                         'className' => 'bg-white/5'
                     ],
@@ -58,7 +58,7 @@
                         'name' => 'Drissa SOW',
                         'program' => 'Dev. Commercial – Ascencia',
                         'text' => 'Une approche très structurée sur mon dossier. Leurs conseils m’ont permis d’aborder les démarches avec sérénité.',
-                        'img' => 'https://i.pravatar.cc/150?u=drissa',
+                        'img' => asset('images/temoignages/Drissa Sow.png'),
                         'rating' => 5,
                         'className' => 'bg-white/5'
                     ],
@@ -66,7 +66,7 @@
                         'name' => 'Noufra Médine',
                         'program' => 'Grande École – ISTEC',
                         'text' => 'Accompagnement de très haut niveau. Ils m’ont aidée à me présenter de manière convaincante.',
-                        'img' => 'https://i.pravatar.cc/150?u=noufra',
+                        'img' => asset('images/temoignages/Noufra.png'),
                         'rating' => 5,
                         'className' => 'bg-gold-600/10 border-gold-600/20'
                     ],
@@ -74,7 +74,7 @@
                         'name' => 'Ulrich DOFFOU',
                         'program' => 'Lettres – Jean Monnet',
                         'text' => 'Ils ont su comprendre mon profil spécifique et m’orienter vers une formation cohérente.',
-                        'img' => 'https://i.pravatar.cc/150?u=ulrich',
+                        'img' => asset('images/temoignages/Ulrich Dofou.jpg'),
                         'rating' => 5,
                         'className' => 'bg-white/5'
                     ]
