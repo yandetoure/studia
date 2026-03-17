@@ -65,7 +65,7 @@
                     <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Taux de réussite</p>
                 </div>
                 <div>
-                    <p class="text-5xl font-black text-gold-500 mb-2">+100</p>
+                    <p class="text-5xl font-black text-gold-500 mb-2">+2000</p>
                     <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Dossiers / an</p>
                 </div>
                 <div>
