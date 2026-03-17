@@ -5,11 +5,24 @@
 @section('content')
     {{-- Premium Hero Section with Photo Overlay & Gold Theme --}}
     <section class="relative min-h-screen flex items-center overflow-hidden bg-slate-950">
-        {{-- Hero Background with Advanced Overlay --}}
-        <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/hero_gold.png') }}" alt="STUDIA Premium" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
-            <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950 to-transparent"></div>
+        {{-- Hero Background with Advanced Overlay & Carousel --}}
+        <div class="absolute inset-0 z-0 bg-slate-950 overflow-hidden" id="hero-carousel">
+            @php
+                $heroImages = [
+                    'images/hero_gold.png',
+                    'images/campus.png',
+                    'images/IMG_2612.JPG'
+                ];
+            @endphp
+            
+            @foreach($heroImages as $index => $img)
+                <img src="{{ asset($img) }}" alt="STUDIA Premium" 
+                    class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out {{ $index === 0 ? 'opacity-100' : 'opacity-0' }}"
+                    style="transition-duration: 2000ms;">
+            @endforeach
+
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950 to-transparent z-10 pointer-events-none"></div>
         </div>
 
         <div
@@ -256,5 +269,25 @@
             </div>
         </div>
     </section>
-
+    @push('scripts')
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.hero-slide');
+                if(slides.length > 1) {
+                    let currentSlide = 0;
+                    const slideInterval = 5000; // Change image every 5 seconds
+                    
+                    setInterval(() => {
+                        slides[currentSlide].classList.remove('opacity-100');
+                        slides[currentSlide].classList.add('opacity-0');
+                        
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        
+                        slides[currentSlide].classList.remove('opacity-0');
+                        slides[currentSlide].classList.add('opacity-100');
+                    }, slideInterval);
+                }
+            });
+        </script>
+    @endpush
 @endsection
