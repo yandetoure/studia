@@ -38,8 +38,7 @@
                             pays, constitution de dossiers d’admission, accompagnement aux procédures de visa, et
                             préparation à l’installation à l’étranger.</p>
                         <p>Son expérience couvre plusieurs destinations majeures telles que la <span
-                                class="text-slate-900 font-bold">France, le Canada, la Turquie, l’Inde, les États-Unis, le
-                                Maroc, la Tunisie, la Belgique, l’Espagne, le Royaume-Uni</span> et d’autres pays
+                                class="text-slate-900 font-bold">France, la Belgique, l'Espagne, Malte, l'Angleterre, la Suisse, l'Allemagne, la Turquie, Dubaï, l'Inde, le Maroc, la Tunisie, l'Égypte et le Sénégal</span> et d’autres pays
                             stratégiques pour la mobilité académique africaine.</p>
                     </div>
                 </div>

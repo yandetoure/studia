@@ -124,7 +124,7 @@
                             <div class="space-y-2">
                                 <label
                                     class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Destination</label>
-                                <input type="text" placeholder="Ex: France, Canada..."
+                                <input type="text" placeholder="Ex: France, Belgique..."
                                     class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
                             </div>
                         </div>

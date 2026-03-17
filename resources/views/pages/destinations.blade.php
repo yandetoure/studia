@@ -22,10 +22,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 @php
                     $destInfo = [
-                        ['name' => 'Europe', 'countries' => 'France, Belgique, Espagne, Malte, Angleterre, Royaume-Uni'],
-                        ['name' => 'Amérique du Nord', 'countries' => 'Canada, États-Unis'],
-                        ['name' => 'Afrique & Maghreb', 'countries' => 'Maroc, Tunisie, Égypte, Sénégal'],
-                        ['name' => 'Asie & Moyen-Orient', 'countries' => 'Turquie, Inde, Dubaï']
+                        ['name' => 'Europe', 'countries' => 'France, Belgique, Espagne, Malte, Angleterre, Suisse, Allemagne'],
+                        ['name' => 'Asie & Moyen-Orient', 'countries' => 'Turquie, Inde, Dubaï'],
+                        ['name' => 'Afrique & Maghreb', 'countries' => 'Maroc, Tunisie, Égypte, Sénégal']
                     ];
                 @endphp
                 @foreach($destInfo as $region)

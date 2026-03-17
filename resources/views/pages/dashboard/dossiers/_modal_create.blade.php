@@ -36,17 +36,23 @@
                         <option value="logement">Recherche Logement</option>
                     </select>
                 </div>
-                <div>
                     <label>Pays de Destination</label>
                     <select name="target_country" required>
                         <option value="">-- Choisir un pays --</option>
                         <option value="France">France</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Sénégal">Sénégal</option>
-                        <option value="Maroc">Maroc</option>
                         <option value="Belgique">Belgique</option>
+                        <option value="Espagne">Espagne</option>
+                        <option value="Malte">Malte</option>
+                        <option value="Angleterre">Angleterre</option>
                         <option value="Suisse">Suisse</option>
-                        <option value="USA">USA</option>
+                        <option value="Allemagne">Allemagne</option>
+                        <option value="Turquie">Turquie</option>
+                        <option value="Dubaï">Dubaï</option>
+                        <option value="Inde">Inde</option>
+                        <option value="Maroc">Maroc</option>
+                        <option value="Tunisie">Tunisie</option>
+                        <option value="Égypte">Égypte</option>
+                        <option value="Sénégal">Sénégal</option>
                         <option value="Autre">Autre</option>
                     </select>
                 </div>

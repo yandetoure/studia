@@ -23,18 +23,20 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 @php
                     $destinations = [
-                        ['name' => 'France', 'desc' => 'Innovation & Culture', 'flag' => '🇫🇷'],
-                        ['name' => 'Canada', 'desc' => 'Opportunités & Nature', 'flag' => '🇨🇦'],
-                        ['name' => 'USA', 'desc' => 'Excellence Universitaire', 'flag' => '🇺🇸'],
-                        ['name' => 'Angleterre', 'desc' => 'Prestige Académique', 'flag' => '🇬🇧'],
+                        ['name' => 'France', 'desc' => 'Prestige & Culture', 'flag' => '🇫🇷'],
                         ['name' => 'Belgique', 'desc' => 'Cœur de l’Europe', 'flag' => '🇧🇪'],
-                        ['name' => 'Espagne', 'desc' => 'Dynamisme & Soleil', 'flag' => '🇪🇸'],
+                        ['name' => 'Espagne', 'desc' => 'Soleil & Excellence', 'flag' => '🇪🇸'],
                         ['name' => 'Malte', 'desc' => 'Immersion Anglophone', 'flag' => '🇲🇹'],
-                        ['name' => 'Turquie', 'desc' => 'Pont entre deux mondes', 'flag' => '🇹🇷'],
-                        ['name' => 'Maroc', 'desc' => 'Écoles de Commerce', 'flag' => '🇲🇦'],
-                        ['name' => 'Tunisie', 'desc' => 'Ingénierie & Santé', 'flag' => '🇹🇳'],
-                        ['name' => 'Sénégal', 'desc' => 'Hub Éducatif Afrique', 'flag' => '🇸🇳'],
-                        ['name' => 'Dubaï', 'desc' => 'Luxe & Business', 'flag' => '🇦🇪'],
+                        ['name' => 'Angleterre', 'desc' => 'Héritage & Prestige', 'flag' => '🇬🇧'],
+                        ['name' => 'Suisse', 'label' => 'Qualité & Précision', 'flag' => '🇨🇭'],
+                        ['name' => 'Allemagne', 'desc' => 'Ingénierie & Rigueur', 'flag' => '🇩🇪'],
+                        ['name' => 'Turquie', 'desc' => 'Passerelle & Modernité', 'flag' => '🇹🇷'],
+                        ['name' => 'Dubaï', 'desc' => 'Luxe & Opportunités', 'flag' => '🇦🇪'],
+                        ['name' => 'Inde', 'desc' => 'Innovation & Savoir', 'flag' => '🇮🇳'],
+                        ['name' => 'Maroc', 'desc' => 'Hub Continental', 'flag' => '🇲🇦'],
+                        ['name' => 'Tunisie', 'desc' => 'Sciences & Ingénierie', 'flag' => '🇹🇳'],
+                        ['name' => 'Égypte', 'desc' => 'Histoire & Avenir', 'flag' => '🇪🇬'],
+                        ['name' => 'Sénégal', 'desc' => 'Leadership Africain', 'flag' => '🇸🇳'],
                     ];
                 @endphp
                 @foreach($destinations as $dest)

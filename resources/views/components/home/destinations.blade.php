@@ -28,12 +28,19 @@
             @php
                 $destinations = [
                     ['name' => 'France', 'label' => 'Prestige & Culture', 'flag' => '🇫🇷'],
-                    ['name' => 'Canada', 'label' => 'Avenir & Opportunités', 'flag' => '🇨🇦'],
-                    ['name' => 'USA', 'label' => 'Innovation & Impact', 'flag' => '🇺🇸'],
-                    ['name' => 'Angleterre', 'label' => 'Héritage & Excellence', 'flag' => '🇬🇧'],
                     ['name' => 'Belgique', 'label' => 'Cœur de l’Europe', 'flag' => '🇧🇪'],
-                    ['name' => 'Maroc', 'label' => 'Hub Continental', 'flag' => '🇲🇦'],
+                    ['name' => 'Espagne', 'label' => 'Soleil & Excellence', 'flag' => '🇪🇸'],
+                    ['name' => 'Malte', 'label' => 'Immersion Anglophone', 'flag' => '🇲🇹'],
+                    ['name' => 'Angleterre', 'label' => 'Héritage & Prestige', 'flag' => '🇬🇧'],
+                    ['name' => 'Suisse', 'label' => 'Qualité & Précision', 'flag' => '🇨🇭'],
+                    ['name' => 'Allemagne', 'label' => 'Ingénierie & Rigueur', 'flag' => '🇩🇪'],
                     ['name' => 'Turquie', 'label' => 'Passerelle & Modernité', 'flag' => '🇹🇷'],
+                    ['name' => 'Dubaï', 'label' => 'Luxe & Opportunités', 'flag' => '🇦🇪'],
+                    ['name' => 'Inde', 'label' => 'Innovation & Savoir', 'flag' => '🇮🇳'],
+                    ['name' => 'Maroc', 'label' => 'Hub Continental', 'flag' => '🇲🇦'],
+                    ['name' => 'Tunisie', 'label' => 'Sciences & Ingénierie', 'flag' => '🇹🇳'],
+                    ['name' => 'Égypte', 'label' => 'Histoire & Avenir', 'flag' => '🇪🇬'],
+                    ['name' => 'Sénégal', 'label' => 'Leadership Africain', 'flag' => '🇸🇳'],
                 ];
             @endphp
             @foreach(array_merge($destinations, $destinations) as $dest)
