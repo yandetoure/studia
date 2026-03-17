@@ -60,7 +60,7 @@
                     <div
                         class="flex items-center justify-center px-12 py-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm transition-all hover:border-gold-500/30 hover:shadow-2xl hover:shadow-gold-500/10 group/logo min-w-[280px] h-32">
                         <img src="{{ asset('images/Logos écoles partenaires/' . $logo) }}" alt="Partner Logo"
-                            class="h-16 w-auto object-contain grayscale group-hover/logo:grayscale-0 transition-all duration-500">
+                            class="h-16 w-auto object-contain transition-all duration-500">
                     </div>
                 @endforeach
             </div>
@@ -73,7 +73,7 @@
                     <div
                         class="flex items-center justify-center px-12 py-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm transition-all hover:border-gold-500/30 hover:shadow-2xl hover:shadow-gold-500/10 group/logo min-w-[280px] h-32">
                         <img src="{{ asset('images/Logos écoles partenaires/' . $logo) }}" alt="Partner Logo"
-                            class="h-16 w-auto object-contain grayscale group-hover/logo:grayscale-0 transition-all duration-500">
+                            class="h-16 w-auto object-contain transition-all duration-500">
                     </div>
                 @endforeach
             </div>
