@@ -12,7 +12,7 @@
                         Globale</span>
                 </div>
                 <h2 class="text-5xl lg:text-[7rem] font-black text-white leading-[0.85] tracking-tighter italic">
-                    Un Nouveau <br> <span class="text-gold-500 font-serif font-light lowercase">Campus.</span>
+                    Nos <br> <span class="text-gold-500 font-serif font-light lowercase">Destinations.</span>
                 </h2>
             </div>
             <p
