@@ -42,7 +42,7 @@
                         'name' => 'Aminata SORE',
                         'program' => 'Licence AES – Poitiers',
                         'text' => 'STUDIA m’a aidée à structurer mon projet universitaire. Accompagnement sérieux et équipe toujours disponible.',
-                        'img' => 'https://i.pravatar.cc/150?u=aminata',
+                        'img' => 'https://ui-avatars.com/api/?name=Aminata+SORE&background=D4AF37&color=fff&size=200&font-size=0.4&bold=true',
                         'rating' => 5,
                         'className' => 'bg-gold-600/10 border-gold-600/20'
                     ],
@@ -50,7 +50,7 @@
                         'name' => 'Yannis ADINGRA',
                         'program' => 'Bachelor Business – Excelia',
                         'text' => 'Leur professionnalisme et leur maîtrise des procédures m’ont beaucoup rassuré. Je recommande STUDIA à tous.',
-                        'img' => 'https://i.pravatar.cc/150?u=yannis',
+                        'img' => 'https://ui-avatars.com/api/?name=Yannis+ADINGRA&background=0F172A&color=D4AF37&size=200&font-size=0.4&bold=true',
                         'rating' => 5,
                         'className' => 'bg-white/5'
                     ],
