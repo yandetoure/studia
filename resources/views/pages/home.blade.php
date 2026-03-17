@@ -18,9 +18,9 @@
             <div class="lg:col-span-7 space-y-10 py-20">
                 <div class="space-y-6">
 
-                    <h1 class="text-7xl lg:text-[7.5rem] font-black text-white leading-[0.9] tracking-[-0.04em]">
-                        Ouvrir le <br>
-                        <span class="text-gold-500 italic font-serif font-light lowercase">Monde.</span>
+                    <h1 class="text-7xl lg:text-[6.5rem] font-black text-white leading-[0.9] tracking-[-0.04em]">
+                        Ouvrir le Monde, <br>
+                        Guider l'<span class="text-gold-500 italic font-serif font-light lowercase">Avenir.</span>
                     </h1>
 
                     <p class="text-xl lg:text-2xl text-slate-300 max-w-xl leading-relaxed font-light">
