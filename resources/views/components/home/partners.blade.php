@@ -31,7 +31,7 @@
                         'EM Strasbourg.png',
                         'EU Business School (1).png',
                         'LPU.png',
-                        'Media School.png',
+                        'Media School 1.png',
                         'Safe House.png',
                         'UH.png',
                         'abs.png',
