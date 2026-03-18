@@ -31,8 +31,10 @@
         <div
             style="padding: 30px; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center;">
             <h2 style="font-size: 20px; font-weight: 600;">Paiements Récents</h2>
+            @hasanyrole('admin|compta')
             <a href="{{ route('dashboard.finances.index') }}"
                 style="color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 500;">Voir tout →</a>
+            @endhasanyrole
         </div>
         <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
             <table>
@@ -83,12 +85,16 @@
             style="padding: 30px; border-bottom: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center;">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <h2 style="font-size: 20px; font-weight: 600;">Factures & Devis Récents</h2>
+                @hasanyrole('admin|compta')
                 <button onclick="document.getElementById('addInvoiceModal').style.display='flex'" class="btn-gold" style="padding: 5px 15px; font-size: 12px; height: auto;">
                     + Nouveau
                 </button>
+                @endhasanyrole
             </div>
+            @hasanyrole('admin|compta')
             <a href="{{ route('dashboard.finances.index') }}"
                 style="color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 500;">Voir tout →</a>
+            @endhasanyrole
         </div>
         <div class="table-container" style="margin-top: 0; border: none; border-radius: 0;">
             <table>
@@ -120,6 +126,8 @@
                             <td style="font-weight: 600;">{{ number_format($invoice->total_amount, 0, ',', ' ') }} FCFA</td>
                             <td>
                                 <div style="display: flex; gap: 8px;">
+                                    @hasanyrole('admin|compta')
+                                    <a href="{{ route('dashboard.finances.invoices.pdf', $invoice->id) }}" class="btn-small" style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); color: #d4af37; text-decoration: none;" title="Télécharger PDF">⬇️</a>
                                     <button onclick="openEditInvoiceModal({
                                                         id: {{ $invoice->id }},
                                                         invoice_number: '{{ $invoice->invoice_number }}',
@@ -137,6 +145,9 @@
                                         <button type="submit" class="btn-small"
                                             style="background: rgba(231, 76, 60, 0.1); padding: 8px; border-radius: 8px; border: 1px solid rgba(231, 76, 60, 0.2); color: #e74c3c;">🗑️</button>
                                     </form>
+                                    @else
+                                    <span style="color: var(--text-dim); font-size: 13px;">Non autorisé</span>
+                                    @endhasanyrole
                                 </div>
                             </td>
                         </tr>

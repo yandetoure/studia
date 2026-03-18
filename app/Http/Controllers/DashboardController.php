@@ -135,6 +135,47 @@ class DashboardController extends Controller
         return view('pages.dashboard.finances.index', compact('accounts', 'payments'));
     }
 
+    public function exportFinances(Request $request)
+    {
+        $payments = Payment::with(['invoice.client', 'account'])->latest()->get();
+
+        $headers = [
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=export-finances-studia-" . date('Y-m-d') . ".csv",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        ];
+
+        $columns = ['ID', 'Date', 'Client', 'Facture', 'Montant (FCFA)', 'Methode', 'Compte', 'Reference'];
+
+        $callback = function() use($payments, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns, ';'); // Use semicolon for European Excel support
+
+            foreach ($payments as $payment) {
+                $clientName = $payment->invoice && $payment->invoice->client 
+                    ? $payment->invoice->client->first_name . ' ' . $payment->invoice->client->last_name 
+                    : 'N/A';
+                
+                $row = [
+                    $payment->id,
+                    \Carbon\Carbon::parse($payment->payment_date)->format('Y-m-d'),
+                    $clientName,
+                    $payment->invoice ? $payment->invoice->invoice_number : 'N/A',
+                    $payment->amount,
+                    $payment->method,
+                    $payment->account ? $payment->account->name : 'N/A',
+                    $payment->reference ?? ''
+                ];
+                fputcsv($file, $row, ';');
+            }
+            fclose($file);
+        };
+
+        return response()->stream($callback, 200, $headers);
+    }
+
     public function invoices(Request $request)
     {
         $accounts = Account::all();
@@ -278,6 +319,15 @@ class DashboardController extends Controller
     {
         $invoice->delete();
         return redirect()->back()->with('success', 'Facture supprimée avec succès.');
+    }
+
+    public function downloadInvoicePdf(Invoice $invoice)
+    {
+        $invoice->load(['client', 'dossier', 'payments']);
+        
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pages.dashboard.finances.pdf_invoice', compact('invoice'));
+        
+        return $pdf->download($invoice->invoice_number . '.pdf');
     }
 
     public function storePayment(Request $request)

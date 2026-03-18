@@ -359,9 +359,10 @@
                     class="nav-link {{ request()->routeIs('dashboard.dossiers.index') ? 'active' : '' }}">
                     <span>📁</span> Dossiers
                 </a>
+                @hasanyrole('admin|compta')
                 <a href="{{ route('dashboard.finances.invoices') }}"
                     class="nav-link {{ request()->routeIs('dashboard.finances.invoices') ? 'active' : '' }}">
-                    <span>�</span> Factures
+                    <span></span> Factures
                 </a>
                 <a href="{{ route('dashboard.finances.devis') }}"
                     class="nav-link {{ request()->routeIs('dashboard.finances.devis') ? 'active' : '' }}">
@@ -371,8 +372,14 @@
                     class="nav-link {{ request()->routeIs('dashboard.finances.index') ? 'active' : '' }}">
                     <span>💰</span> Finances
                 </a>
+                @endhasanyrole
 
                 <div class="nav-label" style="margin-top: 30px;">Outils</div>
+                @if(auth()->check() && auth()->user()->hasRole('admin'))
+                    <a href="{{ route('dashboard.users.index') }}" class="nav-link {{ request()->routeIs('dashboard.users.*') ? 'active' : '' }}">
+                        <span>🧑‍💻</span> Collaborateurs
+                    </a>
+                @endif
                 <a href="{{ route('dashboard.documents') }}" class="nav-link {{ request()->routeIs('dashboard.documents') ? 'active' : '' }}">
                     <span>📄</span> Documents
                 </a>

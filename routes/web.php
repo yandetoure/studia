@@ -44,17 +44,29 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'au
     Route::post('/dossiers/{dossier}/documents', [DashboardController::class, 'storeDocument'])->name('dossiers.documents.store');
     Route::post('/dossiers/{dossier}/notes', [DashboardController::class, 'storeNote'])->name('dossiers.notes.store');
 
-    // Finances
-    Route::get('/finances', [DashboardController::class, 'finances'])->name('finances.index');
-    Route::get('/factures', [DashboardController::class, 'invoices'])->name('finances.invoices');
-    Route::get('/devis', [DashboardController::class, 'devis'])->name('finances.devis');
-    Route::post('/invoices', [DashboardController::class, 'storeInvoice'])->name('finances.invoices.store');
-    Route::put('/invoices/{invoice}', [DashboardController::class, 'updateInvoice'])->name('finances.invoices.update');
-    Route::delete('/invoices/{invoice}', [DashboardController::class, 'destroyInvoice'])->name('finances.invoices.destroy');
-    Route::post('/payments', [DashboardController::class, 'storePayment'])->name('finances.payments.store');
-    Route::delete('/payments/{payment}', [DashboardController::class, 'destroyPayment'])->name('finances.payments.destroy');
+    // Finances (Admin & Compta)
+    Route::group(['middleware' => ['role:admin|compta']], function () {
+        Route::get('/finances', [DashboardController::class, 'finances'])->name('finances.index');
+        Route::get('/finances/export', [DashboardController::class, 'exportFinances'])->name('finances.export');
+        Route::get('/factures', [DashboardController::class, 'invoices'])->name('finances.invoices');
+        Route::get('/devis', [DashboardController::class, 'devis'])->name('finances.devis');
+        Route::post('/invoices', [DashboardController::class, 'storeInvoice'])->name('finances.invoices.store');
+        Route::put('/invoices/{invoice}', [DashboardController::class, 'updateInvoice'])->name('finances.invoices.update');
+        Route::delete('/invoices/{invoice}', [DashboardController::class, 'destroyInvoice'])->name('finances.invoices.destroy');
+        Route::get('/invoices/{invoice}/pdf', [DashboardController::class, 'downloadInvoicePdf'])->name('finances.invoices.pdf');
+        Route::post('/payments', [DashboardController::class, 'storePayment'])->name('finances.payments.store');
+        Route::delete('/payments/{payment}', [DashboardController::class, 'destroyPayment'])->name('finances.payments.destroy');
+    });
 
     // Tools
     Route::get('/documents', [DashboardController::class, 'documents'])->name('documents');
     Route::get('/parametres', [DashboardController::class, 'settings'])->name('settings');
+
+    // Users (Admin Only)
+    Route::group(['middleware' => ['role:admin']], function () {
+        Route::get('/utilisateurs', [\App\Http\Controllers\Dashboard\UserController::class, 'index'])->name('users.index');
+        Route::post('/utilisateurs', [\App\Http\Controllers\Dashboard\UserController::class, 'store'])->name('users.store');
+        Route::put('/utilisateurs/{user}', [\App\Http\Controllers\Dashboard\UserController::class, 'update'])->name('users.update');
+        Route::delete('/utilisateurs/{user}', [\App\Http\Controllers\Dashboard\UserController::class, 'destroy'])->name('users.destroy');
+    });
 });

@@ -9,11 +9,20 @@
             @endif
         </h1>
         <div style="display: flex; gap: 15px;">
+            @if(request()->routeIs('dashboard.finances.index'))
+                @hasanyrole('admin|compta')
+                <a href="{{ route('dashboard.finances.export') }}" class="btn-gold" style="background: var(--glass); color: var(--text-main); text-decoration: none; border: 1px solid var(--glass-border);">
+                    📊 Exporter CSV
+                </a>
+                @endhasanyrole
+            @endif
+            @hasanyrole('admin|compta')
             <button class="nav-link"
                 style="margin-bottom: 0; background: var(--glass); border: 1px solid var(--glass-border);"
                 onclick="document.getElementById('addInvoiceModal').style.display='flex'">+ Nouveau Devis/Facture</button>
             <button class="btn-gold" onclick="document.getElementById('addPaymentModal').style.display='flex'">💰
                 Enregistrer un Paiement</button>
+            @endhasanyrole
         </div>
     </header>
 
@@ -128,6 +137,8 @@
                                 </td>
                                 <td>
                                     <div style="display: flex; gap: 8px;">
+                                        @hasanyrole('admin|compta')
+                                        <a href="{{ route('dashboard.finances.invoices.pdf', $invoice->id) }}" class="btn-small" style="background: var(--glass); padding: 8px; border-radius: 8px; border: 1px solid var(--glass-border); color: #d4af37; text-decoration: none;" title="Télécharger PDF">⬇️</a>
                                         <button onclick="openEditInvoiceModal({
                                             id: {{ $invoice->id }},
                                             invoice_number: '{{ $invoice->invoice_number }}',
@@ -140,6 +151,9 @@
                                             @csrf @method('DELETE')
                                             <button type="submit" class="btn-small" style="background: rgba(231, 76, 60, 0.1); padding: 8px; border-radius: 8px; border: 1px solid rgba(231, 76, 60, 0.2); color: #e74c3c;">🗑️</button>
                                         </form>
+                                        @else
+                                        <span style="color: var(--text-dim); font-size: 13px;">Non autorisé</span>
+                                        @endhasanyrole
                                     </div>
                                 </td>
                             </tr>
