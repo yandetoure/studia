@@ -28,13 +28,18 @@
             <div class="flex animate-marquee-slow gap-8 py-4 px-4 whitespace-nowrap group-hover:pause">
                 @php
                     $logos = [
+                        'EM Strasbourg.png',
                         'EU Business School (1).png',
+                        'LPU.png',
                         'Media School.png',
                         'Safe House.png',
+                        'UH.png',
                         'abs.png',
+                        'boreal.png',
                         'britts.png',
                         'cdp.png',
                         'eaa.jpeg',
+                        'eklore.png',
                         'em lyon.png',
                         'excelia.png',
                         'galileo.png',
@@ -48,8 +53,8 @@
                         'skema.png',
                         'studely.png'
                     ];
-                    $row1 = array_slice($logos, 0, 10);
-                    $row2 = array_slice($logos, 10);
+                    $row1 = array_slice($logos, 0, 12);
+                    $row2 = array_slice($logos, 12);
                 @endphp
                 @foreach(array_merge($row1, $row1) as $logo)
                     <div
