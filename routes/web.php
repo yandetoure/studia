@@ -17,7 +17,7 @@ Route::get('/logement-et-integration', [PageController::class, 'housing'])->name
 Route::get('/billets-davion', [PageController::class, 'flight'])->name('services.flight');
 
 Route::get('/consulting-accompagnement-professionnel', [PageController::class, 'consulting'])->name('services.consulting');
-Route::get('/destinations', [PageController::class, 'destinations'])->name('destinations');
+Route::get('/destinations/{slug}', [PageController::class, 'showDestination'])->name('destinations.show');
 Route::get('/pourquoi-choisir-studia', [PageController::class, 'whyStudia'])->name('why-studia');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');

@@ -27,24 +27,25 @@
         <div class="flex animate-marquee-premium gap-12 py-10 whitespace-nowrap">
             @php
                 $destinations = [
-                    ['name' => 'France', 'label' => 'Prestige & Culture', 'flag' => '🇫🇷'],
-                    ['name' => 'Belgique', 'label' => 'Cœur de l’Europe', 'flag' => '🇧🇪'],
-                    ['name' => 'Espagne', 'label' => 'Soleil & Excellence', 'flag' => '🇪🇸'],
-                    ['name' => 'Malte', 'label' => 'Immersion Anglophone', 'flag' => '🇲🇹'],
-                    ['name' => 'Angleterre', 'label' => 'Héritage & Prestige', 'flag' => '🇬🇧'],
-                    ['name' => 'Suisse', 'label' => 'Qualité & Précision', 'flag' => '🇨🇭'],
-                    ['name' => 'Allemagne', 'label' => 'Ingénierie & Rigueur', 'flag' => '🇩🇪'],
-                    ['name' => 'Turquie', 'label' => 'Passerelle & Modernité', 'flag' => '🇹🇷'],
-                    ['name' => 'Dubaï', 'label' => 'Luxe & Opportunités', 'flag' => '🇦🇪'],
-                    ['name' => 'Inde', 'label' => 'Innovation & Savoir', 'flag' => '🇮🇳'],
-                    ['name' => 'Maroc', 'label' => 'Hub Continental', 'flag' => '🇲🇦'],
-                    ['name' => 'Tunisie', 'label' => 'Sciences & Ingénierie', 'flag' => '🇹🇳'],
-                    ['name' => 'Égypte', 'label' => 'Histoire & Avenir', 'flag' => '🇪🇬'],
-                    ['name' => 'Sénégal', 'label' => 'Leadership Africain', 'flag' => '🇸🇳'],
+                    ['name' => 'France', 'slug' => 'france', 'label' => 'Prestige & Culture', 'flag' => '🇫🇷'],
+                    ['name' => 'Canada', 'slug' => 'canada', 'label' => 'Avenir & Nature', 'flag' => '🇨🇦'],
+                    ['name' => 'Belgique', 'slug' => 'belgique', 'label' => 'Cœur de l’Europe', 'flag' => '🇧🇪'],
+                    ['name' => 'Espagne', 'slug' => 'espagne', 'label' => 'Soleil & Excellence', 'flag' => '🇪🇸'],
+                    ['name' => 'Malte', 'slug' => 'malte', 'label' => 'Immersion Anglophone', 'flag' => '🇲🇹'],
+                    ['name' => 'Angleterre', 'slug' => 'angleterre', 'label' => 'Héritage & Prestige', 'flag' => '🇬🇧'],
+                    ['name' => 'Suisse', 'slug' => 'suisse', 'label' => 'Qualité & Précision', 'flag' => '🇨🇭'],
+                    ['name' => 'Allemagne', 'slug' => 'allemagne', 'label' => 'Ingénierie & Rigueur', 'flag' => '🇩🇪'],
+                    ['name' => 'Turquie', 'slug' => 'turquie', 'label' => 'Passerelle & Modernité', 'flag' => '🇹🇷'],
+                    ['name' => 'Dubaï', 'slug' => 'dubai', 'label' => 'Luxe & Opportunités', 'flag' => '🇦🇪'],
+                    ['name' => 'Inde', 'slug' => 'inde', 'label' => 'Innovation & Savoir', 'flag' => '🇮🇳'],
+                    ['name' => 'Maroc', 'slug' => 'maroc', 'label' => 'Hub Continental', 'flag' => '🇲🇦'],
+                    ['name' => 'Tunisie', 'slug' => 'tunisie', 'label' => 'Sciences & Ingénierie', 'flag' => '🇹🇳'],
+                    ['name' => 'Égypte', 'slug' => 'egypte', 'label' => 'Histoire & Avenir', 'flag' => '🇪🇬'],
+                    ['name' => 'Sénégal', 'slug' => 'senegal', 'label' => 'Leadership Africain', 'flag' => '🇸🇳'],
                 ];
             @endphp
             @foreach(array_merge($destinations, $destinations) as $dest)
-                <div
+                <a href="{{ route('destinations.show', $dest['slug']) }}"
                     class="min-w-[380px] p-12 rounded-[3.5rem] bg-white/5 border border-white/10 backdrop-blur-2xl hover:bg-white/10 hover:border-gold-500/40 transition-all duration-700 group/card relative overflow-hidden">
                     {{-- Icon Overlay --}}
                     <div
@@ -59,7 +60,7 @@
                     <h4 class="text-4xl font-black text-white italic tracking-tighter mb-3">{{ $dest['name'] }}</h4>
                     <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gold-500 italic">{{ $dest['label'] }}
                     </p>
-                </div>
+                </a>
             @endforeach
         </div>
     </div>

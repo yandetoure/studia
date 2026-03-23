@@ -72,7 +72,7 @@
                     <li><a href="{{ route('about') }}" class="hover:text-white transition-colors">À propos</a></li>
                     <li><a href="{{ route('services') }}" class="hover:text-white transition-colors">Nos services</a>
                     </li>
-                    <li><a href="{{ route('destinations') }}" class="hover:text-white transition-colors">Destinations
+                    <li><a href="{{ route('home') }}#destinations" class="hover:text-white transition-colors">Destinations
                             d’études</a></li>
                     <li><a href="{{ route('housing') }}" class="hover:text-white transition-colors">Logement &
                             intégration</a></li>

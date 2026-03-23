@@ -56,9 +56,17 @@ class PageController extends Controller
         return view('pages.services.consulting');
     }
 
-    public function destinations()
+    public function showDestination($slug)
     {
-        return view('pages.destinations');
+        $destinations = config('destinations');
+
+        if (!isset($destinations[$slug])) {
+            abort(404);
+        }
+
+        $destination = $destinations[$slug];
+
+        return view('pages.destinations.show', compact('destination'));
     }
 
     public function whyStudia()

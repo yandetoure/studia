@@ -54,8 +54,8 @@
                 </div>
             </div>
 
-            <a href="{{ route('destinations') }}"
-                class="hover:text-gold-600 transition-colors {{ request()->routeIs('destinations') ? 'text-gold-600' : '' }}">Destinations</a>
+            <a href="{{ route('home') }}#destinations"
+                class="hover:text-gold-600 transition-colors">Destinations</a>
             <a href="{{ route('contact') }}"
                 class="hover:text-gold-600 transition-colors {{ request()->routeIs('contact') ? 'text-gold-600' : '' }}">Contact</a>
         </div>

@@ -50,7 +50,7 @@
                 <a href="{{ route('home') }}" class="hover:text-gold-600">Accueil</a>
                 <a href="{{ route('about') }}" class="hover:text-gold-600">À propos</a>
                 <a href="{{ route('services') }}" class="hover:text-gold-600">Nos services</a>
-                <a href="{{ route('destinations') }}" class="hover:text-gold-600">Destinations d’études</a>
+                <a href="{{ route('home') }}#destinations" class="hover:text-gold-600">Destinations d’études</a>
                 <a href="{{ route('housing') }}" class="hover:text-gold-600">Logement & intégration</a>
                 <a href="{{ route('home') }}#testimonials" class="hover:text-gold-600">Témoignages</a>
                 <a href="#" class="hover:text-gold-600">Blog / Conseils</a>
