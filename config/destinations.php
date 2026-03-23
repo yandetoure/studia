@@ -654,4 +654,71 @@ return [
             ]
         ]
     ],
+    'allemagne' => [
+        'name' => 'Allemagne',
+        'flag' => '🇩🇪',
+        'label' => 'Ingénierie & Rigueur',
+        'hero_title' => 'Étudier en Allemagne avec STUDIA',
+        'intro' => 'L’Allemagne est une destination de premier plan pour les sciences et l’ingénierie, offrant des formations de haute qualité souvent sans frais de scolarité dans les universités publiques.',
+        'sections' => [
+            [
+                'type' => 'list',
+                'title' => 'Pourquoi l\'Allemagne ?',
+                'items' => [
+                    'Excellence académique mondiale',
+                    'Frais de scolarité quasi inexistants en public',
+                    'Opportunités de carrière exceptionnelles',
+                    'Qualité de vie et sécurité'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Orientation et choix du programme',
+                    'Aide à l\'inscription universitaire',
+                    'Accompagnement pour le visa et le compte bloqué',
+                    'Aide à l\'installation'
+                ]
+            ]
+        ]
+    ],
+    'turquie' => [
+        'name' => 'Turquie',
+        'flag' => '🇹🇷',
+        'label' => 'Passerelle & Modernité',
+        'hero_title' => 'Étudier en Turquie avec STUDIA',
+        'intro' => 'La Turquie offre une passerelle unique entre l’Europe et l’Asie, avec des universités modernes et des coûts de vie très abordables.',
+        'sections' => [
+            [
+                'type' => 'list',
+                'title' => 'Pourquoi la Turquie ?',
+                'items' => [
+                    'Universités modernes et bien équipées',
+                    'Coût de la vie très compétitif',
+                    'Culture riche et hospitalière',
+                    'Facilité d\'obtention des visas'
+                ]
+            ]
+        ]
+    ],
+    'malte' => [
+        'name' => 'Malte',
+        'flag' => '🇲🇹',
+        'label' => 'Immersion Anglophone',
+        'hero_title' => 'Étudier à Malte avec STUDIA',
+        'intro' => 'Malte est la destination idéale pour une immersion linguistique totale en anglais tout en profitant d’un cadre méditerranéen exceptionnel.',
+        'sections' => [
+            [
+                'type' => 'list',
+                'title' => 'Pourquoi Malte ?',
+                'items' => [
+                    'Immersion totale en anglais',
+                    'Cadre de vie méditerranéen',
+                    'Diplômes reconnus en Europe',
+                    'Atmosphère multiculturelle et dynamique'
+                ]
+            ]
+        ]
+    ],
 ];
