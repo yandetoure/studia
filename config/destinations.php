@@ -37,7 +37,7 @@ return [
                     '<strong>Mi-Décembre :</strong> Date limite de soumission du dossier pour les Licences 1 et Écoles d\'Architecture.',
                     '<strong>Dernière dizaine de Janvier :</strong> Date limite de soumission pour les Licences 2, 3, Masters 1, 2 et BUT.',
                     '<strong>Fin Avril :</strong> Date limite pour recevoir les réponses des établissements publics et valider votre choix définitif.',
-                    '<strong>Mi-Mars jusqu’à 30 jours avant la date de rentrée :</strong> Je soumits mon dossier pour les écoles privées.',
+                    '<strong>Mi-Mars jusqu’à 30 jours avant la date de rentrée :</strong> Je soumets mon dossier pour les écoles privées.',
                     '<strong>Mi-Mars jusqu’en Janvier :</strong> Période de demande de visa après admission.'
                 ]
             ],
@@ -101,6 +101,17 @@ return [
             ],
             [
                 'type' => 'list',
+                'title' => 'Programmes disponibles',
+                'items' => [
+                    'Bachelor (Baccalauréat au Canada) – 3 à 4 ans',
+                    'Master (Maîtrise) – 1 à 2 ans',
+                    'Doctorat (Doctorate) – 3 à 5 ans',
+                    'Certificats et Diplômes d’études supérieures (PGC/PGD)',
+                    'Domaines : Gestion, Ingénierie, Informatique, Sciences de la santé, Marketing, Relations internationales, etc.'
+                ]
+            ],
+            [
+                'type' => 'list',
                 'title' => 'Rentrées académiques',
                 'items' => [
                     '<strong>Rentrée d’automne (Septembre) :</strong> Dépôt recommandé des candidatures : janvier – mars',
@@ -132,6 +143,15 @@ return [
                     'Biométrie (85$)',
                     'Assurance santé',
                     'Dépôt de garantie de scolarité (selon l’établissement)'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Informations Importantes',
+                'items' => [
+                    'L’admission dans les universités canadiennes se fait généralement en 1ère année de programme.',
+                    'L’admission se fait en début de cycle académique.',
+                    'L’admission directe dans certaines années intermédiaires peut être limitée selon les institutions.'
                 ]
             ],
             [
@@ -191,27 +211,40 @@ return [
                 'type' => 'list',
                 'title' => 'Programmes disponibles',
                 'items' => [
-                    'Bachelier (Licence)',
-                    'Master',
-                    'Programmes professionnels',
-                    'Domaines : Gestion, Informatique, Ingénierie, Marketing, Sciences sociales, Tourisme.'
+                    'Bachelier (Licence) – 3 ans',
+                    'Master – 1 à 2 ans',
+                    'Programmes de spécialisation',
+                    'Formations professionnelles et techniques'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût des études (indicatif)',
+                'title' => 'Calendrier des candidatures',
                 'items' => [
-                    '<strong>Étudiants européens :</strong> environ 800 à 1000 € par an',
-                    '<strong>Étudiants hors UE :</strong> entre 2500 € et 4500 € par an',
-                    'Frais d’homologation (si requis) : 150 € à 200 €.'
+                    'Début des candidatures : Février',
+                    'Fin des candidatures : entre Avril et Juin (selon les établissements)',
+                    'Il est fortement conseillé de préparer son dossier plusieurs mois à l\'avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou hautes écoles',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des réponses des établissements',
+                    'Accompagnement dans la demande de visa étudiant',
+                    'Assistance pour l’installation en Belgique',
+                    'Gestion de l\'homologation des diplômes (frais de 150€ à 200€ à la charge de l\'étudiant)'
                 ]
             ],
             [
                 'type' => 'docs',
                 'title' => 'Documents pour l\'admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Bachelier)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
                         'Attestation ou diplôme du BAC',
                         'Copie du passeport',
@@ -219,7 +252,7 @@ return [
                         'CV académique',
                         'Photos d’identité'
                     ],
-                    'Niveau Master' => [
+                    'Niveau Licence / Master' => [
                         'Diplôme du BAC',
                         'Relevé de notes du BAC',
                         'Diplôme ou attestation de Licence',
@@ -227,8 +260,21 @@ return [
                         'CV académique',
                         'Copie du passeport',
                         'Acte de naissance',
-                        'Lettre de motivation'
+                        'Lettre de motivation (selon programme)'
                     ]
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Procédure de visa étudiant (Visa D)',
+                'subtitle' => 'Après l’obtention de l’admission, les documents suivants sont généralement demandés :',
+                'items' => [
+                    'Formulaire de demande de visa',
+                    'Passeport valide',
+                    'Lettre d’admission de l’établissement',
+                    'Preuve de moyens financiers suffisants',
+                    'Certificat médical',
+                    'Casier judiciaire (selon l’âge)'
                 ]
             ]
         ]
@@ -242,19 +288,43 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Avantages des études à Dubaï',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Système éducatif international',
-                    'Environnement économique dynamique',
-                    'Opportunités de stages et carrière mondiale',
-                    'Ville extrêmement sûre et moderne'
+                    'Bachelor',
+                    'Master',
+                    'Programmes professionnels',
+                    'Domaines : Business & Management, Finance & Commerce international, Informatique & Intelligence artificielle, Marketing digital, Ingénierie, Tourisme & Hôtellerie.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Rentrées académiques',
-                'subtitle' => '3 rentrées par année (tous les quatre mois) :',
+                'title' => 'Dates de rentrées académiques',
+                'subtitle' => 'Nous avons une rentrée tous les quatre mois à Dubaï (3 rentrées par an) :',
                 'items' => ['Mars', 'Juillet', 'Novembre']
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Avantages des études à Dubaï',
+                'items' => [
+                    'Universités internationales reconnues',
+                    'Diplômes reconnus à l’international',
+                    'Environnement international et multiculturel',
+                    'Possibilité de stages et opportunités professionnelles',
+                    'Campus modernes et infrastructures de haut niveau',
+                    'Ville sûre et dynamique'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix de l’université et du programme',
+                    'Préparation et dépôt du dossier d’admission',
+                    'Obtention de la lettre d’admission',
+                    'Accompagnement dans la procédure de visa étudiant',
+                    'Assistance pour l’installation à Dubaï'
+                ]
             ],
             [
                 'type' => 'list',
@@ -266,18 +336,31 @@ return [
                 ]
             ],
             [
+                'type' => 'list',
+                'title' => 'Visa étudiant Dubaï',
+                'subtitle' => 'Une fois l’admission obtenue, STUDIA vous accompagne pour la procédure incluant généralement :',
+                'items' => [
+                    'Demande de visa étudiant',
+                    'Assurance santé',
+                    'Autorisation de séjour étudiant',
+                    'Lettre d’hébergement'
+                ]
+            ],
+            [
                 'type' => 'docs',
                 'title' => 'Documents à fournir',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Bachelor)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
                         'Attestation ou diplôme du BAC',
                         'Copie du passeport',
                         'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplômes antérieurs',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
                         'CV académique',
                         'Copie du passeport'
@@ -295,40 +378,80 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Pourquoi choisir l\'Espagne ?',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Enseignement supérieur reconnu internationalement',
-                    'Environnement multiculturel et dynamique',
-                    'Coût de vie accessible (600€ à 1000€ par mois)',
-                    'Culture riche et climat exceptionnel'
+                    'Grado (Licence)',
+                    'Master',
+                    'MBA et programmes spécialisés',
+                    'Domaines : Gestion et Management, Commerce international, Marketing digital, Informatique et nouvelles technologies, Ingénierie, Tourisme et Hôtellerie.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Frais de scolarité (indicatif)',
+                'title' => 'Rentrées académiques',
+                'items' => [
+                    '<strong>Rentrée principale :</strong> Septembre – Octobre. Dépôt recommandé : mars à juin.',
+                    '<strong>Rentrées secondaires :</strong> Février, Juin et Août.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou écoles',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Accompagnement pour la demande de visa étudiant',
+                    'Assistance pour l’installation en Espagne'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études en Espagne (indicatif)',
                 'items' => [
                     '<strong>Licence :</strong> 1 500 € à 6 000 € par an',
-                    '<strong>Master :</strong> 2 000 € à 8 000 € par an'
+                    '<strong>Master :</strong> 2 000 € à 8 000 € par an',
+                    'Coût de la vie : 600 € à 1 000 € par mois.'
                 ]
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents à fournir',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Licence)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
                         'Attestation ou diplôme du BAC',
                         'CV',
                         'Copie du passeport',
-                        'Acte de naissance'
+                        'Acte de naissance',
+                        'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Licence',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
                         'CV académique',
-                        'Lettre de motivation'
+                        'Copie du passeport',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Procédure de visa étudiant',
+                'subtitle' => 'Après l’obtention de l’admission, les documents suivants sont généralement demandés :',
+                'items' => [
+                    'Passeport valide',
+                    'Lettre d’admission de l’université',
+                    'Preuve de moyens financiers suffisants',
+                    'Preuve de logement',
+                    'Assurance santé internationale',
+                    'Certificat médical',
+                    'Casier judiciaire (selon l’âge)'
                 ]
             ]
         ]
@@ -342,40 +465,80 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Pourquoi la Suisse ?',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Enseignement de très haut niveau',
-                    'Universités prestigieuses et innovantes',
-                    'Environnement sûr et multiculturel',
-                    'Opportunités dans un pays économiquement puissant'
+                    'Bachelor (Licence)',
+                    'Master',
+                    'MBA et programmes spécialisés',
+                    'Domaines : Management et Business, Finance et Banque, Hôtellerie et Tourisme, Marketing et Communication, Informatique, Relations internationales.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût des études (indicatif)',
+                'title' => 'Rentrées académiques',
+                'items' => [
+                    '<strong>Rentrée principale :</strong> Septembre – Octobre. Dépôt recommandé : mars à juin.',
+                    '<strong>Rentrées secondaires :</strong> Février, Juin, Août.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou écoles',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Accompagnement pour la demande de visa étudiant',
+                    'Assistance pour l’installation en Suisse'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études en Suisse (indicatif)',
                 'items' => [
                     '<strong>Universités publiques :</strong> 1 000 à 4 000 CHF par an',
                     '<strong>Écoles privées :</strong> 10 000 à 30 000 CHF par an',
-                    'Coût de la vie : 1 200 à 2 000 CHF par mois.'
+                    'Coût de la vie : 1 200 CHF à 2 000 CHF par mois.'
                 ]
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Bachelor)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
+                        'Attestation ou diplôme du BAC',
+                        'CV',
                         'Copie du passeport',
-                        'Acte de naissance'
+                        'Acte de naissance',
+                        'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Bachelor',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
                         'CV académique',
-                        'Lettre de motivation'
+                        'Copie du passeport',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Procédure de visa étudiant',
+                'subtitle' => 'Après l’obtention de l’admission, les documents suivants sont généralement demandés :',
+                'items' => [
+                    'Passeport valide',
+                    'Lettre d’admission de l’établissement',
+                    'Preuve de moyens financiers suffisants',
+                    'Preuve de logement',
+                    'Assurance santé',
+                    'Certificat médical',
+                    'Casier judiciaire (selon les cas)'
                 ]
             ]
         ]
@@ -389,17 +552,38 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Les atouts du Maroc',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Universités et écoles reconnues en Afrique',
-                    'Formations adaptées au marché du travail',
-                    'Coût de vie et scolarité très accessible',
-                    'Environnement culturel riche'
+                    'Licence / Bachelor',
+                    'Master',
+                    'Programmes professionnels',
+                    'Domaines : Gestion et Management, Commerce international, Finance et Comptabilité, Informatique et nouvelles technologies, Marketing et communication, Tourisme et hôtellerie.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût des études',
+                'title' => 'Rentrées académiques',
+                'items' => [
+                    '<strong>Rentrée principale :</strong> Septembre – Octobre',
+                    '<strong>Rentrée secondaire :</strong> Janvier – Février',
+                    'Il est conseillé de préparer son dossier plusieurs mois à l’avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou écoles',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Assistance administrative',
+                    'Conseils pour l’installation au Maroc'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études au Maroc (indicatif)',
                 'items' => [
                     '<strong>Licence :</strong> 2 000 € à 4 000 € par an',
                     '<strong>Master :</strong> 3 000 € à 5 000 € par an',
@@ -408,20 +592,26 @@ return [
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Licence)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
-                        'Copie du passeport',
-                        'Acte de naissance'
+                        'Attestation ou diplôme du BAC',
+                        'CV',
+                        'Copie du passeport ou carte d’identité',
+                        'Acte de naissance',
+                        'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Licence',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
                         'CV académique',
-                        'Lettre de motivation'
+                        'Copie du passeport ou carte d’identité',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
                 ]
             ]
@@ -436,33 +626,68 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Pourquoi la Tunisie ?',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Enseignement supérieur de qualité reconnue',
-                    'Coût de scolarité abordable',
-                    'Environnement culturel proche et accueillant',
-                    'Expertise en médecine et ingénierie'
+                    'Licence',
+                    'Master',
+                    'Doctorat',
+                    'Formations professionnelles',
+                    'Domaines : Médecine, Pharmacie, Médecine dentaire, Ingénierie, Informatique, Gestion et Management, Commerce international, Marketing.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Domaines demandés',
-                'items' => ['Médecine', 'Pharmacie', 'Ingénierie', 'Informatique', 'Gestion']
+                'title' => 'Rentrées académiques',
+                'items' => [
+                    '<strong>Rentrée principale :</strong> Septembre – Octobre',
+                    '<strong>Rentrée secondaire :</strong> Février – Mars',
+                    'Il est recommandé de déposer son dossier plusieurs mois à l’avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou écoles',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Assistance administrative',
+                    'Conseils pour l’installation en Tunisie'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études en Tunisie (indicatif)',
+                'items' => [
+                    '<strong>Licence :</strong> 1 500 € à 3 000 € par an',
+                    '<strong>Master :</strong> 2 000 € à 4 000 € par an',
+                    'Note : Pour les études de médecine, les frais peuvent être plus élevés.',
+                    'Coût de la vie : 300 € à 600 € par mois.'
+                ]
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Licence)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
-                        'Copie du passeport'
+                        'Attestation ou diplôme du BAC',
+                        'CV',
+                        'Copie du passeport ou carte d’identité',
+                        'Acte de naissance',
+                        'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Licence',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
-                        'CV académique'
+                        'CV académique',
+                        'Copie du passeport ou carte d’identité',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
                 ]
             ]
@@ -477,17 +702,38 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Avantages du Sénégal',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Enseignement supérieur reconnu en Afrique',
-                    'Environnement académique dynamique et multiculturel',
-                    'Coût de scolarité accessible',
-                    'Cadre de vie stable et accueillant'
+                    'Licence',
+                    'Master',
+                    'Programmes professionnels',
+                    'Domaines : Gestion et Management, Commerce international, Finance et Comptabilité, Informatique et Technologies, Marketing et Communication, Ingénierie, Logistique et Transport.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût des études',
+                'title' => 'Rentrées académiques',
+                'items' => [
+                    '<strong>Rentrée principale :</strong> Octobre – Novembre',
+                    '<strong>Rentrée secondaire :</strong> Février – Mars',
+                    'Il est conseillé de préparer son dossier plusieurs mois à l’avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou écoles',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Assistance administrative',
+                    'Conseils pour l’installation et l’intégration'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études au Sénégal (indicatif)',
                 'items' => [
                     '<strong>Licence :</strong> 1 000 € à 3 000 € par an',
                     '<strong>Master :</strong> 2 000 € à 4 000 € par an',
@@ -496,18 +742,26 @@ return [
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Licence)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
-                        'Copie du passeport'
+                        'Attestation ou diplôme du BAC',
+                        'CV',
+                        'Copie du passeport ou carte d’identité',
+                        'Acte de naissance',
+                        'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Licence',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
-                        'CV académique'
+                        'CV académique',
+                        'Copie du passeport ou carte d’identité',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
                 ]
             ]
@@ -522,12 +776,13 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Pourquoi l\'Inde ?',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Expertise mondiale en Informatique et Ingénierie',
-                    'Frais de scolarité très accessibles',
-                    'Programmes enseignés majoritairement en anglais',
-                    'Environnement innovant et expansion continue'
+                    'Bachelor (Licence)',
+                    'Master',
+                    'Doctorat',
+                    'Programmes professionnels',
+                    'Domaines : Informatique et technologies de l’information, Ingénierie, Gestion et Management, Commerce international, Pharmacie, Médecine et sciences de la santé, Marketing et communication.'
                 ]
             ],
             [
@@ -535,33 +790,66 @@ return [
                 'title' => 'Rentrées académiques',
                 'items' => [
                     '<strong>Rentrée principale :</strong> Juillet – Août',
-                    '<strong>Rentrée secondaire :</strong> Janvier – Février'
+                    '<strong>Rentrée secondaire :</strong> Janvier – Février',
+                    'Il est conseillé de préparer son dossier plusieurs mois à l’avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou institutions',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Accompagnement dans la demande de visa étudiant',
+                    'Assistance pour l’installation en Inde'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût indicatif (Annuel)',
+                'title' => 'Coût des études en Inde (indicatif)',
                 'items' => [
-                    '<strong>Licence :</strong> 1 500 USD à 4 000 USD',
-                    '<strong>Master :</strong> 2 000 USD à 6 000 USD',
+                    '<strong>Licence :</strong> 1 500 USD à 4 000 USD par an',
+                    '<strong>Master :</strong> 2 000 USD à 6 000 USD par an',
                     'Coût de la vie : 200 USD à 400 USD par mois.'
                 ]
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Bachelor)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
-                        'Copie du passeport'
+                        'Attestation ou diplôme du BAC',
+                        'CV',
+                        'Copie du passeport',
+                        'Acte de naissance',
+                        'Photos d’identité'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Licence',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
-                        'CV académique'
+                        'CV académique',
+                        'Copie du passeport',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Procédure de visa étudiant',
+                'subtitle' => 'Après l’obtention de l’admission, les documents suivants sont généralement demandés :',
+                'items' => [
+                    'Passeport valide',
+                    'Lettre d’admission de l’établissement',
+                    'Preuve de moyens financiers suffisants',
+                    'Formulaire de demande de visa',
+                    'Photos d’identité'
                 ]
             ]
         ]
@@ -575,33 +863,81 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Pourquoi l\'Égypte ?',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Universités prestigieuses et reconnues',
-                    'Grande diversité de programmes',
-                    'Coûts de scolarité accessibles',
-                    'Cadre académique international'
+                    'Licence (Bachelor)',
+                    'Master',
+                    'Doctorat',
+                    'Programmes professionnels',
+                    'Domaines : Médecine, Pharmacie, Ingénierie, Informatique, Gestion et Management, Commerce international, Sciences politiques et relations internationales.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût indicatif (Annuel)',
+                'title' => 'Rentrées académiques',
                 'items' => [
-                    '<strong>Licence :</strong> 2 000 USD à 5 000 USD',
-                    '<strong>Master :</strong> 3 000 USD à 6 000 USD',
+                    '<strong>Rentrée principale :</strong> Septembre – Octobre',
+                    '<strong>Rentrée secondaire :</strong> Février – Mars',
+                    'Il est recommandé de préparer son dossier plusieurs mois à l’avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou institutions',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Assistance administrative',
+                    'Conseils pour l’installation et l’intégration'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études en Égypte (indicatif)',
+                'items' => [
+                    '<strong>Licence :</strong> 2 000 USD à 5 000 USD par an',
+                    '<strong>Master :</strong> 3 000 USD à 6 000 USD par an',
+                    'Note : Pour la médecine, les frais peuvent être plus élevés.',
                     'Coût de la vie : 250 USD à 500 USD par mois.'
                 ]
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Licence)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
-                        'Copie du passeport'
+                        'Attestation ou diplôme du BAC',
+                        'CV',
+                        'Copie du passeport',
+                        'Acte de naissance',
+                        'Photos d’identité'
+                    ],
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
+                        'Relevés de notes universitaires',
+                        'CV académique',
+                        'Copie du passeport',
+                        'Acte de naissance',
+                        'Lettre de motivation (selon programme)'
                     ]
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Procédure de visa étudiant',
+                'subtitle' => 'Après l’obtention de l’admission, les documents suivants sont généralement demandés :',
+                'items' => [
+                    'Passeport valide',
+                    'Lettre d’admission de l’université',
+                    'Preuve de moyens financiers suffisants',
+                    'Formulaire de demande de visa',
+                    'Photos d’identité'
                 ]
             ]
         ]
@@ -615,108 +951,80 @@ return [
         'sections' => [
             [
                 'type' => 'list',
-                'title' => 'Les avantages du système britannique',
+                'title' => 'Programmes disponibles',
                 'items' => [
-                    'Diplômes parmi les mieux classés au monde',
-                    'Durée de formation plus courte (Master en 1 an)',
-                    'Environnement académique extrêmement multiculturel',
-                    'Enseignement orienté vers la pratique professionnelle'
+                    'Bachelor (Licence) – généralement 3 à 4 ans',
+                    'Master – généralement 1 an',
+                    'MBA et programmes spécialisés',
+                    'Domaines : Business et Management, Finance et Banque, Informatique et Data Science, Ingénierie, Marketing et Communication, Relations internationales, Droit.'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Coût des études (indicatif)',
+                'title' => 'Rentrées académiques',
+                'items' => [
+                    '<strong>Rentrée principale :</strong> Septembre',
+                    '<strong>Rentrée secondaire :</strong> Janvier',
+                    'Les candidatures doivent généralement être déposées plusieurs mois à l’avance.'
+                ]
+            ],
+            [
+                'type' => 'steps',
+                'title' => 'Accompagnement STUDIA',
+                'items' => [
+                    'Analyse et orientation académique',
+                    'Choix des universités ou institutions',
+                    'Préparation et soumission du dossier d’admission',
+                    'Suivi des admissions',
+                    'Accompagnement dans la demande de visa étudiant',
+                    'Assistance pour l’installation au Royaume-Uni'
+                ]
+            ],
+            [
+                'type' => 'list',
+                'title' => 'Coût des études en Angleterre (indicatif)',
                 'items' => [
                     '<strong>Bachelor :</strong> 10 000 £ à 18 000 £ par an',
                     '<strong>Master :</strong> 12 000 £ à 22 000 £',
-                    'Frais de visa : £490 à £524.'
+                    'Coût de la vie : 900 £ à 1 300 £ par mois.'
                 ]
             ],
             [
                 'type' => 'docs',
-                'title' => 'Documents requis',
+                'title' => 'Documents à fournir pour la demande d’admission',
                 'levels' => [
-                    'Niveau BAC' => [
-                        'Bulletins de notes du lycée',
+                    'Niveau BAC (Bachelor)' => [
+                        'Bulletins de notes du lycée (Seconde, Première, Terminale)',
                         'Relevé de notes du BAC',
-                        'Attestation du BAC',
+                        'Attestation ou diplôme du BAC',
+                        'CV',
                         'Copie du passeport',
-                        'Certificat de langue (IELTS)'
+                        'Acte de naissance',
+                        'Certificat de langue anglaise (IELTS ou équivalent, selon université)'
                     ],
-                    'Niveau Master' => [
-                        'Diplôme de Licence',
+                    'Niveau Licence / Master' => [
+                        'Diplôme du BAC',
+                        'Relevé de notes du BAC',
+                        'Diplôme ou attestation de Licence',
                         'Relevés de notes universitaires',
                         'CV académique',
+                        'Copie du passeport',
                         'Lettre de motivation',
-                        'Certificat de langue (IELTS)'
+                        'Certificat de langue anglaise (IELTS ou équivalent)'
                     ]
-                ]
-            ]
-        ]
-    ],
-    'allemagne' => [
-        'name' => 'Allemagne',
-        'flag' => '🇩🇪',
-        'label' => 'Ingénierie & Rigueur',
-        'hero_title' => 'Étudier en Allemagne avec STUDIA',
-        'intro' => 'L’Allemagne est une destination de premier plan pour les sciences et l’ingénierie, offrant des formations de haute qualité souvent sans frais de scolarité dans les universités publiques.',
-        'sections' => [
-            [
-                'type' => 'list',
-                'title' => 'Pourquoi l\'Allemagne ?',
-                'items' => [
-                    'Excellence académique mondiale',
-                    'Frais de scolarité quasi inexistants en public',
-                    'Opportunités de carrière exceptionnelles',
-                    'Qualité de vie et sécurité'
                 ]
             ],
             [
                 'type' => 'list',
-                'title' => 'Accompagnement STUDIA',
+                'title' => 'Procédure de visa étudiant',
+                'subtitle' => 'Après l’obtention de l’admission, les documents suivants sont généralement demandés (Frais : £490 à £524) :',
                 'items' => [
-                    'Orientation et choix du programme',
-                    'Aide à l\'inscription universitaire',
-                    'Accompagnement pour le visa et le compte bloqué',
-                    'Aide à l\'installation'
-                ]
-            ]
-        ]
-    ],
-    'turquie' => [
-        'name' => 'Turquie',
-        'flag' => '🇹🇷',
-        'label' => 'Passerelle & Modernité',
-        'hero_title' => 'Étudier en Turquie avec STUDIA',
-        'intro' => 'La Turquie offre une passerelle unique entre l’Europe et l’Asie, avec des universités modernes et des coûts de vie très abordables.',
-        'sections' => [
-            [
-                'type' => 'list',
-                'title' => 'Pourquoi la Turquie ?',
-                'items' => [
-                    'Universités modernes et bien équipées',
-                    'Coût de la vie très compétitif',
-                    'Culture riche et hospitalière',
-                    'Facilité d\'obtention des visas'
-                ]
-            ]
-        ]
-    ],
-    'malte' => [
-        'name' => 'Malte',
-        'flag' => '🇲🇹',
-        'label' => 'Immersion Anglophone',
-        'hero_title' => 'Étudier à Malte avec STUDIA',
-        'intro' => 'Malte est la destination idéale pour une immersion linguistique totale en anglais tout en profitant d’un cadre méditerranéen exceptionnel.',
-        'sections' => [
-            [
-                'type' => 'list',
-                'title' => 'Pourquoi Malte ?',
-                'items' => [
-                    'Immersion totale en anglais',
-                    'Cadre de vie méditerranéen',
-                    'Diplômes reconnus en Europe',
-                    'Atmosphère multiculturelle et dynamique'
+                    'Passeport valide',
+                    'Lettre d’admission de l’université (CAS – Confirmation of Acceptance for Studies)',
+                    'Preuve de moyens financiers suffisants',
+                    'Preuve de logement',
+                    'Certificat de langue anglaise',
+                    'Paiement des frais de visa et de l’assurance santé'
                 ]
             ]
         ]
