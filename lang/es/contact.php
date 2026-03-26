@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'Contacto STUDIA - Costa de Marfil',
+    'hero_subtitle' => 'Te Escuchamos',
+    'hero_title_1' => 'Contacta a ',
+    'hero_title_2' => 'STUDIA.',
+    'hero_desc' => '¿Una pregunta? ¿Un proyecto? Nuestro equipo de expertos está listo para apoyarte en tu éxito internacional.',
+    'our_details' => 'Nuestros datos.',
+    'location' => 'Ubicación',
+    'location_details' => 'Costa de Marfil<br>STUDIA atiende con cita previa.',
+    'phone_whatsapp' => 'Teléfono y WhatsApp',
+    'email' => 'Correo Electrónico',
+    'advice' => 'Consejo: Lo antes posible. <br> Idealmente 6 a 12 meses antes de la salida.',
+    'your_project' => 'Tu proyecto de estudios.',
+    'full_name' => 'Nombre completo',
+    'phone' => 'Teléfono',
+    'your_email' => 'Correo',
+    'project' => 'Tu Proyecto',
+    'options_orientation' => 'Orientación',
+    'options_study_abroad' => 'Estudios en el extranjero',
+    'options_visa_assistance' => 'Asistencia de Visado',
+    'options_academic_support' => 'Asistencia académica',
+    'destination' => 'Destino',
+    'message_details' => 'Mensaje / Detalles',
+    'send_request' => 'Enviar mi solicitud',
+];

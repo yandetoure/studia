@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'Alojamiento e Integración - STUDIA',
+    'hero_subtitle' => 'Instalación y Serenidad',
+    'hero_title_1' => 'Prepara tu <br> ',
+    'hero_title_2' => 'Instalación',
+    'hero_title_3' => ' en tu país de estudio.',
+    'hero_desc' => 'Encontrar alojamiento en un país nuevo puede ser complejo a distancia. STUDIA apoya a los estudiantes para encontrar soluciones fiables.',
+    'smooth_transition_1' => 'Una transición ',
+    'smooth_transition_2' => 'suave',
+    'smooth_transition_3' => '.',    'smooth_desc' => 'El objetivo es asegurar una transición suave a tu nueva vida estudiantil internacional. Te ayudamos a identificar las mejores opciones según tu presupuesto y necesidades.',
+    'student_residences' => 'Residencias estudiantiles',
+    'student_residences_desc' => 'Soluciones seguras y amigables, a menudo cerca de los campus.',
+    'private_housing' => 'Alojamiento privado',
+    'private_housing_desc' => 'Estudios o apartamentos en la ciudad para mayor independencia.',
+    'temporary_solutions' => 'Soluciones temporales',
+    'temporary_solutions_desc' => 'Ayuda con la reserva de alojamiento para tus primeros días a la llegada.',
+    'guaranteed_support' => 'Soporte Garantizado',
+    'your_pack_1' => 'Tu Pack de ',
+    'your_pack_2' => 'Integración',
+    'your_pack_3' => '.',    'admin_advice' => 'Consejos administrativos',
+    'admin_advice_desc' => 'Apertura de cuenta bancaria, seguros, permiso de residencia.',
+    'student_life' => 'Vida estudiantil',
+    'student_life_desc' => 'Preparación para los códigos culturales y académicos del país anfitrión.',
+    'local_orientation' => 'Orientación local',
+    'local_orientation_desc' => 'Puntos de referencia en la ciudad anfitriona, redes de transporte, trabajos estudiantiles.',
+];
