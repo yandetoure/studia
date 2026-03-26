@@ -58,7 +58,7 @@ class PageController extends Controller
 
     public function showDestination($slug)
     {
-        $destinations = config('destinations');
+        $destinations = __('destinations_data');
 
         if (!isset($destinations[$slug])) {
             abort(404);

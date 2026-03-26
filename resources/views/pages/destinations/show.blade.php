@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $destination['name'] . ' - Étudier à l’International - STUDIA')
+@section('title', $destination['name'] . __('destinations_page.title_suffix'))
 
 @section('content')
     {{-- Hero Section --}}
@@ -27,10 +27,10 @@
 
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="{{ route('contact') }}" class="px-8 py-4 rounded-2xl bg-gold-600 text-slate-950 font-bold hover:bg-gold-500 transition-all shadow-xl shadow-gold-600/20">
-                            Commencer mon projet
+                            {{ __('destinations_page.start_project') }}
                         </a>
                         <a href="#details" class="px-8 py-4 rounded-2xl bg-white/5 text-white border border-white/10 font-bold hover:bg-white/10 transition-all">
-                            Voir les détails
+                            {{ __('destinations_page.view_details') }}
                         </a>
                     </div>
                 </div>
@@ -158,28 +158,28 @@
                                     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                                 </svg>
                             </div>
-                            <h4 class="text-3xl font-black italic tracking-tighter leading-none">Prêt à partir pour la {{ $destination['name'] }} ?</h4>
-                            <p class="text-slate-400 font-medium">Nos conseillers experts vous accompagnent de A à Z dans vos démarches.</p>
+                            <h4 class="text-3xl font-black italic tracking-tighter leading-none">{{ __('destinations_page.ready_to_leave') }} {{ $destination['name'] }} ?</h4>
+                            <p class="text-slate-400 font-medium">{{ __('destinations_page.ready_desc') }}</p>
                             <a href="{{ route('contact') }}" class="block w-full py-5 text-center rounded-2xl bg-gold-600 text-slate-950 font-black hover:bg-gold-500 transition-all shadow-xl shadow-gold-600/20">
-                                Prendre Rendez-vous
+                                {{ __('destinations_page.book_appointment') }}
                             </a>
                         </div>
 
                         {{-- Quick Info --}}
                         <div class="p-10 rounded-[3rem] border border-slate-100 bg-white space-y-6">
-                            <h4 class="text-lg font-black uppercase tracking-widest text-gold-600 italic">Infos Pratiques</h4>
+                            <h4 class="text-lg font-black uppercase tracking-widest text-gold-600 italic">{{ __('destinations_page.practical_info') }}</h4>
                             <div class="space-y-4">
                                 <div class="flex justify-between items-center py-4 border-b border-slate-50">
-                                    <span class="text-slate-500 font-medium">Destination</span>
+                                    <span class="text-slate-500 font-medium">{{ __('destinations_page.destination') }}</span>
                                     <span class="font-bold text-slate-900">{{ $destination['name'] }}</span>
                                 </div>
                                 <div class="flex justify-between items-center py-4 border-b border-slate-50">
-                                    <span class="text-slate-500 font-medium">Flag</span>
+                                    <span class="text-slate-500 font-medium">{{ __('destinations_page.flag') }}</span>
                                     <span class="text-2xl">{{ $destination['flag'] }}</span>
                                 </div>
                                 <div class="flex justify-between items-center py-4 border-b border-slate-50">
-                                    <span class="text-slate-500 font-medium">Expertise</span>
-                                    <span class="font-bold text-gold-600 italic">STUDIA Verified</span>
+                                    <span class="text-slate-500 font-medium">{{ __('destinations_page.expertise') }}</span>
+                                    <span class="font-bold text-gold-600 italic">{{ __('destinations_page.studia_verified') }}</span>
                                 </div>
                             </div>
                         </div>

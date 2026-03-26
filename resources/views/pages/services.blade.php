@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Nos Services - STUDIA - Accompagnement Complet')
+@section('title', __('services_pages.index_title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl space-y-6">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">Nos Services</h1>
-                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">Chez STUDIA, nous proposons un
-                    accompagnement <span class="text-gold-600">complet</span> et structuré.</h2>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">{{ __('services_pages.index_hero_subtitle') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">{{ __('services_pages.index_hero_title_1') }}<span class="text-gold-600">{{ __('services_pages.index_hero_title_2') }}</span>{{ __('services_pages.index_hero_title_3') }}</h2>
             </div>
         </div>
     </section>
@@ -29,14 +28,13 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-black text-slate-900 italic">Orientation académique</h3>
-                        <p class="text-slate-500 italic font-medium text-sm">Analyse du profil, choix de la destination,
-                            choix de la formation et stratégie académique.</p>
+                        <h3 class="text-3xl font-black text-slate-900 italic">{{ __('services_pages.card_1_title') }}</h3>
+                        <p class="text-slate-500 italic font-medium text-sm">{{ __('services_pages.card_1_desc') }}</p>
                     </div>
                     <div class="mt-12">
                         <a href="{{ route('services.orientation') }}"
                             class="inline-flex items-center gap-2 font-bold text-gold-600 hover:text-slate-900 transition-colors">
-                            En savoir plus
+                            {{ __('services_pages.learn_more') }}
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -56,14 +54,13 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-black text-slate-900 italic">Admission internationale</h3>
-                        <p class="text-slate-500 italic font-medium text-sm">Recherche d’établissements, préparation du
-                            dossier, CV académique et lettre de motivation.</p>
+                        <h3 class="text-3xl font-black text-slate-900 italic">{{ __('services_pages.card_2_title') }}</h3>
+                        <p class="text-slate-500 italic font-medium text-sm">{{ __('services_pages.card_2_desc') }}</p>
                     </div>
                     <div class="mt-12">
                         <a href="{{ route('services.abroad') }}"
                             class="inline-flex items-center gap-2 font-bold text-gold-600 hover:text-slate-900 transition-colors">
-                            En savoir plus
+                            {{ __('services_pages.learn_more') }}
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -83,14 +80,13 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-black text-slate-900 italic">Procédure visa</h3>
-                        <p class="text-slate-500 italic font-medium text-sm">Préparation du dossier consulaire, démarche
-                            administrative et préparation aux entretiens.</p>
+                        <h3 class="text-3xl font-black text-slate-900 italic">{{ __('services_pages.card_3_title') }}</h3>
+                        <p class="text-slate-500 italic font-medium text-sm">{{ __('services_pages.card_3_desc') }}</p>
                     </div>
                     <div class="mt-12">
                         <a href="{{ route('services.visa') }}"
                             class="inline-flex items-center gap-2 font-bold text-gold-600 hover:text-slate-900 transition-colors">
-                            En savoir plus
+                            {{ __('services_pages.learn_more') }}
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -109,14 +105,13 @@
                                     d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-black text-slate-900 italic">Préparation au départ</h3>
-                        <p class="text-slate-500 italic font-medium text-sm">Accompagnement pratique pour faciliter votre
-                            installation dans le pays de destination.</p>
+                        <h3 class="text-3xl font-black text-slate-900 italic">{{ __('services_pages.card_4_title') }}</h3>
+                        <p class="text-slate-500 italic font-medium text-sm">{{ __('services_pages.card_4_desc') }}</p>
                     </div>
                     <div class="mt-12">
                         <a href="{{ route('services.departure') }}"
                             class="inline-flex items-center gap-2 font-bold text-gold-600 hover:text-slate-900 transition-colors">
-                            En savoir plus
+                            {{ __('services_pages.learn_more') }}
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -136,14 +131,13 @@
                                 </path>
                             </svg>
                         </div>
-                        <h3 class="text-3xl font-black text-slate-900 italic">Logement & Intégration</h3>
-                        <p class="text-slate-500 italic font-medium text-sm">Solutions de logement adaptées et aide à
-                            l’installation pour une transition sereine.</p>
+                        <h3 class="text-3xl font-black text-slate-900 italic">{{ __('services_pages.card_5_title') }}</h3>
+                        <p class="text-slate-500 italic font-medium text-sm">{{ __('services_pages.card_5_desc') }}</p>
                     </div>
                     <div class="mt-12">
                         <a href="{{ route('housing') }}"
                             class="inline-flex items-center gap-2 font-bold text-gold-600 hover:text-slate-900 transition-colors">
-                            En savoir plus
+                            {{ __('services_pages.learn_more') }}
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

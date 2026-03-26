@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Pourquoi choisir STUDIA ? - Notre Excellence')
+@section('title', __('why_studia.page_title') . ' - Notre Excellence')
 
 @section('content')
     <section class="pt-40 pb-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl space-y-6">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">L'Excellence STUDIA</h1>
-                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">Pourquoi nous faire <span class="text-gold-600">confiance</span> ?</h2>
-                <p class="text-xl text-slate-600 leading-relaxed font-bold italic">Plus qu'un cabinet, un partenaire de vie pour votre projet international.</p>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">{{ __('why_studia.hero_subtitle') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic text-slate-900">{!! __('why_studia.hero_title') !!}</h2>
+                <p class="text-xl text-slate-600 leading-relaxed font-medium">
+                    {{ __('why_studia.hero_desc') }}
+                </p>
             </div>
         </div>
     </section>

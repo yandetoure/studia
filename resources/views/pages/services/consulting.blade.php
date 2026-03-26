@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Consulting & Accompagnement Professionnel - STUDIA')
+@section('title', __('services_pages.consulting_title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-4xl space-y-8">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase italic">Expertise Carrière</h1>
-                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">Consulting <span class="text-gold-500">&
-                        Accompagnement</span> Pro.</h2>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">{{ __('services_pages.cons_hero_subtitle') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic text-white">{!! __('services_pages.cons_hero_title_1') !!}</h2>
                 <p class="text-xl text-slate-400 leading-relaxed font-medium max-w-2xl">
-                    STUDIA accompagne également les professionnels en reconversion et les cadres souhaitant se former à
-                    l’international.
+                    {{ __('services_pages.cons_hero_desc') }}
                 </p>
             </div>
         </div>
@@ -30,9 +28,8 @@
                             </path>
                         </svg>
                     </div>
-                    <h4 class="text-xl font-black italic tracking-tighter">Conseil stratégique</h4>
-                    <p class="text-sm text-slate-500 font-medium leading-relaxed italic">Analyse de vos objectifs de
-                        carrière et définition d'un plan de formation internationale cohérent.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">{{ __('services_pages.cons_feat3_title') }}</h4>
+                    <p class="text-slate-500 italic font-medium">{{ __('services_pages.cons_feat3_desc') }}</p>
                 </div>
 
                 <div
@@ -43,9 +40,8 @@
                                 d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h4 class="text-xl font-black italic tracking-tighter">Orientation Pro</h4>
-                    <p class="text-sm text-slate-500 font-medium leading-relaxed italic">Découverte de nouveaux secteurs et
-                        opportunités de formation pour cadres et experts.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">{{ __('services_pages.cons_feat1_title') }}</h4>
+                    <p class="text-slate-500 italic font-medium">{{ __('services_pages.cons_feat1_desc') }}</p>
                 </div>
 
                 <div
@@ -58,9 +54,8 @@
                             </path>
                         </svg>
                     </div>
-                    <h4 class="text-xl font-black italic tracking-tighter">Projets de formation</h4>
-                    <p class="text-sm text-slate-500 font-medium leading-relaxed italic">Accompagnement dans les dossiers
-                        complèxes de Executive Education et MBA à l'international.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">{{ __('services_pages.cons_feat2_title') }}</h4>
+                    <p class="text-slate-500 italic font-medium">{{ __('services_pages.cons_feat2_desc') }}</p>
                 </div>
             </div>
         </div>
@@ -71,13 +66,10 @@
             <div
                 class="bg-white p-16 rounded-[4rem] border border-slate-100 flex flex-col lg:flex-row gap-16 items-center shadow-2xl shadow-gold-500/5">
                 <div class="lg:w-1/2 space-y-8">
-                    <h3 class="text-4xl font-black italic tracking-tighter">Vous êtes un professionnel ?</h3>
-                    <p class="text-slate-600 font-medium capitalize">Ne laissez pas votre carrière stagner. Prenez de la
-                        hauteur avec une formation internationale reconnue. STUDIA vous aide à franchir cette nouvelle étape
-                        en toute sérénité.</p>
+                    <h3 class="text-3xl font-black italic">{{ __('services_pages.cons_cta_title') }}</h3>
+                    <p class="text-slate-400 font-medium italic">{{ __('services_pages.cons_cta_desc') }}</p>
                     <a href="{{ route('contact') }}"
-                        class="inline-block px-10 py-5 rounded-3xl bg-gold-600 text-slate-950 font-black hover:bg-slate-900 hover:text-white transition-all shadow-xl shadow-gold-500/20">Demander
-                        une étude de profil</a>
+                        class="inline-block px-10 py-5 rounded-3xl bg-gold-600 text-slate-950 font-black hover:bg-slate-900 hover:text-white transition-all shadow-xl shadow-gold-500/20">{{ __('services_pages.cons_cta_button') }}</a>
                 </div>
                 <div class="lg:w-1/2 relative">
                     <div class="absolute inset-0 bg-gold-100/50 rounded-[3rem] blur-3xl opacity-50"></div>

@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Billets d’avion & Assistance Voyage - STUDIA')
+@section('title', __('services_pages.flight_title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-gold-600 text-slate-950 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-3xl space-y-8">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-slate-950/70 uppercase italic">Logistique & Voyage</h1>
-                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">Billets d’avion & <br> <span
-                        class="text-slate-900">Assistance</span>.</h2>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-slate-950/70 uppercase italic">{{ __('services_pages.flight_hero_subtitle') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">{!! __('services_pages.flight_hero_title_1') !!}</h2>
                 <p class="text-xl text-slate-950/70 leading-relaxed font-medium">
-                    STUDIA propose un service d’assistance à la réservation de billets d’avion pour étudiants et
-                    professionnels, en partenariat avec des agences agréées.
+                    {{ __('services_pages.flight_hero_desc') }}
                 </p>
             </div>
         </div>
@@ -21,7 +19,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div class="space-y-12">
-                    <h3 class="text-3xl font-black italic tracking-tighter">Voyager en toute sérénité.</h3>
+                    <h3 class="text-3xl font-black italic tracking-tighter">{{ __('services_pages.flight_serenity') }}</h3>
                     <div class="grid grid-cols-1 gap-8">
                         <div class="flex gap-6">
                             <div
@@ -32,10 +30,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-1 italic uppercase tracking-widest text-xs">Meilleurs
-                                    itinéraires</h4>
-                                <p class="text-sm text-slate-500 font-medium">Nous trouvons les options les plus simples et
-                                    directes pour votre destination.</p>
+                                <h4 class="font-bold text-slate-900 mb-1 italic uppercase tracking-widest text-xs">{{ __('services_pages.flight_feat1_title') }}</h4>
+                                <p class="text-sm text-slate-500 font-medium">{{ __('services_pages.flight_feat1_desc') }}</p>
                             </div>
                         </div>
                         <div class="flex gap-6">
@@ -48,10 +44,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-1 italic uppercase tracking-widest text-xs">Respect
-                                    des dates</h4>
-                                <p class="text-sm text-slate-500 font-medium">Planification rigoureuse pour arriver à temps
-                                    pour la rentrée académique.</p>
+                                <h4 class="font-bold text-slate-900 mb-1 italic uppercase tracking-widest text-xs">{{ __('services_pages.flight_feat2_title') }}</h4>
+                                <p class="text-sm text-slate-500 font-medium">{{ __('services_pages.flight_feat2_desc') }}</p>
                             </div>
                         </div>
                         <div class="flex gap-6">
@@ -64,10 +58,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-1 italic uppercase tracking-widest text-xs">Agences
-                                    agréées</h4>
-                                <p class="text-sm text-slate-500 font-medium">Nous collaborons uniquement avec des
-                                    partenaires fiables et réglementés.</p>
+                                <h4 class="font-bold text-slate-900 mb-1 italic uppercase tracking-widest text-xs">{{ __('services_pages.flight_feat3_title') }}</h4>
+                                <p class="text-sm text-slate-500 font-medium">{{ __('services_pages.flight_feat3_desc') }}</p>
                             </div>
                         </div>
                     </div>
@@ -80,12 +72,10 @@
                                 d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-black italic">Besoin d'un billet ?</h4>
-                    <p class="text-slate-500 italic font-medium capitalize">Contactez notre équipe logistique pour obtenir
-                        un devis adapté à vos dates de voyage.</p>
+                    <h4 class="text-2xl font-black italic">{{ __('services_pages.flight_need_ticket') }}</h4>
+                    <p class="text-slate-500 italic font-medium capitalize">{{ __('services_pages.flight_need_desc') }}</p>
                     <a href="{{ route('contact') }}"
-                        class="inline-block px-10 py-5 rounded-3xl bg-slate-900 text-white font-black hover:bg-gold-600 hover:text-slate-950 transition-all">Contacter
-                        la logistique</a>
+                        class="inline-block px-10 py-5 rounded-3xl bg-slate-900 text-white font-black hover:bg-gold-600 hover:text-slate-950 transition-all">{{ __('services_pages.flight_contact_logistics') }}</a>
                 </div>
             </div>
         </div>
@@ -94,8 +84,7 @@
     {{-- Info --}}
     <section class="py-12 bg-slate-50 border-t border-slate-100 italic">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">STUDIA n’est pas une agence de voyage. La
-                vente de billets est proposée en partenariat avec des agences agréées.</p>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">{{ __('services_pages.flight_disclaimer') }}</p>
         </div>
     </section>
 @endsection

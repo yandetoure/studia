@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Visa & Mobilité Internationale - STUDIA')
+@section('title', __('services_pages.visa_title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-slate-50 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl space-y-6">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">Assistance Administrative</h1>
-                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">Procédure <br> <span
-                        class="text-gold-600">Visa</span>.</h2>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">{{ __('services_pages.visa_hero_subtitle') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">{!! __('services_pages.visa_hero_title_1') !!}</h2>
                 <p class="text-xl text-slate-600 leading-relaxed font-medium">
-                    Les procédures de visa sont souvent complexes. STUDIA vous accompagne dans chaque démarche
-                    administrative pour sécuriser votre départ.
+                    {{ __('services_pages.visa_hero_desc') }}
                 </p>
             </div>
         </div>
@@ -23,18 +21,18 @@
                 @php
                     $visas = [
                         [
-                            'title' => 'Préparation du dossier consulaire',
-                            'desc' => 'Audit et assemblage stratégique de vos pièces selon les exigences strictes des consulats.',
+                            'title' => __('services_pages.visa_step1_title'),
+                            'desc' => __('services_pages.visa_step1_desc'),
                             'icon' => '<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>'
                         ],
                         [
-                            'title' => 'Accompagnement administratif',
-                            'desc' => 'Gestion de la relation avec les organismes officiels et suivi rigoureux de votre dossier.',
+                            'title' => __('services_pages.visa_step2_title'),
+                            'desc' => __('services_pages.visa_step2_desc'),
                             'icon' => '<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>'
                         ],
                         [
-                            'title' => 'Préparation aux entretiens',
-                            'desc' => 'Simulations et coaching intensif pour aborder vos entretiens consulaires avec assurance.',
+                            'title' => __('services_pages.visa_step3_title'),
+                            'desc' => __('services_pages.visa_step3_desc'),
                             'icon' => '<path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>'
                         ]
                     ];
@@ -58,19 +56,19 @@
     {{-- Stats/Trust --}}
     <section class="py-24 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6 text-center space-y-12">
-            <h3 class="text-3xl lg:text-5xl font-black italic italic">Notre engagement : Rigueur & Rapidité.</h3>
+            <h3 class="text-3xl lg:text-5xl font-black italic italic">{{ __('services_pages.visa_commitment') }}</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <p class="text-5xl font-black text-gold-500 mb-2">95%</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Taux de réussite</p>
+                    <p class="text-sm font-bold uppercase tracking-widest text-slate-400">{{ __('services_pages.visa_stat1') }}</p>
                 </div>
                 <div>
                     <p class="text-5xl font-black text-gold-500 mb-2">+2000</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Dossiers / an</p>
+                    <p class="text-sm font-bold uppercase tracking-widest text-slate-400">{{ __('services_pages.visa_stat2') }}</p>
                 </div>
                 <div>
                     <p class="text-5xl font-black text-gold-500 mb-2">0</p>
-                    <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Fausse promesse</p>
+                    <p class="text-sm font-bold uppercase tracking-widest text-slate-400">{{ __('services_pages.visa_stat3') }}</p>
                 </div>
             </div>
         </div>

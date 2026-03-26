@@ -1,23 +1,20 @@
 @extends('layouts.app')
 
-@section('title', 'Préparation au départ - STUDIA')
+@section('title', __('services_pages.dep_title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">Dernière Étape</h1>
-                    <h2 class="text-5xl lg:text-7xl font-black leading-tight italic text-slate-900">Préparation <br> au
-                        <span class="text-gold-600">Départ</span>.</h2>
+                    <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">{{ __('services_pages.dep_hero_subtitle') }}</h1>
+                    <h2 class="text-5xl lg:text-7xl font-black leading-tight italic text-slate-900">{!! __('services_pages.dep_hero_title_1') !!}</h2>
                     <p class="text-xl text-slate-600 leading-relaxed font-medium">
-                        Une fois l’admission obtenue, nous accompagnons les étudiants dans la préparation pratique de leur
-                        départ afin de faciliter leur installation dans le pays de destination.
+                        {{ __('services_pages.dep_hero_desc') }}
                     </p>
                     <div class="flex gap-4">
                         <a href="{{ route('contact') }}"
-                            class="px-8 py-4 rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-500/20 hover:scale-105 transition-all">Nous
-                            contacter</a>
+                            class="px-8 py-4 rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-500/20 hover:scale-105 transition-all">{{ __('services_pages.dep_contact') }}</a>
                     </div>
                 </div>
                 <div class="hidden lg:block">
@@ -34,11 +31,9 @@
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center space-y-8">
-                <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">Arriver dans les <span
-                        class="text-gold-600">meilleures conditions</span>.</h3>
+                <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">{!! __('services_pages.dep_arrive_title') !!}</h3>
                 <p class="text-lg text-slate-500 font-medium">
-                    Notre objectif est de permettre à chaque étudiant d’aborder sa nouvelle vie internationale avec sérénité
-                    et organisation.
+                    {{ __('services_pages.dep_arrive_desc') }}
                 </p>
             </div>
 
@@ -51,12 +46,11 @@
                             </path>
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">Logement Étudiant</h4>
-                    <p class="text-slate-500 italic font-medium">Recherche de solutions adaptées : résidences, colocations
-                        ou studios.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">{{ __('services_pages.dep_housing_title') }}</h4>
+                    <p class="text-slate-500 italic font-medium">{{ __('services_pages.dep_housing_desc') }}</p>
                     <a href="{{ route('housing') }}"
                         class="inline-flex items-center gap-2 text-gold-600 font-bold hover:translate-x-2 transition-transform">
-                        Voir les solutions
+                        {{ __('services_pages.dep_housing_link') }}
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -72,12 +66,11 @@
                             </path>
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">Intégration & Accueil</h4>
-                    <p class="text-slate-500 italic font-medium">Conseils administratifs et préparation à la vie étudiante
-                        locale.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic tracking-tighter">{{ __('services_pages.dep_integ_title') }}</h4>
+                    <p class="text-slate-500 italic font-medium">{{ __('services_pages.dep_integ_desc') }}</p>
                     <a href="{{ route('housing') }}"
                         class="inline-flex items-center gap-2 text-gold-600 font-bold hover:translate-x-2 transition-transform">
-                        En savoir plus
+                        {{ __('services_pages.dep_integ_link') }}
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
