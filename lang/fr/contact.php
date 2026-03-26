@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'Contactez STUDIA - Côte d’Ivoire',
+    'hero_subtitle' => 'Nous Sommes à votre Écoute',
+    'hero_title_1' => 'Contactez ',
+    'hero_title_2' => 'STUDIA.',
+    'hero_desc' => 'Une question ? Un projet ? Notre équipe d’experts est prête à vous accompagner dans votre réussite internationale.',
+    'our_details' => 'Nos coordonnées.',
+    'location' => 'Localisation',
+    'location_details' => 'Côte d’Ivoire<br>STUDIA reçoit sur rendez-vous.',
+    'phone_whatsapp' => 'Téléphone & WhatsApp',
+    'email' => 'Email',
+    'advice' => 'Conseil : Le plus tôt possible. <br> Idéalement 6 à 12 mois avant le départ.',
+    'your_project' => 'Votre projet d\'études.',
+    'full_name' => 'Nom complet',
+    'phone' => 'Téléphone',
+    'your_email' => 'Email',
+    'project' => 'Votre Projet',
+    'options_orientation' => 'Orientation',
+    'options_study_abroad' => 'Études à l\'étranger',
+    'options_visa_assistance' => 'Assistance Visa',
+    'options_academic_support' => 'Soutien scolaire',
+    'destination' => 'Destination',
+    'message_details' => 'Message / Détails',
+    'send_request' => 'Envoyer ma demande',
+];

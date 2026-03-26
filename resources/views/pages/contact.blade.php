@@ -1,18 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'Contactez STUDIA - Côte d’Ivoire')
+@section('title', __('contact.title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-3xl space-y-6">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase italic">Nous Sommes à votre Écoute
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase italic">{{ __('contact.hero_subtitle') }}
                 </h1>
-                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">Contactez <span
-                        class="text-gold-500">STUDIA</span>.</h2>
+                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">{{ __('contact.hero_title_1') }}<span
+                        class="text-gold-500">{{ __('contact.hero_title_2') }}</span></h2>
                 <p class="text-xl text-slate-400 leading-relaxed font-medium">
-                    Une question ? Un projet ? Notre équipe d’experts est prête à vous accompagner dans votre réussite
-                    internationale.
+                    {{ __('contact.hero_desc') }}
                 </p>
             </div>
         </div>
@@ -24,7 +23,7 @@
                 {{-- Contact Info --}}
                 <div class="space-y-16">
                     <div class="space-y-8">
-                        <h3 class="text-3xl font-black italic tracking-tighter">Nos coordonnées.</h3>
+                        <h3 class="text-3xl font-black italic tracking-tighter">{{ __('contact.our_details') }}</h3>
                         <div class="space-y-8">
                             <div class="flex gap-6 items-start group">
                                 <div
@@ -38,9 +37,8 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1 italic">Localisation</h4>
-                                    <p class="text-slate-500 font-medium capitalize prose prose-sm">Côte
-                                        d’Ivoire<br>STUDIA reçoit sur rendez-vous.</p>
+                                    <h4 class="font-bold text-slate-900 mb-1 italic">{{ __('contact.location') }}</h4>
+                                    <p class="text-slate-500 font-medium capitalize prose prose-sm">{!! __('contact.location_details') !!}</p>
                                 </div>
                             </div>
 
@@ -54,7 +52,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1 italic">Téléphone & WhatsApp</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1 italic">{{ __('contact.phone_whatsapp') }}</h4>
                                     <p class="text-slate-500 font-black italic text-xl tracking-tight">+225 07 67 93 93 93
                                     </p>
                                 </div>
@@ -70,7 +68,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1 italic">Email</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1 italic">{{ __('contact.email') }}</h4>
                                     <p class="text-slate-500 font-medium">contact@studia-edu.com</p>
                                 </div>
                             </div>
@@ -81,62 +79,58 @@
                         <div
                             class="w-20 h-20 rounded-full bg-gold-600 flex items-center justify-center text-slate-950 italic font-black text-2xl rotate-12 shadow-lg shadow-gold-500/20">
                             !</div>
-                        <p class="text-sm text-slate-500 font-bold italic leading-relaxed uppercase tracking-widest">Conseil
-                            : Le plus tôt possible. <br> Idéalement 6 à 12 mois avant le départ.</p>
+                        <p class="text-sm text-slate-500 font-bold italic leading-relaxed uppercase tracking-widest">{!! __('contact.advice') !!}</p>
                     </div>
                 </div>
 
                 {{-- Contact Form --}}
                 <div class="bg-slate-900 p-12 lg:p-16 rounded-[4rem] text-white space-y-10 shadow-2xl shadow-gold-500/10">
-                    <h3 class="text-4xl font-black italic tracking-tighter">Votre projet d'études.</h3>
+                    <h3 class="text-4xl font-black italic tracking-tighter">{{ __('contact.your_project') }}</h3>
                     <form action="#" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Nom
-                                    complet</label>
+                                <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">{{ __('contact.full_name') }}</label>
                                 <input type="text" placeholder="Ex: Jean Kouadio"
                                     class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
                             </div>
                             <div class="space-y-2">
                                 <label
-                                    class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Téléphone</label>
+                                    class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">{{ __('contact.phone') }}</label>
                                 <input type="text" placeholder="+225 ..."
                                     class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Email</label>
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">{{ __('contact.your_email') }}</label>
                             <input type="email" placeholder="votre@email.com"
                                 class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Votre
-                                    Projet</label>
+                                <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">{{ __('contact.project') }}</label>
                                 <select
                                     class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
-                                    <option>Orientation</option>
-                                    <option>Études à l'étranger</option>
-                                    <option>Assistance Visa</option>
-                                    <option>Soutien scolaire</option>
+                                    <option>{{ __('contact.options_orientation') }}</option>
+                                    <option>{{ __('contact.options_study_abroad') }}</option>
+                                    <option>{{ __('contact.options_visa_assistance') }}</option>
+                                    <option>{{ __('contact.options_academic_support') }}</option>
                                 </select>
                             </div>
                             <div class="space-y-2">
                                 <label
-                                    class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Destination</label>
+                                    class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">{{ __('contact.destination') }}</label>
                                 <input type="text" placeholder="Ex: France, Belgique..."
                                     class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium">
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">Message /
-                                Détails</label>
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400 italic">{{ __('contact.message_details') }}</label>
                             <textarea rows="4" placeholder="Parlez-nous de votre parcours..."
                                 class="w-full bg-slate-800 border-none rounded-2xl p-4 text-white focus:ring-2 focus:ring-gold-500 transition-all font-medium"></textarea>
                         </div>
                         <button type="submit"
                             class="w-full py-5 rounded-3xl bg-gold-600 hover:bg-white hover:text-slate-950 transition-all font-black text-xl shadow-xl shadow-gold-500/20 active:scale-95 transform text-slate-950">
-                            Envoyer ma demande
+                            {{ __('contact.send_request') }}
                         </button>
                     </form>
                 </div>

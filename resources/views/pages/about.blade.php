@@ -7,12 +7,11 @@
     <section class="pt-40 pb-24 bg-slate-50 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-3xl space-y-6">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">À propos de STUDIA</h1>
-                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">Ouvrir le monde, <span
-                        class="text-gold-600">guider</span> l’avenir.</h2>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-600 uppercase italic">{{ __('about.title') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight">{{ __('about.hero_title_1') }} <span
+                        class="text-gold-600">{{ __('about.hero_title_2') }}</span> {{ __('about.hero_title_3') }}</h2>
                 <p class="text-xl text-slate-600 leading-relaxed font-medium">
-                    STUDIA est un cabinet premium d’orientation scolaire, de soutien académique et d’accompagnement à la
-                    mobilité académique internationale.
+                    {{ __('about.hero_desc') }}
                 </p>
             </div>
         </div>
@@ -24,22 +23,15 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div class="space-y-8">
                     <div class="space-y-4">
-                        <h3 class="text-sm font-bold tracking-[0.2em] text-slate-400 uppercase italic">Le Fondateur</h3>
-                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 italic tracking-tighter">Mamadou Diaw</h2>
-                        <p class="text-gold-600 font-black italic tracking-wide uppercase text-xs">Professionnel de
-                            l’orientation et de la mobilité académique internationale</p>
+                        <h3 class="text-sm font-bold tracking-[0.2em] text-slate-400 uppercase italic">{{ __('about.founder_section') }}</h3>
+                        <h2 class="text-4xl lg:text-5xl font-black text-slate-900 italic tracking-tighter">{{ __('about.founder_name') }}</h2>
+                        <p class="text-gold-600 font-black italic tracking-wide uppercase text-xs">{{ __('about.founder_role') }}</p>
                     </div>
                     <div class="text-slate-600 space-y-6 leading-relaxed font-medium italic">
-                        <p>STUDIA a été fondé par Mamadou Diaw, engagé depuis près de dix années dans l’accompagnement
-                            d’élèves, d’étudiants et de professionnels africains vers des parcours de formation à
-                            l’étranger.</p>
-                        <p>Au fil des années, Mamadou Diaw a accompagné des centaines de profils dans leurs projets d’études
-                            internationales : orientation scolaire et universitaire, choix stratégique des filières et des
-                            pays, constitution de dossiers d’admission, accompagnement aux procédures de visa, et
-                            préparation à l’installation à l’étranger.</p>
-                        <p>Son expérience couvre plusieurs destinations majeures telles que la <span
-                                class="text-slate-900 font-bold">France, la Belgique, l'Espagne, Malte, l'Angleterre, la Suisse, l'Allemagne, la Turquie, Dubaï, l'Inde, le Maroc, la Tunisie, l'Égypte et le Sénégal</span> et d’autres pays
-                            stratégiques pour la mobilité académique africaine.</p>
+                        <p>{{ __('about.founder_p1') }}</p>
+                        <p>{{ __('about.founder_p2') }}</p>
+                        <p>{{ __('about.founder_p3_1') }} <span
+                                class="text-slate-900 font-bold">{{ __('about.founder_p3_destinations') }}</span> {{ __('about.founder_p3_2') }}</p>
                     </div>
                 </div>
                 <div class="relative group">
@@ -70,9 +62,8 @@
                             </div>
                             <h4
                                 class="font-black text-slate-900 italic tracking-tight underline decoration-gold-500/10 underline-offset-4">
-                                Étudiants & Familles</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">Contact direct et
-                                accompagnement empathique.</p>
+                                {{ __('about.students_families') }}</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">{{ __('about.students_families_desc') }}</p>
                         </div>
                         <div class="p-8 bg-white rounded-[2.5rem] shadow-xl shadow-black/5 mt-8 space-y-4">
                             <div class="w-12 h-12 rounded-2xl bg-gold-50 text-gold-600 flex items-center justify-center">
@@ -84,9 +75,8 @@
                             </div>
                             <h4
                                 class="font-black text-slate-900 italic tracking-tight underline decoration-gold-500/10 underline-offset-4">
-                                Établissements</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">Réseau d'écoles et
-                                universités mondiales.</p>
+                                {{ __('about.institutions') }}</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">{{ __('about.institutions_desc') }}</p>
                         </div>
                         <div class="p-8 bg-white rounded-[2.5rem] shadow-xl shadow-black/5 space-y-4">
                             <div class="w-12 h-12 rounded-2xl bg-gold-50 text-gold-600 flex items-center justify-center">
@@ -98,9 +88,8 @@
                             </div>
                             <h4
                                 class="font-black text-slate-900 italic tracking-tight underline decoration-gold-500/10 underline-offset-4">
-                                Dossiers Complexes</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">Rigueur et stratégie face
-                                aux blocages consulaires.</p>
+                                {{ __('about.complex_files') }}</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">{{ __('about.complex_files_desc') }}</p>
                         </div>
                         <div class="p-8 bg-white rounded-[2.5rem] shadow-xl shadow-black/5 mt-8 space-y-4">
                             <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center">
@@ -111,30 +100,25 @@
                             </div>
                             <h4
                                 class="font-black text-slate-900 italic tracking-tight underline decoration-gold-500/10 underline-offset-4">
-                                Réalités Terrain</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">Maîtrise des attentes des
-                                universités étrangères.</p>
+                                {{ __('about.field_realities') }}</h4>
+                            <p class="text-xs text-slate-500 leading-relaxed font-medium italic">{{ __('about.field_realities_desc') }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="space-y-12 order-1 lg:order-2">
                     <div class="space-y-6">
-                        <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">L'Expérience
-                            Authentique</h2>
-                        <h3 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight italic tracking-tighter">Une
-                            expertise fondée sur la <span class="text-gold-600">Pratique Réelle.</span></h3>
+                        <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">{{ __('about.authentic_exp') }}</h2>
+                        <h3 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight italic tracking-tighter">{{ __('about.expertise_founded_1') }}
+                            <span class="text-gold-600">{{ __('about.expertise_founded_2') }}</span></h3>
                         <p class="text-lg text-slate-500 italic font-medium leading-relaxed">
-                            Ce qui distingue Mamadou Diaw, c’est une expertise fondée sur la pratique réelle, et non sur une
-                            approche théorique.
+                            {{ __('about.expertise_desc') }}
                         </p>
                     </div>
                     <div
                         class="space-y-8 bg-white p-12 rounded-[3.5rem] border border-slate-100 shadow-2xl shadow-gold-500/5">
-                        <h4 class="text-2xl font-black italic tracking-tighter">Pourquoi STUDIA est né</h4>
+                        <h4 class="text-2xl font-black italic tracking-tighter">{{ __('about.why_born') }}</h4>
                         <p class="text-slate-500 font-medium italic leading-relaxed text-sm">
-                            STUDIA est né d’un constat clair : trop d’étudiants africains se lancent dans des projets
-                            d’études à l’étranger sans accompagnement structuré, fiable et humain. Mamadou Diaw a créé
-                            STUDIA pour changer cette réalité.
+                            {{ __('about.why_born_desc') }}
                         </p>
                     </div>
                 </div>
@@ -146,9 +130,9 @@
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
-                <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">Nos Fondements</h2>
-                <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">La Philosophie <span
-                        class="text-gold-600">STUDIA.</span></h3>
+                <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">{{ __('about.our_foundings') }}</h2>
+                <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">{{ __('about.philosophy_1') }} <span
+                        class="text-gold-600">{{ __('about.philosophy_2') }}</span></h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -157,26 +141,23 @@
                     <div
                         class="text-7xl font-black text-gold-100 mb-8 font-serif group-hover:text-gold-600/20 transition-colors">
                         01.</div>
-                    <h4 class="text-2xl font-black mb-4 italic tracking-tighter">Clarté</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed font-medium italic">Chaque étudiant doit comprendre son
-                        parcours, ses options et ses chances réelles.</p>
+                    <h4 class="text-2xl font-black mb-4 italic tracking-tighter">{{ __('about.clarity') }}</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed font-medium italic">{{ __('about.clarity_desc') }}</p>
                 </div>
                 <div class="p-12 rounded-[3rem] bg-slate-900 text-white shadow-2xl shadow-gold-900/10 group">
                     <div
                         class="text-7xl font-black text-white/5 mb-8 font-serif group-hover:text-gold-600 transition-colors">
                         02.</div>
-                    <h4 class="text-2xl font-black mb-4 italic tracking-tighter text-gold-500">Accompagnement humain</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed font-medium italic">Chaque dossier est suivi avec
-                        sérieux, écoute et responsabilité.</p>
+                    <h4 class="text-2xl font-black mb-4 italic tracking-tighter text-gold-500">{{ __('about.human_support') }}</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed font-medium italic">{{ __('about.human_support_desc') }}</p>
                 </div>
                 <div
                     class="p-12 rounded-[3rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-gold-500/10 transition-all group">
                     <div
                         class="text-7xl font-black text-gold-100 mb-8 font-serif group-hover:text-gold-600/20 transition-colors">
                         03.</div>
-                    <h4 class="text-2xl font-black mb-4 italic tracking-tighter">Vision internationale</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed font-medium italic">Chaque projet est pensé à l’échelle
-                        mondiale, avec une stratégie adaptée au profil.</p>
+                    <h4 class="text-2xl font-black mb-4 italic tracking-tighter">{{ __('about.international_vision') }}</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed font-medium italic">{{ __('about.international_vision_desc') }}</p>
                 </div>
             </div>
         </div>
@@ -190,42 +171,38 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-4xl font-black leading-tight italic">Une entreprise bâtie sur l’expérience.</h2>
-                    <p class="text-slate-400 font-medium">STUDIA n’est pas une startup opportuniste. C’est une entreprise
-                        bâtie sur l’expérience, la crédibilité et la maîtrise du terrain.</p>
+                    <h2 class="text-4xl font-black leading-tight italic">{{ __('about.company_built') }}</h2>
+                    <p class="text-slate-400 font-medium">{{ __('about.company_desc') }}</p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                                 </path>
                             </svg>
-                            <span class="text-sm font-bold uppercase tracking-wider">Accompagnement professionnel &
-                                transparent</span>
+                            <span class="text-sm font-bold uppercase tracking-wider">{{ __('about.prof_support') }}</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                                 </path>
                             </svg>
-                            <span class="text-sm font-bold uppercase tracking-wider">Respect de la réglementation</span>
+                            <span class="text-sm font-bold uppercase tracking-wider">{{ __('about.respect_rules') }}</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
                                 </path>
                             </svg>
-                            <span class="text-sm font-bold uppercase tracking-wider">Intérêt réel de l’étudiant</span>
+                            <span class="text-sm font-bold uppercase tracking-wider">{{ __('about.real_interest') }}</span>
                         </div>
                     </div>
                 </div>
                 <div class="bg-gold-600 p-12 rounded-[3.5rem] space-y-8 shadow-2xl shadow-gold-500/20 text-center">
-                    <h3 class="text-3xl font-black text-slate-950">Prêt à construire <br> votre avenir ?</h3>
-                    <p class="text-slate-950/70 italic">Mamadou Diaw et son équipe vous attendent pour transformer votre
-                        projet
-                        en succès.</p>
+                    <h3 class="text-3xl font-black text-slate-950">{{ __('about.ready_build_1') }} <br> {{ __('about.ready_build_2') }}</h3>
+                    <p class="text-slate-950/70 italic">{{ __('about.ready_desc') }}</p>
                     <a href="{{ route('contact') }}"
                         class="inline-block px-10 py-5 rounded-3xl bg-slate-900 text-white font-black hover:bg-white hover:text-gold-600 transition-all transform hover:scale-105 active:scale-95 shadow-xl">
-                        Nous contacter
+                        {{ __('about.contact_us') }}
                     </a>
                 </div>
             </div>

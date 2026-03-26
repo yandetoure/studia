@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Logement & Intégration - STUDIA')
+@section('title', __('housing.title'))
 
 @section('content')
     <section class="pt-40 pb-24 bg-slate-900 text-white relative overflow-hidden">
@@ -10,12 +10,11 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-3xl space-y-8">
-                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase italic">Installation & Sérénité</h1>
-                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">Préparer votre <br> <span
-                        class="text-gold-500">Installation</span> dans votre pays d’études.</h2>
+                <h1 class="text-sm font-bold tracking-[0.2em] text-gold-500 uppercase italic">{{ __('housing.hero_subtitle') }}</h1>
+                <h2 class="text-5xl lg:text-7xl font-black leading-tight italic">{!! __('housing.hero_title_1') !!}<span
+                        class="text-gold-500">{{ __('housing.hero_title_2') }}</span>{{ __('housing.hero_title_3') }}</h2>
                 <p class="text-xl text-slate-400 leading-relaxed font-medium">
-                    Trouver un logement dans un nouveau pays peut être complexe lorsque l’on est à distance. STUDIA
-                    accompagne les étudiants dans la recherche de solutions fiables.
+                    {{ __('housing.hero_desc') }}
                 </p>
             </div>
         </div>
@@ -26,20 +25,19 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div class="space-y-12">
                     <div class="space-y-6">
-                        <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">Une transition <span
-                                class="text-gold-600">sereine</span>.</h3>
+                        <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">{{ __('housing.smooth_transition_1') }}<span
+                                class="text-gold-600">{{ __('housing.smooth_transition_2') }}</span>{{ __('housing.smooth_transition_3') }}</h3>
                         <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                            L’objectif est d’assurer une transition fluide vers votre nouvelle vie étudiante internationale.
-                            Nous vous aidons à identifier les meilleures options selon votre budget et vos besoins.
+                            {{ __('housing.smooth_desc') }}
                         </p>
                     </div>
 
                     <div class="grid grid-cols-1 gap-6">
                         @php
                             $options = [
-                                'Résidences étudiantes' => 'Des solutions sécurisées et conviviales, souvent situées à proximité des campus.',
-                                'Logements privés' => 'Studios ou appartements en ville pour plus d\'indépendance.',
-                                'Solutions temporaires' => 'Aide à la réservation d\'un hébergement pour vos premiers jours à l\'arrivée.'
+                                __('housing.student_residences') => __('housing.student_residences_desc'),
+                                __('housing.private_housing') => __('housing.private_housing_desc'),
+                                __('housing.temporary_solutions') => __('housing.temporary_solutions_desc')
                             ];
                         @endphp
 
@@ -70,7 +68,7 @@
                     <div
                         class="absolute -bottom-10 -left-10 p-8 rounded-[2rem] bg-slate-900 text-white shadow-2xl space-y-2">
                         <p class="text-3xl font-black text-gold-500">100%</p>
-                        <p class="text-sm font-bold uppercase tracking-widest italic">Accompagnement Garanti</p>
+                        <p class="text-sm font-bold uppercase tracking-widest italic">{{ __('housing.guaranteed_support') }}</p>
                     </div>
                 </div>
             </div>
@@ -80,8 +78,8 @@
     {{-- Checklist section --}}
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 text-center space-y-16">
-            <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">Votre Pack <span
-                    class="text-gold-600">Intégration</span>.</h3>
+            <h3 class="text-4xl font-black text-slate-900 italic tracking-tighter">{{ __('housing.your_pack_1') }}<span
+                    class="text-gold-600">{{ __('housing.your_pack_2') }}</span>{{ __('housing.your_pack_3') }}</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl shadow-black/5 space-y-6">
@@ -92,8 +90,8 @@
                             </path>
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-black text-slate-900 italic">Conseils administratifs</h4>
-                    <p class="text-slate-500 font-medium">Ouverture de compte bancaire, assurance, titre de séjour.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic">{{ __('housing.admin_advice') }}</h4>
+                    <p class="text-slate-500 font-medium">{{ __('housing.admin_advice_desc') }}</p>
                 </div>
 
                 <div class="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-xl shadow-black/5 space-y-6">
@@ -104,8 +102,8 @@
                             </path>
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-black text-slate-900 italic">Vie étudiante</h4>
-                    <p class="text-slate-500 font-medium">Préparation aux codes culturels et académiques du pays d’accueil.
+                    <h4 class="text-2xl font-black text-slate-900 italic">{{ __('housing.student_life') }}</h4>
+                    <p class="text-slate-500 font-medium">{{ __('housing.student_life_desc') }}
                     </p>
                 </div>
 
@@ -119,9 +117,8 @@
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
-                    <h4 class="text-2xl font-black text-slate-900 italic">Orientation locale</h4>
-                    <p class="text-slate-500 font-medium">Repères dans la ville d’accueil, réseaux de transport, job
-                        étudiant.</p>
+                    <h4 class="text-2xl font-black text-slate-900 italic">{{ __('housing.local_orientation') }}</h4>
+                    <p class="text-slate-500 font-medium">{{ __('housing.local_orientation_desc') }}</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'Contact STUDIA - Ivory Coast',
+    'hero_subtitle' => 'We Are Listening to You',
+    'hero_title_1' => 'Contact ',
+    'hero_title_2' => 'STUDIA.',
+    'hero_desc' => 'A question? A project? Our team of experts is ready to support you in your international success.',
+    'our_details' => 'Our details.',
+    'location' => 'Location',
+    'location_details' => 'Ivory Coast<br>STUDIA receives by appointment.',
+    'phone_whatsapp' => 'Phone & WhatsApp',
+    'email' => 'Email',
+    'advice' => 'Advice: As early as possible. <br> Ideally 6 to 12 months before departure.',
+    'your_project' => 'Your study project.',
+    'full_name' => 'Full name',
+    'phone' => 'Phone',
+    'your_email' => 'Email',
+    'project' => 'Your Project',
+    'options_orientation' => 'Guidance',
+    'options_study_abroad' => 'Study abroad',
+    'options_visa_assistance' => 'Visa Assistance',
+    'options_academic_support' => 'Academic support',
+    'destination' => 'Destination',
+    'message_details' => 'Message / Details',
+    'send_request' => 'Send my request',
+];
