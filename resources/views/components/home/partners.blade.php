@@ -8,15 +8,15 @@
                 <div
                     class="inline-flex items-center gap-4 px-4 py-2 rounded-full bg-gold-600/5 border border-gold-600/10">
                     <span class="w-2 h-2 rounded-full bg-gold-600 animate-pulse"></span>
-                    <span class="text-[10px] font-black uppercase tracking-widest text-gold-700">Réseau d'Élite</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-gold-700">{{ __('home.elite_network') }}</span>
                 </div>
                 <h2 class="text-4xl lg:text-6xl font-black text-slate-900 leading-[0.9] tracking-tighter italic">
-                    Ils nous ont fait <br> <span
-                        class="text-gold-600 underline decoration-gold-600/20 underline-offset-8">Confiance.</span>
+                    {{ __('home.they_trusted_us_1') }} <br> <span
+                        class="text-gold-600 underline decoration-gold-600/20 underline-offset-8">{{ __('home.they_trusted_us_2') }}</span>
                 </h2>
             </div>
             <p class="text-slate-500 font-medium max-w-sm italic opacity-80 leading-relaxed text-lg">
-                Des établissements reconnus mondialement, pour des parcours académiques sécurisés et prestigieux.
+                {{ __('home.partners_desc') }}
             </p>
         </div>
     </div>

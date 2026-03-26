@@ -32,4 +32,8 @@ return [
     'join_hundreds' => 'Rejoignez les centaines d\'étudiants qui ont fait confiance à l\'expertise STUDIA pour leurs projets d\'études internationaux.',
     'start_project' => 'Démarrer mon projet',
     'trust_rigor_excellence' => 'Confiance . Rigueur . Excellence',
+    'elite_network' => 'Réseau d\'Élite',
+    'they_trusted_us_1' => 'Ils nous ont fait',
+    'they_trusted_us_2' => 'Confiance.',
+    'partners_desc' => 'Des établissements reconnus mondialement, pour des parcours académiques sécurisés et prestigieux.',
 ];

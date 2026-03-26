@@ -32,4 +32,8 @@ return [
     'join_hundreds' => 'Join hundreds of students who have trusted STUDIA expertise for their international study projects.',
     'start_project' => 'Start my project',
     'trust_rigor_excellence' => 'Trust . Rigor . Excellence',
+    'elite_network' => 'Elite Network',
+    'they_trusted_us_1' => 'They trusted',
+    'they_trusted_us_2' => 'Us.',
+    'partners_desc' => 'Globally recognized institutions, for secure and prestigious academic paths.',
 ];
