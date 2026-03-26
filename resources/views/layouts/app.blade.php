@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
         content="STUDIA - Cabinet d’orientation scolaire, de soutien académique et de mobilité internationale. {{ __('home.page_title') }}.">
     <title>@yield('title', 'STUDIA - ' . __('home.page_title'))</title>
 

@@ -3,7 +3,7 @@
 return [
     'page_title' => 'Open the World, Guide the Future',
     'hero_title_1' => 'Open the World,',
-    'hero_title_2' => 'Guide the',
+    'hero_title_2' => 'Guide the ',
     'hero_title_3' => 'Future.',
     'discover_services' => 'Discover our services',
     'location' => 'Location',
