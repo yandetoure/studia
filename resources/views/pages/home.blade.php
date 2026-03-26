@@ -32,25 +32,23 @@
                 <div class="space-y-6">
 
                     <h1 class="text-7xl lg:text-[6.5rem] font-black text-white leading-[0.9] tracking-[-0.04em]">
-                        Ouvrir le Monde, <br>
-                        Guider l'<span class="text-gold-500 italic font-serif font-light lowercase">Avenir.</span>
+                        {{ __('home.hero_title_1') }} <br>
+                        {{ __('home.hero_title_2') }}<span class="text-gold-500 italic font-serif font-light lowercase">{{ __('home.hero_title_3') }}</span>
                     </h1>
 
                     <p class="text-xl lg:text-2xl text-slate-300 max-w-xl leading-relaxed font-light">
-                        Cabinet d’orientation scolaire, de soutien académique et de mobilité internationale. Nous
-                        accompagnons les élèves, étudiants et professionnels africains dans leurs projets d’études et de
-                        formation à l’étranger.
+                        {{ __('footer.description') }}
                     </p>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-6">
                     <a href="{{ route('contact') }}#appointment"
                         class="relative group overflow-hidden px-10 py-5 rounded-full bg-gold-600 text-slate-950 font-black transition-all hover:bg-gold-500 hover:scale-105 active:scale-95 shadow-2xl shadow-gold-600/20 text-center">
-                        Prendre rendez-vous
+                        {{ __('nav.book_appointment') }}
                     </a>
                     <a href="#services"
                         class="px-10 py-5 rounded-full bg-white/5 backdrop-blur-sm text-white font-bold border border-white/20 hover:bg-white/10 transition-all text-center flex items-center justify-center gap-3 group">
-                        Découvrir nos services
+                        {{ __('home.discover_services') }}
                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -63,20 +61,20 @@
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-10">
                     <div
                         class="p-6 rounded-3xl bg-white shadow-2xl shadow-black/10 transition-transform hover:-translate-y-2">
-                        <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">Localisation
+                        <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">{{ __('home.location') }}
                         </p>
-                        <p class="text-sm font-bold text-slate-900 leading-tight">Côte d’Ivoire</p>
+                        <p class="text-sm font-bold text-slate-900 leading-tight">{{ __('footer.ivory_coast') }}</p>
                     </div>
                     <div
                         class="p-6 rounded-3xl bg-white shadow-2xl shadow-black/10 transition-transform hover:-translate-y-2">
-                        <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">Contact Direct
+                        <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">{{ __('home.direct_contact') }}
                         </p>
                         <p class="text-sm font-bold text-slate-900 leading-tight">+225 07 67 93 93 93</p>
-                        <p class="text-[10px] text-slate-400 font-medium italic">Available 24/7</p>
+                        <p class="text-[10px] text-slate-400 font-medium italic">{{ __('home.available_24_7') }}</p>
                     </div>
                     <div
                         class="p-6 rounded-3xl bg-white shadow-2xl shadow-black/10 transition-transform hover:-translate-y-2">
-                        <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">Email Officiel
+                        <p class="text-[10px] font-black text-gold-600 uppercase tracking-widest mb-1 italic">{{ __('home.official_email') }}
                         </p>
                         <p class="text-sm font-bold text-slate-900 leading-tight">contact@studia-edu.com</p>
                     </div>
@@ -134,15 +132,14 @@
                 {{-- Content --}}
                 <div class="space-y-10 order-1 lg:order-2">
                     <div class="space-y-6">
-                        <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">L'Héritage STUDIA</h2>
+                        <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">{{ __('home.heritage') }}</h2>
                         <h3 class="text-5xl lg:text-6xl font-black text-slate-900 leading-tight italic tracking-tighter">
-                            Une Vision <span
-                                class="text-gold-600 underline decoration-gold-200 underline-offset-[12px]">Humaine</span>
-                            du Succès.
+                            {{ __('home.vision_1') }} <span
+                                class="text-gold-600 underline decoration-gold-200 underline-offset-[12px]">{{ __('home.vision_2') }}</span>
+                            {{ __('home.vision_3') }}
                         </h3>
                         <p class="text-xl text-slate-500 leading-relaxed font-medium italic">
-                            STUDIA n'est pas qu'un cabinet de conseil. C'est l'histoire d'un engagement profond envers la
-                            réussite de la jeunesse africaine.
+                            {{ __('home.story_desc') }}
                         </p>
                     </div>
 
@@ -152,9 +149,8 @@
                             <div>
                                 <h4
                                     class="font-black text-slate-900 italic tracking-tight text-lg mb-2 underline decoration-gold-500/10 underline-offset-4">
-                                    Plus qu'une Admission</h4>
-                                <p class="text-sm leading-relaxed capitalize">Nous bâtissons des projets de vie. Chaque
-                                    étudiant est unique, chaque parcours est une stratégie sur-mesure.</p>
+                                    {{ __('home.more_than_admission') }}</h4>
+                                <p class="text-sm leading-relaxed capitalize">{{ __('home.life_projects') }}</p>
                             </div>
                         </div>
                         <div class="flex gap-8 group">
@@ -162,20 +158,18 @@
                             <div>
                                 <h4
                                     class="font-black text-slate-900 italic tracking-tight text-lg mb-2 underline decoration-gold-500/10 underline-offset-4">
-                                    Un Accompagnement Structuré</h4>
-                                <p class="text-sm leading-relaxed mb-6">Nous accompagnons chaque étudiant de manière
-                                    structurée, depuis la réflexion sur son projet jusqu’à son installation dans son pays
-                                    d’études.</p>
+                                    {{ __('home.structured_support') }}</h4>
+                                <p class="text-sm leading-relaxed mb-6">{{ __('home.support_desc') }}</p>
                                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
                                     @php
                                         $steps = [
-                                            'Orientation stratégique',
-                                            'Choix de la formation et de l’établissement',
-                                            'Constitution du dossier',
-                                            'Admission',
-                                            'Procédure visa',
-                                            'Préparation du départ',
-                                            'Logement et intégration'
+                                            __('home.strategic_orientation'),
+                                            __('home.choice_training'),
+                                            __('home.file_constitution'),
+                                            __('home.admission'),
+                                            __('home.visa_procedure'),
+                                            __('home.departure_preparation'),
+                                            __('home.housing_integration')
                                         ];
                                     @endphp
                                     @foreach($steps as $index => $step)
@@ -192,7 +186,7 @@
                     <div class="pt-6">
                         <a href="{{ route('about') }}"
                             class="inline-flex items-center gap-4 text-slate-900 font-black italic group text-lg">
-                            <span>Découvrir notre histoire</span>
+                            <span>{{ __('home.discover_story') }}</span>
                             <div
                                 class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-900 group-hover:text-white transition-all">
                                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
@@ -236,20 +230,18 @@
             <div class="relative z-10 text-center space-y-12">
                 <div class="space-y-6">
                     <h2 class="text-4xl lg:text-7xl font-black text-white italic leading-tight tracking-tighter">
-                        Votre Avenir n'attend pas. <br> <span
-                            class="text-gold-500 underline decoration-gold-500/20 underline-offset-8">Prêts à décoller
-                            ?</span>
+                        {{ __('home.future_waits') }} <br> <span
+                            class="text-gold-500 underline decoration-gold-500/20 underline-offset-8">{{ __('home.ready_takeoff') }}</span>
                     </h2>
                     <p class="text-xl text-slate-400 max-w-2xl mx-auto font-medium italic">
-                        Rejoignez les centaines d'étudiants qui ont fait confiance à l'expertise STUDIA pour leurs projets
-                        d'études internationaux.
+                        {{ __('home.join_hundreds') }}
                     </p>
                 </div>
 
                 <div class="flex flex-col sm:flex-row justify-center gap-8 pt-4">
                     <a href="{{ route('contact') }}"
                         class="px-12 py-6 rounded-full bg-gold-600 text-slate-950 font-black text-xl shadow-2xl shadow-gold-500/30 hover:bg-white hover:text-slate-950 transition-all transform hover:scale-110 active:scale-95">
-                        Démarrer mon projet
+                        {{ __('home.start_project') }}
                     </a>
                     <a href="tel:+2250767939393"
                         class="px-12 py-6 rounded-full bg-white/5 border border-white/10 text-white font-black text-xl backdrop-blur-md hover:bg-white/10 transition-all flex items-center justify-center gap-4">
@@ -263,7 +255,7 @@
                 </div>
 
                 <div class="pt-12 border-t border-white/5 flex flex-wrap justify-center gap-12 grayscale opacity-40">
-                    <p class="text-[10px] font-bold uppercase tracking-[0.5em] text-white">Confiance . Rigueur . Excellence
+                    <p class="text-[10px] font-bold uppercase tracking-[0.5em] text-white">{{ __('home.trust_rigor_excellence') }}
                     </p>
                 </div>
             </div>

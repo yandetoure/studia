@@ -3,7 +3,12 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
+
+// Language Switch Route
+Route::get('/locale/{lang}', [LocaleController::class, 'setLocale'])->name('locale.set');
+
 
 // Public Routes
 Route::get('/', [PageController::class, 'home'])->name('home');

@@ -8,16 +8,15 @@
             <div class="space-y-6">
                 <div class="inline-flex items-center gap-4 px-4 py-2 rounded-full bg-white/5 border border-white/10">
                     <span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span>
-                    <span class="text-[10px] font-black uppercase tracking-widest text-gold-500">Expansion
-                        Globale</span>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-gold-500">{{ __('destinations.global_expansion') }}</span>
                 </div>
                 <h2 class="text-5xl lg:text-[7rem] font-black text-white leading-[0.85] tracking-tighter italic">
-                    Nos <br> <span class="text-gold-500 font-serif font-light lowercase">Destinations.</span>
+                    {{ __('destinations.our') }} <br> <span class="text-gold-500 font-serif font-light lowercase">{{ __('destinations.destinations') }}</span>
                 </h2>
             </div>
             <p
                 class="text-slate-400 font-medium max-w-sm italic pb-4 text-lg leading-relaxed border-l-2 border-gold-600/30 pl-8">
-                Explorez des horizons sans limites au cœur des institutions les plus prestigieuses du globe.
+                {{ __('destinations.explore_horizons') }}
             </p>
         </div>
     </div>
@@ -27,18 +26,18 @@
         <div class="flex animate-marquee-premium gap-12 py-10 whitespace-nowrap">
             @php
                 $destinations = [
-                    ['name' => 'France', 'slug' => 'france', 'label' => 'Prestige & Culture', 'flag' => '🇫🇷'],
-                    ['name' => 'Canada', 'slug' => 'canada', 'label' => 'Avenir & Nature', 'flag' => '🇨🇦'],
-                    ['name' => 'Belgique', 'slug' => 'belgique', 'label' => 'Cœur de l’Europe', 'flag' => '🇧🇪'],
-                    ['name' => 'Espagne', 'slug' => 'espagne', 'label' => 'Soleil & Excellence', 'flag' => '🇪🇸'],
-                    ['name' => 'Angleterre', 'slug' => 'angleterre', 'label' => 'Héritage & Prestige', 'flag' => '🇬🇧'],
-                    ['name' => 'Suisse', 'slug' => 'suisse', 'label' => 'Qualité & Précision', 'flag' => '🇨🇭'],
-                    ['name' => 'Dubaï', 'slug' => 'dubai', 'label' => 'Luxe & Opportunités', 'flag' => '🇦🇪'],
-                    ['name' => 'Inde', 'slug' => 'inde', 'label' => 'Innovation & Savoir', 'flag' => '🇮🇳'],
-                    ['name' => 'Maroc', 'slug' => 'maroc', 'label' => 'Hub Continental', 'flag' => '🇲🇦'],
-                    ['name' => 'Tunisie', 'slug' => 'tunisie', 'label' => 'Sciences & Ingénierie', 'flag' => '🇹🇳'],
-                    ['name' => 'Égypte', 'slug' => 'egypte', 'label' => 'Histoire & Avenir', 'flag' => '🇪🇬'],
-                    ['name' => 'Sénégal', 'slug' => 'senegal', 'label' => 'Leadership Africain', 'flag' => '🇸🇳'],
+                    ['name' => 'France', 'slug' => 'france', 'label' => __('destinations.prestige_culture'), 'flag' => '🇫🇷'],
+                    ['name' => 'Canada', 'slug' => 'canada', 'label' => __('destinations.future_nature'), 'flag' => '🇨🇦'],
+                    ['name' => 'Belgique', 'slug' => 'belgique', 'label' => __('destinations.heart_europe'), 'flag' => '🇧🇪'],
+                    ['name' => 'Espagne', 'slug' => 'espagne', 'label' => __('destinations.sun_excellence'), 'flag' => '🇪🇸'],
+                    ['name' => 'Angleterre', 'slug' => 'angleterre', 'label' => __('destinations.heritage_prestige'), 'flag' => '🇬🇧'],
+                    ['name' => 'Suisse', 'slug' => 'suisse', 'label' => __('destinations.quality_precision'), 'flag' => '🇨🇭'],
+                    ['name' => 'Dubaï', 'slug' => 'dubai', 'label' => __('destinations.luxe_opportunities'), 'flag' => '🇦🇪'],
+                    ['name' => 'Inde', 'slug' => 'inde', 'label' => __('destinations.innovation_knowledge'), 'flag' => '🇮🇳'],
+                    ['name' => 'Maroc', 'slug' => 'maroc', 'label' => __('destinations.continental_hub'), 'flag' => '🇲🇦'],
+                    ['name' => 'Tunisie', 'slug' => 'tunisie', 'label' => __('destinations.sciences_engineering'), 'flag' => '🇹🇳'],
+                    ['name' => 'Égypte', 'slug' => 'egypte', 'label' => __('destinations.history_future'), 'flag' => '🇪🇬'],
+                    ['name' => 'Sénégal', 'slug' => 'senegal', 'label' => __('destinations.african_leadership'), 'flag' => '🇸🇳'],
                 ];
             @endphp
             @foreach(array_merge($destinations, $destinations) as $dest)

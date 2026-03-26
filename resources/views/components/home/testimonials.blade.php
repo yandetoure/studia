@@ -12,17 +12,15 @@
                         <path
                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
-                    <span class="text-[10px] font-black uppercase tracking-[0.3em] text-white italic">Success
-                        Stories</span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] text-white italic">{{ __('testimonials.success_stories') }}</span>
                 </div>
                 <h2 class="text-5xl lg:text-7xl font-black text-white leading-[0.8] tracking-tighter italic">
-                    Chaque Parcours est <br> <span class="text-gold-500 font-serif font-light lowercase">Unique.</span>
+                    {{ __('testimonials.each_path_is') }} <br> <span class="text-gold-500 font-serif font-light lowercase">{{ __('testimonials.unique') }}</span>
                 </h2>
             </div>
             <p
                 class="text-slate-400 font-medium max-w-sm italic text-lg leading-relaxed border-l-2 border-gold-600 pl-8">
-                Découvrez comment nous avons transformé les ambitions de nos étudiants en carrières internationales
-                d'exception.
+                {{ __('testimonials.discover_how') }}
             </p>
         </div>
 
@@ -33,7 +31,7 @@
                     [
                         'name' => 'Oumou DIALLO',
                         'program' => 'Sciences Politiques – HEIP',
-                        'text' => 'Grâce à STUDIA, j’ai bénéficié d’une orientation stratégique. L’équipe m’a accompagnée à chaque étape. Aujourd’hui, à HEIP, je suis convaincue que sans cet accompagnement, je n’aurais pas fait les bons choix.',
+                        'text' => __('testimonials.testimony_1'),
                         'img' => asset('images/temoignages/Oumou Diallo.jpg'),
                         'rating' => 5,
                         'className' => 'bg-white/5'
@@ -41,7 +39,7 @@
                     [
                         'name' => 'Aminata SORE',
                         'program' => 'Licence AES – Poitiers',
-                        'text' => 'STUDIA m’a aidée à structurer mon projet universitaire. Accompagnement sérieux et équipe toujours disponible.',
+                        'text' => __('testimonials.testimony_2'),
                         'img' => 'https://ui-avatars.com/api/?name=Aminata+SORE&background=D4AF37&color=fff&size=200&font-size=0.4&bold=true',
                         'rating' => 5,
                         'className' => 'bg-gold-600/10 border-gold-600/20'
@@ -49,7 +47,7 @@
                     [
                         'name' => 'Yannis ADINGRA',
                         'program' => 'Bachelor Business – Excelia',
-                        'text' => 'Leur professionnalisme et leur maîtrise des procédures m’ont beaucoup rassuré. Je recommande STUDIA à tous.',
+                        'text' => __('testimonials.testimony_3'),
                         'img' => 'https://ui-avatars.com/api/?name=Yannis+ADINGRA&background=0F172A&color=D4AF37&size=200&font-size=0.4&bold=true',
                         'rating' => 5,
                         'className' => 'bg-white/5'
@@ -57,7 +55,7 @@
                     [
                         'name' => 'Drissa SOW',
                         'program' => 'Dev. Commercial – Ascencia',
-                        'text' => 'Une approche très structurée sur mon dossier. Leurs conseils m’ont permis d’aborder les démarches avec sérénité.',
+                        'text' => __('testimonials.testimony_4'),
                         'img' => asset('images/temoignages/Drissa Sow.png'),
                         'rating' => 5,
                         'className' => 'bg-white/5'
@@ -65,7 +63,7 @@
                     [
                         'name' => 'Noufra Médine',
                         'program' => 'Grande École – ISTEC',
-                        'text' => 'Accompagnement de très haut niveau. Ils m’ont aidée à me présenter de manière convaincante.',
+                        'text' => __('testimonials.testimony_5'),
                         'img' => asset('images/temoignages/Noufra.png'),
                         'rating' => 5,
                         'className' => 'bg-gold-600/10 border-gold-600/20'
@@ -73,7 +71,7 @@
                     [
                         'name' => 'Ulrich DOFFOU',
                         'program' => 'Lettres – Jean Monnet',
-                        'text' => 'Ils ont su comprendre mon profil spécifique et m’orienter vers une formation cohérente.',
+                        'text' => __('testimonials.testimony_6'),
                         'img' => asset('images/temoignages/Ulrich Dofou.jpg'),
                         'rating' => 5,
                         'className' => 'bg-white/5'
@@ -131,8 +129,7 @@
         {{-- Verification Batch --}}
         <div class="mt-20 flex justify-center opacity-30">
             <div class="flex items-center gap-8 border-y border-white/10 py-8 px-12">
-                <span class="text-[10px] font-black text-white uppercase tracking-[1em]">Authenticité . Excellence .
-                    Succès</span>
+                <span class="text-[10px] font-black text-white uppercase tracking-[1em]">{{ __('testimonials.authenticity_excellence_success') }}</span>
             </div>
         </div>
 

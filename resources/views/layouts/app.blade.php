@@ -4,9 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="STUDIA - Cabinet d’orientation scolaire, de soutien académique et de mobilité internationale. Ouvrir le Monde, Guider l’Avenir.">
-    <title>@yield('title', 'STUDIA - Ouvrir le Monde, Guider l’Avenir')</title>
+        content="STUDIA - Cabinet d’orientation scolaire, de soutien académique et de mobilité internationale. {{ __('home.page_title') }}.">
+    <title>@yield('title', 'STUDIA - ' . __('home.page_title'))</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,18 +46,21 @@
                 </button>
             </div>
             <nav class="mt-8 flex flex-col gap-6 text-xl font-medium">
-                <a href="{{ route('home') }}" class="hover:text-gold-600">Accueil</a>
-                <a href="{{ route('about') }}" class="hover:text-gold-600">À propos</a>
-                <a href="{{ route('services') }}" class="hover:text-gold-600">Nos services</a>
-                <a href="{{ route('home') }}#destinations" class="hover:text-gold-600">Destinations d’études</a>
-                <a href="{{ route('housing') }}" class="hover:text-gold-600">Logement & intégration</a>
-                <a href="{{ route('home') }}#testimonials" class="hover:text-gold-600">Témoignages</a>
-                <a href="#" class="hover:text-gold-600">Blog / Conseils</a>
-                <a href="{{ route('contact') }}" class="hover:text-gold-600">Contact / Prendre rendez-vous</a>
-                <div class="mt-4 pt-6 border-t border-slate-100">
+                <a href="{{ route('home') }}" class="hover:text-gold-600">{{ __('nav.home') }}</a>
+                <a href="{{ route('about') }}" class="hover:text-gold-600">{{ __('nav.about') }}</a>
+                <a href="{{ route('services') }}" class="hover:text-gold-600">{{ __('footer.services') }}</a>
+                <a href="{{ route('home') }}#destinations" class="hover:text-gold-600">{{ __('footer.study_destinations') }}</a>
+                <a href="{{ route('housing') }}" class="hover:text-gold-600">{{ __('footer.housing_integration') }}</a>
+                <a href="{{ route('home') }}#testimonials" class="hover:text-gold-600">{{ __('footer.testimonials') }}</a>
+                <a href="#" class="hover:text-gold-600">{{ __('footer.blog_advice') }}</a>
+                <a href="{{ route('contact') }}" class="hover:text-gold-600">{{ __('footer.contact_appointment') }}</a>
+                <div class="mt-4 pt-6 border-t border-slate-100 flex flex-col gap-4">
+                    <div class="flex items-center gap-4 mb-4">
+                        <a href="{{ route('locale.set', 'fr') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'fr' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">FR</a>
+                        <a href="{{ route('locale.set', 'en') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'en' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">EN</a>
+                    </div>
                     <a href="{{ route('contact') }}#appointment"
-                        class="w-full py-4 text-center rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-200">Prendre
-                        RDV</a>
+                        class="w-full py-4 text-center rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-200">{{ __('nav.book_appointment') }}</a>
                 </div>
             </nav>
         </div>

@@ -3,11 +3,11 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 lg:gap-32 items-center">
             <div class="space-y-12">
                 <div class="space-y-6">
-                    <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">L'Excellence Studia
+                    <h2 class="text-sm font-bold tracking-[0.3em] text-gold-600 uppercase italic">{{ __('why_studia.studia_excellence') }}
                     </h2>
                     <h3 class="text-5xl lg:text-6xl font-black text-slate-900 leading-tight italic tracking-tighter">
-                        Pourquoi Choisir <br> <span
-                            class="text-gold-600 underline decoration-gold-200 underline-offset-[12px]">STUDIA ?</span>
+                        {{ __('why_studia.why_choose') }} <br> <span
+                            class="text-gold-600 underline decoration-gold-200 underline-offset-[12px]">{{ __('why_studia.studia_question') }}</span>
                     </h3>
                 </div>
 
@@ -16,54 +16,48 @@
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black italic shadow-lg group-hover:bg-gold-600 group-hover:text-slate-950 transition-colors">
                             1.</div>
-                        <h4 class="font-black text-slate-900 italic tracking-tighter">10 ans d’expérience</h4>
-                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">Une expertise terrain
-                            solide consolidée au fil d'une décennie.</p>
+                        <h4 class="font-black text-slate-900 italic tracking-tighter">{{ __('why_studia.experience') }}</h4>
+                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">{{ __('why_studia.experience_desc') }}</p>
                     </div>
 
                     <div class="space-y-4 group">
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center font-black italic shadow-lg group-hover:bg-gold-600 group-hover:text-slate-950 transition-colors">
                             2.</div>
-                        <h4 class="font-black text-slate-900 italic tracking-tighter">Approche personnalisée</h4>
-                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">Pas de pack standard.
-                            Chaque profil est unique, chaque stratégie est sur-mesure.</p>
+                        <h4 class="font-black text-slate-900 italic tracking-tighter">{{ __('why_studia.personalized') }}</h4>
+                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">{{ __('why_studia.personalized_desc') }}</p>
                     </div>
 
                     <div class="space-y-4 group">
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center font-black italic shadow-lg group-hover:bg-gold-600 group-hover:text-slate-950 transition-colors">
                             3.</div>
-                        <h4 class="font-black text-slate-900 italic tracking-tighter">Expertise Afrique – Intl</h4>
-                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">Nous comprenons les deux
-                            mondes : les réalités locales et les exigences étrangères.</p>
+                        <h4 class="font-black text-slate-900 italic tracking-tighter">{{ __('why_studia.expertise_africa_intl') }}</h4>
+                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">{{ __('why_studia.expertise_africa_intl_desc') }}</p>
                     </div>
 
                     <div class="space-y-4 group">
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center font-black italic shadow-lg group-hover:bg-gold-600 group-hover:text-slate-950 transition-colors">
                             4.</div>
-                        <h4 class="font-black text-slate-900 italic tracking-tighter">Fiabilité & Crédibilité</h4>
-                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">Une réputation bâtie sur la
-                            réussite réelle de nos étudiants et la confiance des parents.</p>
+                        <h4 class="font-black text-slate-900 italic tracking-tighter">{{ __('why_studia.reliability') }}</h4>
+                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">{{ __('why_studia.reliability_desc') }}</p>
                     </div>
 
                     <div class="space-y-4 group">
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center font-black italic shadow-lg group-hover:bg-gold-600 group-hover:text-slate-950 transition-colors">
                             5.</div>
-                        <h4 class="font-black text-slate-900 italic tracking-tighter">Transparence totale</h4>
-                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">Pas de fausse promesse. Une
-                            clarté absolue sur vos chances réelles de réussite.</p>
+                        <h4 class="font-black text-slate-900 italic tracking-tighter">{{ __('why_studia.transparency') }}</h4>
+                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">{{ __('why_studia.transparency_desc') }}</p>
                     </div>
 
                     <div class="space-y-4 group">
                         <div
                             class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-900 flex items-center justify-center font-black italic shadow-lg group-hover:bg-gold-600 group-hover:text-slate-950 transition-colors">
                             6.</div>
-                        <h4 class="font-black text-slate-900 italic tracking-tighter">Suivi de A à Z</h4>
-                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">De l'orientation initiale
-                            jusqu'à votre installation complète dans votre pays d'accueil.</p>
+                        <h4 class="font-black text-slate-900 italic tracking-tighter">{{ __('why_studia.monitoring') }}</h4>
+                        <p class="text-xs text-slate-500 font-medium italic leading-relaxed">{{ __('why_studia.monitoring_desc') }}</p>
                     </div>
                 </div>
             </div>
@@ -75,12 +69,10 @@
                     <div class="absolute top-0 right-0 w-64 h-64 bg-gold-600/20 rounded-full blur-[80px] -mr-32 -mt-32">
                     </div>
 
-                    <h4 class="text-4xl font-black italic leading-tight tracking-tighter">Votre succès est notre
-                        unique <span class="text-gold-500">Standard.</span></h4>
+                    <h4 class="text-4xl font-black italic leading-tight tracking-tighter">{{ __('why_studia.your_success') }} <span class="text-gold-500">{{ __('why_studia.standard') }}</span></h4>
 
                     <p class="text-slate-400 font-medium italic leading-relaxed">
-                        Le cabinet STUDIA s'engage sur la qualité et la transparence. Notre héritage se mesure au nombre
-                        de destins transformés chaque année.
+                        {{ __('why_studia.commitment') }}
                     </p>
 
                     <div class="pt-8">
@@ -90,7 +82,7 @@
                             </div>
                             <div>
                                 <p class="font-black italic text-lg">Mamadou Diaw</p>
-                                <p class="text-xs text-gold-500 font-bold uppercase tracking-widest">Fondateur & Expert
+                                <p class="text-xs text-gold-500 font-bold uppercase tracking-widest">{{ __('why_studia.founder_expert') }}
                                 </p>
                             </div>
                         </div>
