@@ -56,9 +56,10 @@
                 <a href="#" class="hover:text-gold-600">{{ __('footer.blog_advice') }}</a>
                 <a href="{{ route('contact') }}" class="hover:text-gold-600">{{ __('footer.contact_appointment') }}</a>
                 <div class="mt-4 pt-6 border-t border-slate-100 flex flex-col gap-4">
-                    <div class="flex items-center gap-4 mb-4">
+                    <div class="flex items-center gap-3 mb-4">
                         <a href="{{ route('locale.set', 'fr') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'fr' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">FR</a>
                         <a href="{{ route('locale.set', 'en') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'en' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">EN</a>
+                        <a href="{{ route('locale.set', 'es') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'es' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">ES</a>
                     </div>
                     <a href="{{ route('contact') }}#appointment"
                         class="w-full py-4 text-center rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-200">{{ __('nav.book_appointment') }}</a>

@@ -69,12 +69,15 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="absolute top-full right-0 mt-2 w-24 bg-white rounded-xl shadow-xl border border-slate-100 p-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 z-50">
+                <div class="absolute top-full right-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-slate-100 p-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 z-50">
                     <a href="{{ route('locale.set', 'fr') }}" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-xs font-bold {{ app()->getLocale() == 'fr' ? 'text-gold-600 bg-gold-50' : 'text-slate-600' }}">
                         Français (FR)
                     </a>
                     <a href="{{ route('locale.set', 'en') }}" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-xs font-bold {{ app()->getLocale() == 'en' ? 'text-gold-600 bg-gold-50' : 'text-slate-600' }}">
                         English (EN)
+                    </a>
+                    <a href="{{ route('locale.set', 'es') }}" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-xs font-bold {{ app()->getLocale() == 'es' ? 'text-gold-600 bg-gold-50' : 'text-slate-600' }}">
+                        Español (ES)
                     </a>
                 </div>
             </div>
