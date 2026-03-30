@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'Kontaktieren Sie STUDIA - Elfenbeinküste',
+    'hero_subtitle' => 'Wir hören Ihnen zu',
+    'hero_title_1' => 'Kontaktieren Sie ',
+    'hero_title_2' => 'STUDIA.',
+    'hero_desc' => 'Eine Frage? Ein Projekt? Unser Expertenteam ist bereit, Sie bei Ihrem internationalen Erfolg zu unterstützen.',
+    'our_details' => 'Unsere Details.',
+    'location' => 'Standort',
+    'location_details' => 'Elfenbeinküste<br>STUDIA empfängt nach Terminvereinbarung.',
+    'phone_whatsapp' => 'Telefon & WhatsApp',
+    'email' => 'E-Mail',
+    'advice' => 'Beratung: So früh wie möglich. <br> Idealerweise 6 bis 12 Monate vor der Abreise.',
+    'your_project' => 'Ihr Studienprojekt.',
+    'full_name' => 'Vollständiger Name',
+    'phone' => 'Telefon',
+    'your_email' => 'E-Mail',
+    'project' => 'Ihr Projekt',
+    'options_orientation' => 'Orientierung',
+    'options_study_abroad' => 'Studium im Ausland',
+    'options_visa_assistance' => 'Unterstützung beim Visum',
+    'options_academic_support' => 'Akademische Unterstützung',
+    'destination' => 'Ziel',
+    'message_details' => 'Nachricht / Details',
+    'send_request' => 'Meine Anfrage senden',
+];
