@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'اتصل بـ STUDIA - ساحل العاج',
+    'hero_subtitle' => 'نحن نستمع إليك',
+    'hero_title_1' => 'اتصل بـ ',
+    'hero_title_2' => 'STUDIA.',
+    'hero_desc' => 'سؤال؟ مشروع؟ فريق الخبراء لدينا مستعد لدعمك في نجاحك الدولي.',
+    'our_details' => 'تفاصيلنا.',
+    'location' => 'الموقع',
+    'location_details' => 'ساحل العاج<br>تستقبل STUDIA بموعد مسبق.',
+    'phone_whatsapp' => 'الهاتف وواتساب',
+    'email' => 'البريد الإلكتروني',
+    'advice' => 'نصيحة: في أقرب وقت ممكن. <br> مثالي قبل 6 إلى 12 شهراً من المغادرة.',
+    'your_project' => 'مشروعك الدراسي.',
+    'full_name' => 'الاسم الكامل',
+    'phone' => 'الهاتف',
+    'your_email' => 'البريد الإلكتروني',
+    'project' => 'مشروعك',
+    'options_orientation' => 'التوجيه',
+    'options_study_abroad' => 'الدراسة في الخارج',
+    'options_visa_assistance' => 'مساعدة في التأشيرة',
+    'options_academic_support' => 'الدعم الأكاديمي',
+    'destination' => 'الوجهة',
+    'message_details' => 'الرسالة / التفاصيل',
+    'send_request' => 'إرسال طلبي',
+];

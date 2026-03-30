@@ -17,4 +17,5 @@ return [
     'destinations' => 'Destinations',
     'contact' => 'Contact',
     'book_appointment' => 'Book an Appointment',
+    'contact_whatsapp' => 'Contact us on WhatsApp',
 ];

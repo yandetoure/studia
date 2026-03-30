@@ -26,18 +26,18 @@
         <div class="flex animate-marquee-premium gap-12 py-10 whitespace-nowrap">
             @php
                 $destinations = [
-                    ['name' => 'France', 'slug' => 'france', 'label' => __('destinations.prestige_culture'), 'flag' => '🇫🇷'],
-                    ['name' => 'Canada', 'slug' => 'canada', 'label' => __('destinations.future_nature'), 'flag' => '🇨🇦'],
-                    ['name' => 'Belgique', 'slug' => 'belgique', 'label' => __('destinations.heart_europe'), 'flag' => '🇧🇪'],
-                    ['name' => 'Espagne', 'slug' => 'espagne', 'label' => __('destinations.sun_excellence'), 'flag' => '🇪🇸'],
-                    ['name' => 'Angleterre', 'slug' => 'angleterre', 'label' => __('destinations.heritage_prestige'), 'flag' => '🇬🇧'],
-                    ['name' => 'Suisse', 'slug' => 'suisse', 'label' => __('destinations.quality_precision'), 'flag' => '🇨🇭'],
-                    ['name' => 'Dubaï', 'slug' => 'dubai', 'label' => __('destinations.luxe_opportunities'), 'flag' => '🇦🇪'],
-                    ['name' => 'Inde', 'slug' => 'inde', 'label' => __('destinations.innovation_knowledge'), 'flag' => '🇮🇳'],
-                    ['name' => 'Maroc', 'slug' => 'maroc', 'label' => __('destinations.continental_hub'), 'flag' => '🇲🇦'],
-                    ['name' => 'Tunisie', 'slug' => 'tunisie', 'label' => __('destinations.sciences_engineering'), 'flag' => '🇹🇳'],
-                    ['name' => 'Égypte', 'slug' => 'egypte', 'label' => __('destinations.history_future'), 'flag' => '🇪🇬'],
-                    ['name' => 'Sénégal', 'slug' => 'senegal', 'label' => __('destinations.african_leadership'), 'flag' => '🇸🇳'],
+                    ['name' => __('destinations.france'), 'slug' => 'france', 'label' => __('destinations.prestige_culture'), 'flag' => '🇫🇷'],
+                    ['name' => __('destinations.canada'), 'slug' => 'canada', 'label' => __('destinations.future_nature'), 'flag' => '🇨🇦'],
+                    ['name' => __('destinations.belgique'), 'slug' => 'belgique', 'label' => __('destinations.heart_europe'), 'flag' => '🇧🇪'],
+                    ['name' => __('destinations.espagne'), 'slug' => 'espagne', 'label' => __('destinations.sun_excellence'), 'flag' => '🇪🇸'],
+                    ['name' => __('destinations.angleterre'), 'slug' => 'angleterre', 'label' => __('destinations.heritage_prestige'), 'flag' => '🇬🇧'],
+                    ['name' => __('destinations.suisse'), 'slug' => 'suisse', 'label' => __('destinations.quality_precision'), 'flag' => '🇨🇭'],
+                    ['name' => __('destinations.dubai'), 'slug' => 'dubai', 'label' => __('destinations.luxe_opportunities'), 'flag' => '🇦🇪'],
+                    ['name' => __('destinations.inde'), 'slug' => 'inde', 'label' => __('destinations.innovation_knowledge'), 'flag' => '🇮🇳'],
+                    ['name' => __('destinations.maroc'), 'slug' => 'maroc', 'label' => __('destinations.continental_hub'), 'flag' => '🇲🇦'],
+                    ['name' => __('destinations.tunisie'), 'slug' => 'tunisie', 'label' => __('destinations.sciences_engineering'), 'flag' => '🇹🇳'],
+                    ['name' => __('destinations.egypte'), 'slug' => 'egypte', 'label' => __('destinations.history_future'), 'flag' => '🇪🇬'],
+                    ['name' => __('destinations.senegal'), 'slug' => 'senegal', 'label' => __('destinations.african_leadership'), 'flag' => '🇸🇳'],
                 ];
             @endphp
             @foreach(array_merge($destinations, $destinations) as $dest)

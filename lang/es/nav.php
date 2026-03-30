@@ -17,4 +17,5 @@ return [
     'destinations' => 'Destinos',
     'contact' => 'Contacto',
     'book_appointment' => 'Reservar una Cita',
+    'contact_whatsapp' => 'Contáctanos por WhatsApp',
 ];
