@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'title' => 'Konaklama ve Entegrasyon - STUDIA',
+    'hero_subtitle' => 'Yerleşme ve Huzur',
+    'hero_title_1' => 'Eğitim ülkenizde <br> ',
+    'hero_title_2' => 'Yerleşiminizi',
+    'hero_title_3' => ' hazırlayın.',
+    'hero_desc' => 'Yeni bir ülkede konaklama bulmak, uzaktayken karmaşık olabilir. STUDIA, öğrencilerin güvenilir çözümler bulmalarını destekler.',
+    'smooth_transition_1' => 'Sorunsuz bir ',
+    'smooth_transition_2' => 'geçiş',
+    'smooth_transition_3' => '.',
+    'smooth_desc' => 'Hedef, yeni uluslararası öğrencilik hayatınıza sorunsuz bir geçiş sağlamaktır. Bütçenize ve ihtiyaçlarınıza göre en iyi seçenekleri belirlemenize yardımcı oluyoruz.',
+    'student_residences' => 'Öğrenci yurtları',
+    'student_residences_desc' => 'Genellikle kampüslerin yakınında bulunan güvenli ve arkadaş canlısı çözümler.',
+    'private_housing' => 'Özel konaklama',
+    'private_housing_desc' => 'Daha fazla bağımsızlık için şehir merkezindeki stüdyolar veya daireler.',
+    'temporary_solutions' => 'Geçici çözümler',
+    'temporary_solutions_desc' => 'Varışınızdaki ilk günleriniz için konaklama rezervasyonu yardımı.',
+    'guaranteed_support' => 'Garantili Destek',
+    'your_pack_1' => 'Sizin ',
+    'your_pack_2' => 'Entegrasyon',
+    'your_pack_3' => ' Paketiniz.',
+    'admin_advice' => 'İdari tavsiyeler',
+    'admin_advice_desc' => 'Banka hesabı açma, sigorta, oturma izni.',
+    'student_life' => 'Öğrenci hayatı',
+    'student_life_desc' => 'Ev sahibi ülkenin kültüm ve akademik kurallarına hazırlık.',
+    'local_orientation' => 'Yerel oryantasyon',
+    'local_orientation_desc' => 'Ev sahibi şehirdeki simge yapılar, ulaşım ağları, öğrenci işleri.',
+];
+

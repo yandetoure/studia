@@ -82,6 +82,9 @@
                     <a href="{{ route('locale.set', 'ar') }}" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-xs font-bold {{ app()->getLocale() == 'ar' ? 'text-gold-600 bg-gold-50' : 'text-slate-600' }}">
                         العربية (AR)
                     </a>
+                    <a href="{{ route('locale.set', 'tr') }}" class="block px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors text-xs font-bold {{ app()->getLocale() == 'tr' ? 'text-gold-600 bg-gold-50' : 'text-slate-600' }}">
+                        Türkçe (TR)
+                    </a>
                 </div>
             </div>
 

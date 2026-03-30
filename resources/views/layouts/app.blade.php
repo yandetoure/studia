@@ -61,6 +61,7 @@
                         <a href="{{ route('locale.set', 'en') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'en' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">EN</a>
                         <a href="{{ route('locale.set', 'es') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'es' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">ES</a>
                         <a href="{{ route('locale.set', 'ar') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'ar' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">AR</a>
+                        <a href="{{ route('locale.set', 'tr') }}" class="flex-1 py-3 text-center rounded-xl border {{ app()->getLocale() == 'tr' ? 'border-gold-600 text-gold-600 bg-gold-50' : 'border-slate-200 text-slate-600' }} font-bold text-sm">TR</a>
                     </div>
                     <a href="{{ route('contact') }}#appointment"
                         class="w-full py-4 text-center rounded-2xl bg-gold-600 text-slate-950 font-bold shadow-xl shadow-gold-200">{{ __('nav.book_appointment') }}</a>
